@@ -1,0 +1,73 @@
+[
+  {
+    "arxiv_id": "2506.11543",
+    "title": "FIMA-Q: Post-Training Quantization for Vision Transformers by Fisher Information Matrix Approximation",
+    "authors": [
+      "Zhuguanyu Wu",
+      "Shihe Wang",
+      "Jiayi Zhang",
+      "Jiaxin Chen",
+      "Yunhong Wang"
+    ],
+    "abstract": "Post-training quantization (PTQ) has stood out as a cost-effective and promising model compression paradigm in recent years, as it avoids computationally intensive model retraining. Nevertheless, current PTQ methods for Vision Transformers (ViTs) still suffer from significant accuracy degradation, especially under low-bit quantization. To address these shortcomings, we analyze the prevailing Hessian-guided quantization loss, and uncover certain limitations of conventional Hessian approximations. By following the block-wise reconstruction framework, we propose a novel PTQ method for ViTs, dubbed FIMA-Q. Specifically, we firstly establish the connection between KL divergence and FIM, which enables fast computation of the quantization loss during reconstruction. We further propose an efficient FIM approximation method, namely DPLR-FIM, by employing the diagonal plus low-rank principle, and formulate the ultimate quantization loss. Our extensive experiments, conducted across various vision tasks with representative ViT-based architectures on public datasets, demonstrate that our method substantially promotes the accuracy compared to the state-of-the-art approaches, especially in the case of low-bit quantization. The source code is available at https://github.com/ShiheWang/FIMA-Q.",
+    "date": "2025-06-13",
+    "proceeding": "CVPR 2025 1",
+    "conference_url_abs": "http://openaccess.thecvf.com//content/CVPR2025/html/Wu_FIMA-Q_Post-Training_Quantization_for_Vision_Transformers_by_Fisher_Information_Matrix_CVPR_2025_paper.html",
+    "paperswithcode_url": "https://paperswithcode.com/paper/fima-q-post-training-quantization-for-vision-1",
+    "tasks": [
+      "Model Compression",
+      "Quantization"
+    ],
+    "repo_urls": [
+      "https://github.com/shihewang/fima-q"
+    ],
+    "type": "paper",
+    "source": "arxiv"
+  },
+  {
+    "arxiv_id": "2506.12222",
+    "title": "SSLAM: Enhancing Self-Supervised Models with Audio Mixtures for Polyphonic Soundscapes",
+    "authors": [
+      "Tony Alex",
+      "Sara Ahmed",
+      "Armin Mustafa",
+      "Muhammad Awais",
+      "Philip JB Jackson"
+    ],
+    "abstract": "Self-supervised pre-trained audio networks have seen widespread adoption in real-world systems, particularly in multi-modal large language models. These networks are often employed in a frozen state, under the assumption that the SSL pre-training has sufficiently equipped them to handle real-world audio. However, a critical question remains: how well do these models actually perform in real-world conditions, where audio is typically polyphonic and complex, involving multiple overlapping sound sources? Current audio SSL methods are often benchmarked on datasets predominantly featuring monophonic audio, such as environmental sounds, and speech. As a result, the ability of SSL models to generalize to polyphonic audio, a common characteristic in natural scenarios, remains underexplored. This limitation raises concerns about the practical robustness of SSL models in more realistic audio settings. To address this gap, we introduce Self-Supervised Learning from Audio Mixtures (SSLAM), a novel direction in audio SSL research, designed to improve, designed to improve the model's ability to learn from polyphonic data while maintaining strong performance on monophonic data. We thoroughly evaluate SSLAM on standard audio SSL benchmark datasets which are predominantly monophonic and conduct a comprehensive comparative analysis against SOTA methods using a range of high-quality, publicly available polyphonic datasets. SSLAM not only improves model performance on polyphonic audio, but also maintains or exceeds performance on standard audio SSL benchmarks. Notably, it achieves up to a 3.9\\% improvement on the AudioSet-2M (AS-2M), reaching a mean average precision (mAP) of 50.2. For polyphonic datasets, SSLAM sets new SOTA in both linear evaluation and fine-tuning regimes with performance improvements of up to 9.1\\% (mAP).",
+    "date": "2025-06-13",
+    "proceeding": "ICLR 2025 4",
+    "conference_url_abs": "https://openreview.net/forum?id=odU59TxdiB",
+    "paperswithcode_url": "https://paperswithcode.com/paper/sslam-enhancing-self-supervised-models-with-1",
+    "tasks": [],
+    "repo_urls": [
+      "https://github.com/ta012/SSLAM"
+    ],
+    "type": "paper",
+    "source": "arxiv"
+  },
+  {
+    "arxiv_id": "2506.09952",
+    "title": "UniPre3D: Unified Pre-training of 3D Point Cloud Models with Cross-Modal Gaussian Splatting",
+    "authors": [
+      "Ziyi Wang",
+      "Yanran Zhang",
+      "Jie zhou",
+      "Jiwen Lu"
+    ],
+    "abstract": "The scale diversity of point cloud data presents significant challenges in developing unified representation learning techniques for 3D vision. Currently, there are few unified 3D models, and no existing pre-training method is equally effective for both object- and scene-level point clouds. In this paper, we introduce UniPre3D, the first unified pre-training method that can be seamlessly applied to point clouds of any scale and 3D models of any architecture. Our approach predicts Gaussian primitives as the pre-training task and employs differentiable Gaussian splatting to render images, enabling precise pixel-level supervision and end-to-end optimization. To further regulate the complexity of the pre-training task and direct the model's focus toward geometric structures, we integrate 2D features from pre-trained image models to incorporate well-established texture knowledge. We validate the universal effectiveness of our proposed method through extensive experiments across a variety of object- and scene-level tasks, using diverse point cloud models as backbones. Code is available at https://github.com/wangzy22/UniPre3D.",
+    "date": "2025-06-11",
+    "proceeding": "CVPR 2025 1",
+    "conference_url_abs": "http://openaccess.thecvf.com//content/CVPR2025/html/Wang_UniPre3D_Unified_Pre-training_of_3D_Point_Cloud_Models_with_Cross-Modal_CVPR_2025_paper.html",
+    "paperswithcode_url": "https://paperswithcode.com/paper/unipre3d-unified-pre-training-of-3d-point-1",
+    "tasks": [
+      "Diversity",
+      "Representation Learning"
+    ],
+    "repo_urls": [
+      "https://github.com/wangzy22/unipre3d"
+    ],
+    "type": "paper",
+    "source": "arxiv"
+  }
+]
