@@ -39,7 +39,7 @@
 
 
 html {
-  min-width: 1250px;
+  // min-width: 1250px;
   overflow-x: auto !important;
   color: var(--text-color);
 }
@@ -62,7 +62,7 @@ body,
   max-width: 2000px;
   box-sizing: border-box;
   margin: 0 auto;
-  min-width: 1200px;
+  // min-width: 1200px;
 }
 
 html,
@@ -91,38 +91,7 @@ body {
 
 
 
-.el-select {
-  .el-select__wrapper {
-    background: rgba(243, 243, 243, 1);
-    border: 1px solid rgba(226, 226, 226, 1) !important;
-    box-shadow: none !important;
-    outline: none;
-  }
-}
 
-.el-dialog {
-  --el-dialog-content-font-size: 1em !important;
-  --el-dialog-border-radius: 15px !important;
-  padding: 1em 1.4em !important;
-
-  .el-dialog__headerbtn:hover {
-    .el-dialog__close {
-      color: #909399;
-    }
-  }
-
-  .el-dialog__close {
-    font-size: 1.5em !important;
-  }
-}
-
-.el-image__error {
-  color: #6c6e73 !important;
-}
-
-.el-popper {
-  --el-popover-font-size: 1em !important
-}
 
 
 .el-button.btn {
