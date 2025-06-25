@@ -15540,5 +15540,9 @@
     "Machine Learning (cs.LG)",
     "Chemical Physics (physics.chem-ph)",
     "Numerical Analysis (math.NA)"
-  ]
+  ],
+  "prompt": {
+    "train_data": "\nYou are an expert in information retrieval. I will provide you with a list of research papers from arXiv, specifically in the *cs.HC* (Human-Computer Interaction) category.\n\nYour task is to analyze each paper and determine its relevance to the topic of **Creativity**.\n\nClassify each paper into one of the following relevance levels:\n\n* `\"strong\"`: The paper is explicitly focused on creativity.\n* `\"weak\"`: The paper mentions or touches on creativity, but it is not the main focus.\n* `\"none\"`: The paper is not related to creativity.\n\nReturn your results in the following JSON format:\n\n```json\n{\n  \"relevance\": \"strong | weak | none\",\n  \"reason\": \"Brief justification based on the paper content\"\n}\n```\n\nBe concise but specific in your reasoning, referencing key terms or sections when applicable.\n"
+  },
+  "description": "Data source: https://arxiv.org/list/cs.HC/new"
 }
