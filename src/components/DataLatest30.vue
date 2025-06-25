@@ -1,5 +1,22 @@
 <template>
   <div class="">
+    <div class="box" style="margin-top: .8em;">
+      <div
+        class="prompt-box"
+        :class="{ expanded: isPromptExpanded }"
+      >
+        <p style="margin-bottom: 0.2em">
+          <b v-html="formatDescription(description)"></b>
+        </p>
+        <div class="prompt-content">
+          <b>prompt：</b>
+          <pre>{{ prompt }}</pre>
+        </div>
+        <el-button class="expand-btn" @click="togglePrompt" text size="small">
+          {{ isPromptExpanded ? "收起" : "展开" }}
+        </el-button>
+      </div>
+    </div>
     <!-- Data Latest 30 标签页添加分页功能 -->
     <div>
       <!-- 日期范围筛选 -->
@@ -11,6 +28,7 @@
           >
           <el-select
             v-model="subjectValue"
+            filterable
             placeholder="Select subject"
             style="width: 400px"
           >
@@ -37,15 +55,36 @@
             value-format="YYYY-MM-DD"
             :disabled-date="disabledDate"
             @change="handleDateRangeChange"
+            style="width: 400"
           />
           <el-button @click="clearDateFilter" style="margin-left: 1em"
             >清除日期筛选</el-button
           >
         </div>
+
+        <div>
+          <span class="demonstration" style="margin-right: em"
+            >相关性 : &nbsp;&nbsp;</span
+          >
+          <el-select
+            v-model="relevanceValue"
+            filterable
+            placeholder=""
+            style="width: 400px"
+          >
+            <!-- <el-option label="All" value="All" /> -->
+            <el-option
+              v-for="item in relevanceList"
+              :key="item"
+              :label="item"
+              :value="item"
+            />
+          </el-select>
+        </div>
       </div>
       <div style="display: flex; justify-content: end">
         <el-button @click="clearAllFilters">清除所有筛选</el-button>
-        <el-button type="primary">保存此次筛选</el-button>
+        <!-- <el-button type="primary">保存此次筛选</el-button> -->
       </div>
 
       <!-- 分页信息显示 -->
@@ -117,7 +156,9 @@
                 </span>
               </span>
             </p>
-            <p v-if="item.conference"><b>conference: </b>{{ item.conference }}</p>
+            <p v-if="item.conference">
+              <b>conference: </b>{{ item.conference }}
+            </p>
             <p v-if="item.conference_url_abs">
               <b>conference_url_abs:</b
               ><a :href="item.conference_url_abs" target="_blank">{{
@@ -133,7 +174,6 @@
                 </span>
               </span>
             </p>
-            
 
             <div class="flex-item" v-if="item.datasets">
               <b>datasets:</b>
@@ -198,7 +238,7 @@
 </template>
 
 <script setup>
-import { ref, computed, watch, defineProps } from "vue";
+import { ref, computed, watch, defineProps, nextTick } from "vue";
 import selectComponent from "@/components/selectComponent.vue";
 
 const props = defineProps({
@@ -210,9 +250,30 @@ const props = defineProps({
     type: Array,
     default: () => [],
   },
+  type: {
+    type: String,
+    required: false, // 确保type是必需的
+  },
+  description: {
+    type: String,
+    required: false, // 确保type是必需的
+  },
+  prompt: {
+    type: String,
+    required: false, // 确保type是必需的
+  },
 });
 
 const subjectValue = ref("All"); // 主题筛选值，默认为All
+const relevanceValue = ref("All"); // 相关性筛选值，默认为All
+
+const relevanceList = ref([]);
+if (props.type === "Creativity") {
+  relevanceList.value = ["Creativity"];
+  relevanceValue.value = "Creativity"; // 默认选择Creativity
+} else {
+  relevanceList.value = ["All"];
+}
 
 // 分页相关状态
 const currentPage = ref(1);
@@ -272,14 +333,35 @@ watch(
   { immediate: true }
 );
 
+// 滚动到 #content 顶部
+const scrollToTop = () => {
+  setTimeout(() => {
+    const contentElement = document.getElementById("content");
+    if (contentElement) {
+      contentElement.scrollTo({
+        top: 0,
+        // behavior: 'smooth'
+      });
+    } else {
+      // 如果找不到 #content，则滚动整个页面
+      window.scrollTo({
+        top: 0,
+        // behavior: 'smooth'
+      });
+    }
+  }, 100);
+};
+
 // 分页事件处理
 const handleSizeChange = (newSize) => {
   pageSize.value = newSize;
   currentPage.value = 1; // 重置到第一页
+  scrollToTop();
 };
 
 const handleCurrentChange = (newPage) => {
   currentPage.value = newPage;
+  scrollToTop();
 };
 
 // 日期范围变化处理
@@ -304,6 +386,22 @@ const clearAllFilters = () => {
 watch(subjectValue, () => {
   currentPage.value = 1; // 重置到第一页
 });
+
+const isPromptExpanded = ref(false);
+
+const togglePrompt = () => {
+  isPromptExpanded.value = !isPromptExpanded.value;
+};
+
+// 格式化描述文本，将URL转换为链接
+const formatDescription = (text) => {
+  if (!text) return "";
+
+  // URL 正则表达式
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+
+  return text.replace(urlRegex, '<a href="$1" target="_blank">$1</a>');
+};
 </script>
 
 <style scoped lang="scss">
@@ -349,7 +447,7 @@ watch(subjectValue, () => {
   .pagination-info {
     color: #666;
     font-size: 14px;
-    margin-bottom: 1em;
+    margin-bottom: 0em;
   }
 
   .pagination-container {
@@ -364,10 +462,14 @@ watch(subjectValue, () => {
     align-items: center;
     margin-bottom: 1em;
     padding: 1em 0;
-    gap: 2em;
+    gap: 1em 2em;
+    flex-wrap: wrap;
     // background: #f8f9fa;
     // border-radius: 8px;
     // border: 1px solid #e9ecef;
+    .demonstration {
+      font-weight: bold;
+    }
   }
 
   .filter-info {
@@ -383,6 +485,51 @@ watch(subjectValue, () => {
   & > b {
     margin-top: 0.2em;
     margin-right: 0.2em;
+  }
+}
+
+.box {
+  border: 1px solid #e4e7ed;
+  border-radius: 4px;
+  background: #f9f9f9;
+  padding: 0.5em 1em;
+}
+.prompt-box {
+  position: relative;
+  height: 4.4em;
+  overflow: hidden;
+  transition: height 0.3s ease;
+
+  &.expanded {
+    height: auto;
+  }
+
+  .prompt-content {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    font-size: 1em;
+
+    pre {
+      margin: 0;
+      font-size: 0.9em;
+      line-height: 1.4;
+      white-space: pre-wrap;
+      flex: 1;
+    }
+  }
+
+  .expand-btn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+
+    &:hover {
+      background: rgba(255, 255, 255, 1);
+    }
   }
 }
 </style>

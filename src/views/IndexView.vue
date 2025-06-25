@@ -6,33 +6,47 @@
         :type="currentIndex == 0 ? 'primary' : ''"
         :class="currentIndex == 0 ? 'on' : ''"
         @click="currentIndex = 0"
-        >HCI</el-button
+        >Creativity</el-button
       >
       <el-button
         :type="currentIndex == 1 ? 'primary' : ''"
         :class="currentIndex == 1 ? 'on' : ''"
         @click="currentIndex = 1"
-        >Data Today</el-button
+        >LLM Training Data</el-button
       >
-      <el-button
+      <!-- <el-button
         :type="currentIndex == 2 ? 'primary' : ''"
         :class="currentIndex == 2 ? 'on' : ''"
         @click="currentIndex = 2"
         >Data Latest 30</el-button
-      >
+      > -->
     </div>
 
     <div v-show="currentIndex == 0">
-      <DataLatest30 :dataList="HCIResultList.data" :subjects="HCIResultList.subjects"></DataLatest30>
+      <DataLatest30
+        :dataList="HCIResultList.data"
+        :subjects="HCIResultList.subjects"
+        :description="HCIResultList.description"
+        :prompt="HCIResultList.prompt?.creativity"
+        type="Creativity"
+      />
     </div>
 
     <div v-show="currentIndex == 1">
-      <DataLatest30 :dataList="DataResultList.data" :subjects="DataResultList.subjects"></DataLatest30>
+      <DataLatest30
+        :dataList="DataResultList.data"
+        :subjects="DataResultList.subjects"
+        :description="DataResultList.description"
+        :prompt="DataResultList.prompt?.train_data"
+      />
     </div>
 
     <!-- Data Latest 30 标签页添加分页功能 -->
     <div v-show="currentIndex == 2">
-      <DataLatest30 :dataList="data_latest_30_result.data" :subjects="data_latest_30_result.subjects"></DataLatest30>
+      <DataLatest30
+        :dataList="data_latest_30_result.data"
+        :subjects="data_latest_30_result.subjects"
+      ></DataLatest30>
     </div>
   </div>
 </template>
@@ -52,13 +66,28 @@ const data_latest_30_result = ref([]);
 // 生命周期钩子：组件挂载时请求 JSON 数据
 onMounted(async () => {
   try {
-    const response = await axios.get("./data/cs_HC.json");
-    HCIResultList.value = response.data;
+    const response = await axios.get(
+      "./data/cs_HC.json?v=" + new Date().getTime()
+    );
+    
+    // 过滤数据，只保留 relevance 为 'creativity' 的数据
+    const originalData = response.data;
+    const filteredData = {
+      ...originalData,
+      data: originalData.data?.filter(item => 
+        item.relevance && item.relevance.keyword  === 'creativity'
+      ) || []
+    };
+    HCIResultList.value = filteredData;
 
-    const response2 = await axios.get("./data/data_result.json");
+    const response2 = await axios.get(
+      "./data/data_result.json?v=" + new Date().getTime()
+    );
     DataResultList.value = response2.data;
 
-    const response3 = await axios.get("./data/data_latest_30.json");
+    const response3 = await axios.get(
+      "./data/data_latest_30.json?v=" + new Date().getTime()
+    );
     data_latest_30_result.value = response3.data;
   } catch (error) {
     console.error("获取 JSON 数据失败:", error);
