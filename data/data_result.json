@@ -1,106 +1,37 @@
 {
   "data": [
     {
-      "id": "2506.19881",
-      "abstract": "Are there any conditions under which a generative model's outputs are guaranteed not to infringe the copyrights of its training data? This is the question of \"provable copyright protection\" first posed by Vyas, Kakade, and Barak (ICML 2023). They define near access-freeness (NAF) and propose it as sufficient for protection. This paper revisits the question and establishes new foundations for provable copyright protection -- foundations that are firmer both technically and legally. First, we show that NAF alone does not prevent infringement. In fact, NAF models can enable verbatim copying, a blatant failure of copy protection that we dub being tainted. Then, we introduce our blameless copy protection framework for defining meaningful guarantees, and instantiate it with clean-room copy protection. Clean-room copy protection allows a user to control their risk of copying by behaving in a way that is unlikely to copy in a counterfactual clean-room setting. Finally, we formalize a common intuition about differential privacy and copyright by proving that DP implies clean-room copy protection when the dataset is golden, a copyright deduplication requirement.",
+      "id": "2506.19952",
+      "abstract": "Large language models (LLMs), despite their ability to perform few-shot machine translation (MT), often lag behind dedicated MT systems trained on parallel corpora, which are crucial for high quality machine translation (MT). However, parallel corpora are often scarce or non-existent for low-resource languages. In this paper, we propose CycleDistill, a bootstrapping approach leveraging LLMs and few-shot translation to obtain high-quality MT systems. CycleDistill involves iteratively generating synthetic parallel corpora from monolingual corpora via zero- or few-shot MT, which is then used to fine-tune the model that was used for generating said data for MT. CycleDistill does not need parallel corpora beyond 1 to 4 few-shot examples, and in our experiments focusing on three Indian languages, by relying solely on monolingual corpora, it can achieve high-quality machine translation, improving upon a few-shot baseline model by over 20-30 chrF points on average in the first iteration. We also study the effect of leveraging softmax activations during the distillation process and observe mild improvements in translation quality.",
       "authors": [
-        "Aloni Cohen"
-      ],
-      "last_revised_date": "2025/06/23",
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2506.19881",
-        "HTML": "https://arxiv.org/html/2506.19881",
-        "PDF": "https://arxiv.org/pdf/2506.19881"
-      },
-      "subjects": [
-        "Cryptography and Security (cs.CR)",
-        "Computers and Society (cs.CY)",
-        "Machine Learning (cs.LG)"
-      ],
-      "submission_historys": [
-        {
-          "date": "Mon, 23 Jun 2025 20:46:51 GMT",
-          "size": "32kb",
-          "version": "v1"
-        }
-      ],
-      "submitted_date": "2025/06/23",
-      "title": "Blameless Users in a Clean Room: Defining Copyright Protection for Generative Models",
-      "relevance": {
-        "keyword": "train_data",
-        "level": "strong",
-        "reason": "The paper discusses copyright protection for generative models. It touches on differential privacy in datasets, which is related to LLM training data concerning copyright and data privacy."
-      }
-    },
-    {
-      "id": "2506.19977",
-      "abstract": "Understanding which parts of the retrieved context contribute to a large language model's generated answer is essential for building interpretable and trustworthy generative QA systems. We propose a novel framework that formulates context attribution as a combinatorial multi-armed bandit (CMAB) problem. Each context segment is treated as a bandit arm, and we employ Combinatorial Thompson Sampling (CTS) to efficiently explore the exponentially large space of context subsets under a limited query budget. Our method defines a reward function based on normalized token likelihoods, capturing how well a subset of segments supports the original model response. Unlike traditional perturbation-based attribution methods such as SHAP, which sample subsets uniformly and incur high computational costs, our approach adaptively balances exploration and exploitation by leveraging posterior estimates of segment relevance. This leads to substantially improved query efficiency while maintaining high attribution fidelity. Extensive experiments on diverse datasets and LLMs demonstrate that our method achieves competitive attribution quality with fewer model queries.",
-      "authors": [
-        "Deng Pan",
-        "Keerthiram Murugesan",
-        "Nuno Moniz and Nitesh Chawla"
+        "Deepon Halder",
+        "Thanmay Jayakumar",
+        "Raj Dabre"
       ],
       "last_revised_date": "2025/06/24",
       "license": "http://creativecommons.org/licenses/by/4.0/",
       "links": {
-        "Abstract": "https://arxiv.org/abs/2506.19977",
-        "HTML": "https://arxiv.org/html/2506.19977",
-        "PDF": "https://arxiv.org/pdf/2506.19977"
+        "Abstract": "https://arxiv.org/abs/2506.19952",
+        "HTML": "https://arxiv.org/html/2506.19952",
+        "PDF": "https://arxiv.org/pdf/2506.19952"
       },
       "subjects": [
+        "Computation and Language (cs.CL)",
         "Artificial Intelligence (cs.AI)"
       ],
       "submission_historys": [
         {
-          "date": "Tue, 24 Jun 2025 19:47:27 GMT",
-          "size": "32kb",
+          "date": "Tue, 24 Jun 2025 18:56:57 GMT",
+          "size": "726kb",
           "version": "v1"
         }
       ],
       "submitted_date": "2025/06/24",
-      "title": "Context Attribution with Multi-Armed Bandit Optimization",
+      "title": "CycleDistill: Bootstrapping Machine Translation using LLMs with Cyclical Distillation",
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper directly addresses attribution in LLMs, which involves evaluating which parts of training or input data contribute to model responses, relevant to understanding data's role in LLMs."
-      }
-    },
-    {
-      "id": "2506.20008",
-      "abstract": "Recent advances in Large Language Models (LLMs) have demonstrated strong potential in code generation, yet their effectiveness in quantum computing remains underexplored. This paper benchmarks LLMs for PennyLane-based quantum code generation using real-world challenges from the Quantum Hackathon (QHack). We introduce QHackBench, a novel benchmark dataset derived from QHack competitions, and evaluate model performance under vanilla prompting and Retrieval-Augmented Generation (RAG). Our structured evaluation framework assesses functional correctness, syntactic validity, and execution success across varying challenge difficulties. Results indicate that RAG-enhanced models, supplemented with an augmented PennyLane dataset, approximately generate similar results as the standard prompting, particularly in complex quantum algorithms. Additionally, we introduce a multi-agent evaluation pipeline that iteratively refines incorrect solutions, further enhancing execution success rates. To foster further research, we commit to publicly releasing QHackBench, along with our evaluation framework and experimental results, enabling continued advancements in AI-assisted quantum programming.",
-      "authors": [
-        "Abdul Basit",
-        "Minghao Shao",
-        "Haider Asif",
-        "Nouhaila Innan",
-        "Muhammad Kashif",
-        "Alberto Marchisio",
-        "Muhammad Shafique"
-      ],
-      "last_revised_date": "2025/06/24",
-      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2506.20008",
-        "HTML": "https://arxiv.org/html/2506.20008",
-        "PDF": "https://arxiv.org/pdf/2506.20008"
-      },
-      "subjects": [
-        "Artificial Intelligence (cs.AI)"
-      ],
-      "submission_historys": [
-        {
-          "date": "Tue, 24 Jun 2025 20:54:56 GMT",
-          "size": "943kb",
-          "version": "v1"
-        }
-      ],
-      "submitted_date": "2025/06/24",
-      "title": "QHackBench: Benchmarking Large Language Models for Quantum Code Generation Using PennyLane Hackathon Challenges",
-      "relevance": {
-        "keyword": "train_data",
-        "level": "strong",
-        "reason": "The paper introduces a novel benchmark dataset (QHackBench) specifically for evaluating LLMs in the context of quantum code generation, emphasizing its relevance to LLM training data."
+        "reason": "The paper proposes CycleDistill, a method to generate synthetic parallel corpora from monolingual corpora using LLMs, specifically addressing the creation and processing of training data for machine translation with LLMs."
       }
     },
     {
@@ -131,85 +62,77 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "This paper explores using randomly generated data for model pre-training and discusses pre-training a model before using real-world data. It touches directly on methods related to LLM training data and pre-training strategies."
+        "reason": "The paper investigates the concept of using synthetically generated data for pre-training models, involving novel data processing strategies that fall under training-stage data processing relevant to LLMs."
       }
     },
     {
-      "id": "2506.20093",
-      "abstract": "Time-series data are critical in diverse applications, such as industrial monitoring, medical diagnostics, and climate research. However, effectively integrating these high-dimensional temporal signals with natural language for dynamic, interactive tasks remains a significant challenge. To address this, we introduce the Time-Series Question Answering (Time-Series QA) task and release EngineMT-QA, the first large-scale, multi-task, temporal-textual QA dataset designed to capture complex interactions between time-series signals and natural language. Building on this resource, we propose the Instruct Time Transformer (ITFormer), a novel framework that bridges time-series encoders with frozen large language models (LLMs). ITFormer effectively extracts, aligns, and fuses temporal and textual features, achieving a strong improvement in QA accuracy over strong baselines with fewer than 1\\% additional trainable parameters. By combining computational efficiency with robust cross-modal modeling, our work establishes a adaptable paradigm for integrating temporal data with natural language, paving the way for new research and applications in multi-modal AI. More details about the project, including datasets and code, are available at: https://pandalin98.github.io/itformer_site/",
+      "id": "2506.20061",
+      "abstract": "Developing effective instruction-following policies in reinforcement learning remains challenging due to the reliance on extensive human-labeled instruction datasets and the difficulty of learning from sparse rewards. In this paper, we propose a novel approach that leverages the capabilities of large language models (LLMs) to automatically generate open-ended instructions retrospectively from previously collected agent trajectories. Our core idea is to employ LLMs to relabel unsuccessful trajectories by identifying meaningful subtasks the agent has implicitly accomplished, thereby enriching the agent's training data and substantially alleviating reliance on human annotations. Through this open-ended instruction relabeling, we efficiently learn a unified instruction-following policy capable of handling diverse tasks within a single policy. We empirically evaluate our proposed method in the challenging Craftax environment, demonstrating clear improvements in sample efficiency, instruction coverage, and overall policy performance compared to state-of-the-art baselines. Our results highlight the effectiveness of utilizing LLM-guided open-ended instruction relabeling to enhance instruction-following reinforcement learning.",
       "authors": [
-        "Yilin Wang",
-        "Peixuan Lei",
-        "Jie Song",
-        "Yuzhe Hao",
-        "Tao Chen",
-        "Yuxuan Zhang",
-        "Lei Jia",
-        "Yuanxiang Li",
-        "Zhongyu Wei"
+        "Zhicheng Zhang",
+        "Ziyan Wang",
+        "Yali Du",
+        "Fei Fang"
+      ],
+      "last_revised_date": "2025/06/24",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2506.20061",
+        "HTML": "https://arxiv.org/html/2506.20061",
+        "PDF": "https://arxiv.org/pdf/2506.20061"
+      },
+      "subjects": [
+        "Machine Learning (cs.LG)"
+      ],
+      "submission_historys": [
+        {
+          "date": "Tue, 24 Jun 2025 23:49:28 GMT",
+          "size": "554kb",
+          "version": "v1"
+        }
+      ],
+      "submitted_date": "2025/06/24",
+      "title": "Learning Instruction-Following Policies through Open-Ended Instruction Relabeling with Large Language Models",
+      "relevance": {
+        "keyword": "train_data",
+        "level": "strong",
+        "reason": "The paper proposes a novel method using LLMs to relabel unsuccessful trajectories in instruction-following policies, effectively augmenting training data and reducing reliance on human annotations, which is a direct contribution to LLM training-stage data processing."
+      }
+    },
+    {
+      "id": "2506.20151",
+      "abstract": "Autoregressive (AR) models have achieved unified and strong performance across both visual understanding and image generation tasks. However, removing undesired concepts from AR models while maintaining overall generation quality remains an open challenge. In this paper, we propose Erasure Autoregressive Model (EAR), a fine-tuning method for effective and utility-preserving concept erasure in AR models. Specifically, we introduce Windowed Gradient Accumulation (WGA) strategy to align patch-level decoding with erasure objectives, and Thresholded Loss Masking (TLM) strategy to protect content unrelated to the target concept during fine-tuning. Furthermore, we propose a novel benchmark, Erase Concept Generator and Visual Filter (ECGVF), aim at provide a more rigorous and comprehensive foundation for evaluating concept erasure in AR models. Specifically, we first employ structured templates across diverse large language models (LLMs) to pre-generate a large-scale corpus of target-replacement concept prompt pairs. Subsequently, we generate images from these prompts and subject them to rigorous filtering via a visual classifier to ensure concept fidelity and alignment. Extensive experimental results conducted on the ECGVF benchmark with the AR model Janus-Pro demonstrate that EAR achieves marked improvements in both erasure effectiveness and model utility preservation. Code is available at: https://github.com/immc-lab/ear/",
+      "authors": [
+        "Haipeng Fan",
+        "Shiyuan Zhang",
+        "Baohunesitu",
+        "Zihang Guo",
+        "Huaiwen Zhang"
       ],
       "last_revised_date": "2025/06/25",
       "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
       "links": {
-        "Abstract": "https://arxiv.org/abs/2506.20093",
-        "HTML": "https://arxiv.org/html/2506.20093",
-        "PDF": "https://arxiv.org/pdf/2506.20093"
+        "Abstract": "https://arxiv.org/abs/2506.20151",
+        "HTML": "https://arxiv.org/html/2506.20151",
+        "PDF": "https://arxiv.org/pdf/2506.20151"
       },
       "subjects": [
-        "Computation and Language (cs.CL)"
+        "Computer Vision and Pattern Recognition (cs.CV)",
+        "Artificial Intelligence (cs.AI)"
       ],
       "submission_historys": [
         {
-          "date": "Wed, 25 Jun 2025 02:33:47 GMT",
-          "size": "9413kb",
+          "date": "Wed, 25 Jun 2025 06:15:07 GMT",
+          "size": "10812kb",
           "version": "v1"
         }
       ],
       "submitted_date": "2025/06/25",
-      "title": "ITFormer: Bridging Time Series and Natural Language for Multi-Modal QA with Large-Scale Multitask Dataset",
+      "title": "EAR: Erasing Concepts from Unified Autoregressive Models",
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper introduces a new large-scale, multi-task, temporal-textual QA dataset for integrating time-series data with natural language using LLMs. This directly relates to LLM training data by providing a new dataset and methodology."
-      }
-    },
-    {
-      "id": "2506.20100",
-      "abstract": "We introduce MIRAGE, a new benchmark for multimodal expert-level reasoning and decision-making in consultative interaction settings. Designed for the agriculture domain, MIRAGE captures the full complexity of expert consultations by combining natural user queries, expert-authored responses, and image-based context, offering a high-fidelity benchmark for evaluating models on grounded reasoning, clarification strategies, and long-form generation in a real-world, knowledge-intensive domain. Grounded in over 35,000 real user-expert interactions and curated through a carefully designed multi-step pipeline, MIRAGE spans diverse crop health, pest diagnosis, and crop management scenarios. The benchmark includes more than 7,000 unique biological entities, covering plant species, pests, and diseases, making it one of the most taxonomically diverse benchmarks available for vision-language models, grounded in the real world. Unlike existing benchmarks that rely on well-specified user inputs and closed-set taxonomies, MIRAGE features underspecified, context-rich scenarios with open-world settings, requiring models to infer latent knowledge gaps, handle rare entities, and either proactively guide the interaction or respond. Project Page: https://mirage-benchmark.github.io",
-      "authors": [
-        "Vardhan Dongre",
-        "Chi Gui",
-        "Shubham Garg",
-        "Hooshang Nayyeri",
-        "Gokhan Tur",
-        "Dilek Hakkani-T\\\"ur",
-        "Vikram S. Adve"
-      ],
-      "last_revised_date": "2025/06/25",
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2506.20100",
-        "HTML": "https://arxiv.org/html/2506.20100",
-        "PDF": "https://arxiv.org/pdf/2506.20100"
-      },
-      "subjects": [
-        "Computation and Language (cs.CL)",
-        "Artificial Intelligence (cs.AI)",
-        "Computer Vision and Pattern Recognition (cs.CV)"
-      ],
-      "submission_historys": [
-        {
-          "date": "Wed, 25 Jun 2025 03:07:54 GMT",
-          "size": "25560kb",
-          "version": "v1"
-        }
-      ],
-      "submitted_date": "2025/06/25",
-      "title": "MIRAGE: A Benchmark for Multimodal Information-Seeking and Reasoning in Agricultural Expert-Guided Conversations",
-      "relevance": {
-        "keyword": "train_data",
-        "level": "strong",
-        "reason": "The paper introduces a benchmark, MIRAGE, for evaluating models on multimodal reasoning and decision-making in agricultural expert-guided conversations. This involves dataset curation and evaluation, which is relevant to LLM training data."
+        "reason": "The EAR method involves fine-tuning autoregressive models for concept erasure, using structured templates across diverse LLMs to create a large-scale corpus. It directly relates to LLM training-stage data processing and assessing model behaviors."
       }
     },
     {
@@ -248,41 +171,41 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "Discusses a benchmark related to LLMs and OCR hallucination, which involves training data challenges like visual degradation and data quality, relevant to LLM training considerations."
+        "reason": "The paper introduces the KIE-HVQA benchmark to evaluate OCR hallucination in LLMs, specifically focusing on degraded document understanding. It details methods for training-stage data processing, such as supervised fine-tuning and reinforcement learning to mitigate hallucinations."
       }
     },
     {
-      "id": "2506.20197",
-      "abstract": "A growing fraction of all code is sampled from Large Language Models (LLMs). We investigate the problem of attributing code generated by language models using hypothesis testing to leverage established techniques and guarantees. Given a set of samples $S$ and a suspect model $\\mathcal{L}^*$, our goal is to assess the likelihood of $S$ originating from $\\mathcal{L}^*$. Due to the curse of dimensionality, this is intractable when only samples from the LLM are given: to circumvent this, we use both samples and density estimates from the LLM, a form of access commonly available.\n  We introduce $\\mathsf{Anubis}$, a zero-shot attribution tool that frames attribution as a distribution testing problem. Our experiments on a benchmark of code samples show that $\\mathsf{Anubis}$ achieves high AUROC scores ( $\\ge0.9$) when distinguishing between LLMs like DeepSeek-Coder, CodeGemma, and Stable-Code using only $\\approx 2000$ samples.",
+      "id": "2506.20199",
+      "abstract": "Large language models (LLMs) have enabled a wide variety of real-world applications in various domains. However, creating a high-performing application with high accuracy remains challenging, particularly for subjective tasks like emotion recognition. Inspired by the SLT 2024 GenSER Challenge, this study investigates approaches to improving conversational emotion recognition (CER) by LLMs. Specifically, we explore how to retrieve high-quality examples in in-context learning (ICL) to enhance CER. We propose various strategies based on random and augmented example retrieval and also analyze the impact of conversational context on CER accuracy. Experiments were conducted on the three datasets including IEMOCAP, MELD and EmoryNLP. The results show that augmented example retrieval consistently outperforms other techniques under investigation across all datasets, highlighting the importance of retrieving coherent targeted examples and enhancing them through paraphrasing.",
       "authors": [
-        "Cl\\'ement L. Canonne",
-        "Yash Pote",
-        "Uddalok Sarkar"
+        "Mengqi Wang",
+        "Tiantian Feng",
+        "Shrikanth Narayanan"
       ],
       "last_revised_date": "2025/06/25",
-      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
       "links": {
-        "Abstract": "https://arxiv.org/abs/2506.20197",
-        "HTML": "https://arxiv.org/html/2506.20197",
-        "PDF": "https://arxiv.org/pdf/2506.20197"
+        "Abstract": "https://arxiv.org/abs/2506.20199",
+        "HTML": "https://arxiv.org/html/2506.20199",
+        "PDF": "https://arxiv.org/pdf/2506.20199"
       },
       "subjects": [
-        "Machine Learning (cs.LG)",
+        "Computation and Language (cs.CL)",
         "Artificial Intelligence (cs.AI)"
       ],
       "submission_historys": [
         {
-          "date": "Wed, 25 Jun 2025 07:37:16 GMT",
-          "size": "269kb",
+          "date": "Wed, 25 Jun 2025 07:39:19 GMT",
+          "size": "3442kb",
           "version": "v1"
         }
       ],
       "submitted_date": "2025/06/25",
-      "title": "Zero-Shot Attribution for Large Language Models: A Distribution Testing Approach",
+      "title": "How to Retrieve Examples in In-context Learning to Improve Conversational Emotion Recognition using Large Language Models?",
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper discusses methods for attributing code generated by LLMs, engaging with generated content as samples which implies relevance to training data assessment."
+        "reason": "The paper investigates methods to enhance conversational emotion recognition through in-context learning by retrieving and processing training examples, directly addressing training-stage data processing for improving LLM applications."
       }
     },
     {
@@ -315,7 +238,7 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper explicitly deals with enhancing LLMs through structured reasoning by converting unstructured data to structured formats and fine-tuning LLMs, directly involving the training data aspect."
+        "reason": "The paper focuses on enhancing LLMs through structured reasoning by converting unstructured data into structured formats and training LLMs via Supervised Fine-Tuning (SFT), directly involving data processing for LLM training."
       }
     },
     {
@@ -352,7 +275,7 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper proposes a benchmark for evaluating LLMs using a curated dataset, directly discussing the construction and use of training data for LLM evaluation."
+        "reason": "The paper describes the development of a scalable pipeline for curating a benchmark for LLM evaluation, emphasizing data quality enhancement and labeling, which is directly related to the processing of training data for LLMs."
       }
     },
     {
@@ -386,40 +309,7 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper introduces Biomed-Enriched, a dataset created for LLM pretraining in biomedical contexts. It explicitly discusses dataset construction, quality filtering, and its impact on model training, relevant to LLM training data."
-      }
-    },
-    {
-      "id": "2506.20451",
-      "abstract": "A fundamental question in applying In-Context Learning (ICL) for tabular data classification is how to determine the ideal number of demonstrations in the prompt. This work addresses this challenge by presenting an algorithm to automatically select a reasonable number of required demonstrations. Our method distinguishes itself by integrating not only the tabular data's distribution but also the user's selected prompt template and the specific Large Language Model (LLM) into its estimation. Rooted in Spectral Graph Theory, our proposed algorithm defines a novel metric to quantify the similarities between different demonstrations. We then construct a similarity graph and analyze the eigenvalues of its Laplacian to derive the minimum number of demonstrations capable of representing the data within the LLM's intrinsic representation space. We validate the efficacy of our approach through experiments comparing its performance against conventional random selection algorithms on diverse datasets and LLMs.",
-      "authors": [
-        "Shuchu Han",
-        "Wolfgang Bruckner"
-      ],
-      "last_revised_date": "2025/06/25",
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2506.20451",
-        "HTML": "https://arxiv.org/html/2506.20451",
-        "PDF": "https://arxiv.org/pdf/2506.20451"
-      },
-      "subjects": [
-        "Machine Learning (cs.LG)",
-        "Artificial Intelligence (cs.AI)"
-      ],
-      "submission_historys": [
-        {
-          "date": "Wed, 25 Jun 2025 13:57:54 GMT",
-          "size": "2356kb",
-          "version": "v1"
-        }
-      ],
-      "submitted_date": "2025/06/25",
-      "title": "Automatic Demonstration Selection for LLM-based Tabular Data Classification",
-      "relevance": {
-        "keyword": "train_data",
-        "level": "strong",
-        "reason": "The paper proposes methods to optimize the use of demonstrations in prompts for LLMs, directly engaging with the intersection of demonstration-data selection and LLM utilization."
+        "reason": "The paper introduces a new dataset, Biomed-Enriched, that enriches biomedical text with LLMs for pretraining, involving detailed data collection and annotation processes directly contributing to data engineering and training-stage data processing for LLMs."
       }
     },
     {
@@ -456,7 +346,7 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper explicitly discusses 'training dataset' and 'memorization' in machine learning models, relevant to analyzing the influence of training data on model behavior."
+        "reason": "The paper explores memorization by quantifying the influence of training data samples, including (near-)duplicates, on language models. This relates to data engineering tasks like deduplication and data quality enhancement."
       }
     },
     {
@@ -495,7 +385,7 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper explicitly addresses training data issues for LLMs, particularly the creation of a dataset to train models on new API updates, which directly relates to LLM training data."
+        "reason": "The paper presents a novel dataset construction for training LLMs to adapt to code API changes, a clear contribution to data processing for LLM training and fine-tuning in dynamic environments."
       }
     },
     {
@@ -528,275 +418,194 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper discusses the impact of different data types (e.g., mathematical corpora, QA-style data) and data formatting during mid-training on LLM performance, making it highly relevant to LLM training data."
+        "reason": "The paper involves the design and processing of large-scale training data for LLMs by introducing strategies like adding QA-style data and a large math reasoning-intensive corpus (MegaMath-Web-Pro-Max) for RL purposes, which demonstrates a strong involvement in LLM training data processing."
       }
     },
     {
-      "id": "2506.20558",
-      "abstract": "Comments within code serve as a crucial foundation for software documentation, facilitating developers to communicate and understand the code effectively. However, code-comment inconsistency (CCI) can negatively affect software development, testing, and maintenance. Recent efforts to mitigate this issue have emerged, but existing studies often suffer from inaccurate datasets and inadequate solutions, weakening their practical effectiveness. In this study, we first conduct a quantitative analysis of existing datasets, revealing a substantial portion of sampled data are mislabeled. To address these data limitations, we introduce CCIBench, a refined dataset comprising high-quality data, to support the training and evaluation of method-level CCI methods. Furthermore, we present an innovative end-to-end LLM-based framework, CCISolver, designed to improve code quality by identifying and rectifying CCIs. Comprehensive evaluations demonstrate CCISolver's superior performance. For detection, it establishes a new state-of-the-art with an F1-score of 89.54%. In fixing task, it achieves a remarkable 18.84% relative improvement in GLEU score over the strongest baseline. This superiority is confirmed by human evaluation, where CCISolver's fixing success rate of 0.6533 significantly surpasses existing methods. Critically, in a practical end-to-end setting, CCISolver's innovative architecture is approximately 36% faster for inference than the baseline model, underscoring its scalability and real-world applicability.",
+      "id": "2506.20621",
+      "abstract": "[Context] The increasing adoption of machine learning (ML) in software systems demands specialized ideation approaches that address ML-specific challenges, including data dependencies, technical feasibility, and alignment between business objectives and probabilistic system behavior. Traditional ideation methods like Lean Inception lack structured support for these ML considerations, which can result in misaligned product visions and unrealistic expectations. [Goal] This paper presents Define-ML, a framework that extends Lean Inception with tailored activities - Data Source Mapping, Feature-to-Data Source Mapping, and ML Mapping - to systematically integrate data and technical constraints into early-stage ML product ideation. [Method] We developed and validated Define-ML following the Technology Transfer Model, conducting both static validation (with a toy problem) and dynamic validation (in a real-world industrial case study). The analysis combined quantitative surveys with qualitative feedback, assessing utility, ease of use, and intent of adoption. [Results] Participants found Define-ML effective for clarifying data concerns, aligning ML capabilities with business goals, and fostering cross-functional collaboration. The approach's structured activities reduced ideation ambiguity, though some noted a learning curve for ML-specific components, which can be mitigated by expert facilitation. All participants expressed the intention to adopt Define-ML. [Conclusion] Define-ML provides an openly available, validated approach for ML product ideation, building on Lean Inception's agility while aligning features with available data and increasing awareness of technical feasibility.",
       "authors": [
-        "Renyi Zhong",
-        "Yintong Huo",
-        "Wenwei Gu",
-        "Jinxi Kuang",
-        "Zhihan Jiang",
-        "Guangba Yu",
-        "Yichen Li",
-        "David Lo",
-        "Michael R. Lyu"
+        "Silvio Alonso",
+        "Antonio Pedro Santos Alves",
+        "Lucas Romao",
+        "H\\'elio Lopes",
+        "Marcos Kalinowski"
       ],
       "last_revised_date": "2025/06/25",
       "license": "http://creativecommons.org/licenses/by/4.0/",
       "links": {
-        "Abstract": "https://arxiv.org/abs/2506.20558",
-        "HTML": "https://arxiv.org/html/2506.20558",
-        "PDF": "https://arxiv.org/pdf/2506.20558"
+        "Abstract": "https://arxiv.org/abs/2506.20621",
+        "HTML": "https://arxiv.org/html/2506.20621",
+        "PDF": "https://arxiv.org/pdf/2506.20621"
       },
       "subjects": [
-        "Software Engineering (cs.SE)"
+        "Software Engineering (cs.SE)",
+        "Artificial Intelligence (cs.AI)"
       ],
       "submission_historys": [
         {
-          "date": "Wed, 25 Jun 2025 15:56:07 GMT",
-          "size": "825kb",
+          "date": "Wed, 25 Jun 2025 17:11:26 GMT",
+          "size": "1062kb",
           "version": "v1"
         }
       ],
       "submitted_date": "2025/06/25",
-      "title": "CCISolver: End-to-End Detection and Repair of Method-Level Code-Comment Inconsistency",
+      "title": "Define-ML: An Approach to Ideate Machine Learning-Enabled Systems",
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper focuses on code-comment inconsistency detection and repair, introducing a refined dataset for training and evaluation, thus explicitly dealing with training data quality and datasets."
+        "reason": "The paper presents a framework (Define-ML) for integrating data considerations into early-stage ML product ideation. It emphasizes the systematic integration of data and technical constraints, implicitly involving data engineering aspects for LLM systems."
       }
     },
     {
-      "id": "2506.20598",
-      "abstract": "The global demand for sustainable protein sources has accelerated the need for intelligent tools that can rapidly process and synthesise domain-specific scientific knowledge. In this study, we present a proof-of-concept multi-agent Artificial Intelligence (AI) framework designed to support sustainable protein production research, with an initial focus on microbial protein sources. Our Retrieval-Augmented Generation (RAG)-oriented system consists of two GPT-based LLM agents: (1) a literature search agent that retrieves relevant scientific literature on microbial protein production for a specified microbial strain, and (2) an information extraction agent that processes the retrieved content to extract relevant biological and chemical information. Two parallel methodologies, fine-tuning and prompt engineering, were explored for agent optimisation. Both methods demonstrated effectiveness at improving the performance of the information extraction agent in terms of transformer-based cosine similarity scores between obtained and ideal outputs. Mean cosine similarity scores were increased by up to 25%, while universally reaching mean scores of $\\geq 0.89$ against ideal output text. Fine-tuning overall improved the mean scores to a greater extent (consistently of $\\geq 0.94$) compared to prompt engineering, although lower statistical uncertainties were observed with the latter approach. A user interface was developed and published for enabling the use of the multi-agent AI system, alongside preliminary exploration of additional chemical safety-based search capabilities",
+      "id": "2506.20629",
+      "abstract": "Low-Rank Adaptation (LoRA) is a widely used finetuning method for large models. Its small memory footprint allows practitioners to adapt large models to specific tasks at a fraction of the cost of full finetuning. Different modifications have been proposed to enhance its efficiency by, for example, setting the learning rate, the rank, and the initialization. Another improvement axis is adapter placement strategy: when using LoRA, practitioners usually pick module types to adapt with LoRA, such as Query and Key modules. Few works have studied the problem of adapter placement, with nonconclusive results: original LoRA paper suggested placing adapters in attention modules, while other works suggested placing them in the MLP modules. Through an intuitive theoretical analysis, we introduce PLoP (Precise LoRA Placement), a lightweight method that allows automatic identification of module types where LoRA adapters should be placed, given a pretrained model and a finetuning task. We demonstrate that PLoP consistently outperforms, and in the worst case competes, with commonly used placement strategies through comprehensive experiments on supervised finetuning and reinforcement learning for reasoning.",
       "authors": [
-        "Alexander D. Kalian",
-        "Jaewook Lee",
-        "Stefan P. Johannesson",
-        "Lennart Otte",
-        "Christer Hogstrand",
-        "Miao Guo"
-      ],
-      "last_revised_date": "2025/06/25",
-      "license": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2506.20598",
-        "HTML": "https://arxiv.org/html/2506.20598",
-        "PDF": "https://arxiv.org/pdf/2506.20598"
-      },
-      "subjects": [
-        "Artificial Intelligence (cs.AI)",
-        "Systems and Control (cs.SY)",
-        "Systems and Control (eess.SY)"
-      ],
-      "submission_historys": [
-        {
-          "date": "Wed, 25 Jun 2025 16:37:46 GMT",
-          "size": "1909kb",
-          "version": "v1"
-        }
-      ],
-      "submitted_date": "2025/06/25",
-      "title": "Fine-Tuning and Prompt Engineering of LLMs, for the Creation of Multi-Agent AI for Addressing Sustainable Protein Production Challenges",
-      "relevance": {
-        "keyword": "train_data",
-        "level": "strong",
-        "reason": "The paper heavily involves optimization techniques (fine-tuning and prompt engineering) for LLMs, which directly relates to LLM training and usage of training data."
-      }
-    },
-    {
-      "id": "2506.20623",
-      "abstract": "Closed-loop learning is the process of repeatedly estimating a model from data generated from the model itself. It is receiving great attention due to the possibility that large neural network models may, in the future, be primarily trained with data generated by artificial neural networks themselves. We study this process for models that belong to exponential families, deriving equations of motions that govern the dynamics of the parameters. We show that maximum likelihood estimation of the parameters endows sufficient statistics with the martingale property and that as a result the process converges to absorbing states that amplify initial biases present in the data. However, we show that this outcome may be prevented by polluting the data with an infinitesimal fraction of data points generated from a fixed model, by relying on maximum a posteriori estimation or by introducing regularisation. Furthermore, we show that the asymptotic behavior of the dynamics is not reparametrisation invariant.",
-      "authors": [
-        "Fariba Jangjoo",
-        "Matteo Marsili",
-        "Yasser Roudi"
+        "Soufiane Hayou",
+        "Nikhil Ghosh",
+        "Bin Yu"
       ],
       "last_revised_date": "2025/06/25",
       "license": "http://creativecommons.org/licenses/by/4.0/",
       "links": {
-        "Abstract": "https://arxiv.org/abs/2506.20623",
-        "HTML": "https://arxiv.org/html/2506.20623",
-        "PDF": "https://arxiv.org/pdf/2506.20623"
+        "Abstract": "https://arxiv.org/abs/2506.20629",
+        "HTML": "https://arxiv.org/html/2506.20629",
+        "PDF": "https://arxiv.org/pdf/2506.20629"
       },
       "subjects": [
         "Machine Learning (cs.LG)",
-        "Disordered Systems and Neural Networks (cond-mat.dis-nn)",
-        "Data Analysis, Statistics and Probability (physics.data-an)",
+        "Computation and Language (cs.CL)",
         "Machine Learning (stat.ML)"
       ],
       "submission_historys": [
         {
-          "date": "Wed, 25 Jun 2025 17:12:22 GMT",
-          "size": "1220kb",
+          "date": "Wed, 25 Jun 2025 17:25:02 GMT",
+          "size": "3256kb",
           "version": "v1"
         }
       ],
       "submitted_date": "2025/06/25",
-      "title": "Lost in Retraining: Roaming the Parameter Space of Exponential Families Under Closed-Loop Learning",
+      "title": "PLoP: Precise LoRA Placement for Efficient Finetuning of Large Models",
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "This paper discusses closed-loop learning and data generation by networks, including data manipulation to prevent bias amplification. It closely relates to how data is used in an LLM context."
+        "reason": "This paper introduces PLoP, a method for precise LoRA adapter placement, which is a significant contribution to the fine-tuning stage of large models, directly related to data processing for LLM training."
       }
     },
     {
-      "id": "2403.19827",
-      "abstract": "Language models learn rare syntactic phenomena, but the extent to which this is attributable to generalization vs. memorization is a major open question. To that end, we iteratively trained transformer language models on systematically manipulated corpora which were human-scale in size, and then evaluated their learning of a rare grammatical phenomenon: the English Article+Adjective+Numeral+Noun (AANN) construction (``a beautiful five days''). We compared how well this construction was learned on the default corpus relative to a counterfactual corpus in which AANN sentences were removed. We found that AANNs were still learned better than systematically perturbed variants of the construction. Using additional counterfactual corpora, we suggest that this learning occurs through generalization from related constructions (e.g., ``a few days''). An additional experiment showed that this learning is enhanced when there is more variability in the input. Taken together, our results provide an existence proof that LMs can learn rare grammatical phenomena by generalization from less rare phenomena. Data and code: https://github.com/kanishkamisra/aannalysis.",
+      "id": "2506.20639",
+      "abstract": "Diffusion large language models (dLLMs) are compelling alternatives to autoregressive (AR) models because their denoising models operate over the entire sequence. The global planning and iterative refinement features of dLLMs are particularly useful for code generation. However, current training and inference mechanisms for dLLMs in coding are still under-explored. To demystify the decoding behavior of dLLMs and unlock their potential for coding, we systematically investigate their denoising processes and reinforcement learning (RL) methods. We train a 7B dLLM, \\textbf{DiffuCoder}, on 130B tokens of code. Using this model as a testbed, we analyze its decoding behavior, revealing how it differs from that of AR models: (1) dLLMs can decide how causal their generation should be without relying on semi-AR decoding, and (2) increasing the sampling temperature diversifies not only token choices but also their generation order. This diversity creates a rich search space for RL rollouts. For RL training, to reduce the variance of token log-likelihood estimates and maintain training efficiency, we propose \\textbf{coupled-GRPO}, a novel sampling scheme that constructs complementary mask noise for completions used in training. In our experiments, coupled-GRPO significantly improves DiffuCoder's performance on code generation benchmarks (+4.4\\% on EvalPlus) and reduces reliance on AR causal during decoding. Our work provides deeper insight into the machinery of dLLM generation and offers an effective, diffusion-native RL training framework. https://github.com/apple/ml-diffucoder.",
       "authors": [
-        "Kanishka Misra",
-        "Kyle Mahowald"
+        "Shansan Gong and Ruixiang Zhang and Huangjie Zheng and Jiatao Gu and Navdeep Jaitly and Lingpeng Kong and Yizhe Zhang"
       ],
-      "last_revised_date": "2025/06/24",
-      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "last_revised_date": "2025/06/25",
+      "license": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
       "links": {
-        "Abstract": "https://arxiv.org/abs/2403.19827",
-        "HTML": "https://arxiv.org/html/2403.19827",
-        "PDF": "https://arxiv.org/pdf/2403.19827"
+        "Abstract": "https://arxiv.org/abs/2506.20639",
+        "HTML": "https://arxiv.org/html/2506.20639",
+        "PDF": "https://arxiv.org/pdf/2506.20639"
       },
       "subjects": [
         "Computation and Language (cs.CL)"
       ],
       "submission_historys": [
         {
-          "date": "Thu, 28 Mar 2024 20:35:10 GMT",
-          "size": "934kb",
+          "date": "Wed, 25 Jun 2025 17:35:47 GMT",
+          "size": "2004kb",
+          "version": "v1"
+        }
+      ],
+      "submitted_date": "2025/06/25",
+      "title": "DiffuCoder: Understanding and Improving Masked Diffusion Models for Code Generation",
+      "relevance": {
+        "keyword": "train_data",
+        "level": "strong",
+        "reason": "The paper involves training a large language model ('DiffuCoder') on 130B tokens of code and proposes new methods for reinforcement learning, focusing on the training process of LLMs for code generation."
+      }
+    },
+    {
+      "id": "2506.20573",
+      "abstract": "The widespread availability of large public datasets is a key factor behind the recent successes of statistical inference and machine learning methods. However, these datasets often contain some low-quality or contaminated data, to which many learning procedures are sensitive. Therefore, the question of whether and how public datasets should be prefiltered to facilitate accurate downstream learning arises. On a technical level this requires the construction of principled data prefiltering methods which are learner-agnostic robust, in the sense of provably protecting a set of pre-specified downstream learners from corrupted data. In this work, we formalize the problem of Learner-Agnostic Robust data Prefiltering (LARP), which aims at finding prefiltering procedures that minimize a worst-case loss over a pre-specified set of learners. We first instantiate our framework in the context of scalar mean estimation with Huber estimators under the Huber data contamination model. We provide a hardness result on a specific problem instance and analyze several natural prefiltering procedures. Our theoretical results indicate that performing LARP on a heterogeneous set of learners leads to some loss in model performance compared to the alternative of prefiltering data for each learner/use-case individually. We explore the resulting utility loss and its dependence on the problem parameters via extensive experiments on real-world image and tabular data, observing statistically significant reduction in utility. Finally, we model the trade-off between the utility drop and the cost of repeated (learner-specific) prefiltering within a game-theoretic framework and showcase benefits of LARP for large datasets.",
+      "authors": [
+        "Kristian Minchev",
+        "Dimitar Iliev Dimitrov",
+        "Nikola Konstantinov"
+      ],
+      "last_revised_date": "2025/06/25",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2506.20573",
+        "HTML": "https://arxiv.org/html/2506.20573",
+        "PDF": "https://arxiv.org/pdf/2506.20573"
+      },
+      "subjects": [
+        "Machine Learning (stat.ML)",
+        "Machine Learning (cs.LG)"
+      ],
+      "submission_historys": [
+        {
+          "date": "Wed, 25 Jun 2025 16:07:59 GMT",
+          "size": "110kb",
+          "version": "v1"
+        }
+      ],
+      "submitted_date": "2025/06/25",
+      "title": "LARP: Learner-Agnostic Robust Data Prefiltering",
+      "relevance": {
+        "keyword": "train_data",
+        "level": "strong",
+        "reason": "The paper introduces Learner-Agnostic Robust Data Prefiltering (LARP), focusing on constructing methods for robust data prefiltering which can enhance data quality for downstream learning, thus directly related to data processing for machine learning models."
+      }
+    },
+    {
+      "id": "2406.11898",
+      "abstract": "Knowledge Graph Completion (KGC) attempts to predict missing facts in a Knowledge Graph (KG). Recently, there's been an increased focus on designing KGC methods that can excel in the inductive setting, where a portion or all of the entities and relations seen in inference are unobserved during training. Numerous benchmark datasets have been proposed for inductive KGC, all of which are subsets of existing KGs used for transductive KGC. However, we find that the current procedure for constructing inductive KGC datasets inadvertently creates a shortcut that can be exploited even while disregarding the relational information. Specifically, we observe that the Personalized PageRank (PPR) score can achieve strong or near SOTA performance on most datasets. In this paper, we study the root cause of this problem. Using these insights, we propose an alternative strategy for constructing inductive KGC datasets that helps mitigate the PPR shortcut. We then benchmark multiple popular methods using the newly constructed datasets and analyze their performance. The new benchmark datasets help promote a better understanding of the capabilities and challenges of inductive KGC by removing any shortcuts that obfuscate performance. The code and dataset and can be found at https://github.com/HarryShomer/Better-Inductive-KGC.",
+      "authors": [
+        "Harry Shomer",
+        "Jay Revolinsky",
+        "Jiliang Tang"
+      ],
+      "last_revised_date": "2025/06/24",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2406.11898",
+        "HTML": "https://arxiv.org/html/2406.11898",
+        "PDF": "https://arxiv.org/pdf/2406.11898"
+      },
+      "subjects": [
+        "Artificial Intelligence (cs.AI)",
+        "Machine Learning (cs.LG)"
+      ],
+      "submission_historys": [
+        {
+          "date": "Fri, 14 Jun 2024 21:01:46 GMT",
+          "size": "1314kb",
           "version": "v1"
         },
         {
-          "date": "Sat, 10 Aug 2024 19:45:30 GMT",
-          "size": "1734kb",
+          "date": "Sun, 06 Oct 2024 07:06:34 GMT",
+          "size": "2101kb",
           "version": "v2"
         },
         {
-          "date": "Tue, 24 Jun 2025 21:39:54 GMT",
-          "size": "708kb",
+          "date": "Tue, 24 Jun 2025 21:16:19 GMT",
+          "size": "1525kb",
           "version": "v3"
         }
       ],
       "submitted_date": "2025/06/24",
-      "title": "Language Models Learn Rare Phenomena from Less Rare Phenomena: The Case of the Missing AANNs",
+      "title": "Towards Better Benchmark Datasets for Inductive Knowledge Graph Completion",
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper discusses the learning process of language models using manipulated corpora to evaluate training data's impact, directly addressing LLM training data and its influence on language model performance."
+        "reason": "The paper proposes an alternative strategy for constructing inductive Knowledge Graph Completion (KGC) datasets to improve benchmarking and remove shortcuts. This contribution relates to data construction and enhancement of dataset quality, making it relevant to data engineering for LLMs."
       },
       "tasks": [
-        "counterfactual",
-        "Memorization"
-      ]
-    },
-    {
-      "id": "2410.18362",
-      "abstract": "Web development involves turning UI designs into functional webpages, which can be difficult for both beginners and experienced developers due to the complexity of HTML's hierarchical structures and styles. While Large Language Models (LLMs) have shown promise in generating source code, two major challenges persist in UI-to-HTML code generation: (1) effectively representing HTML's hierarchical structure for LLMs, and (2) bridging the gap between the visual nature of UI designs and the text-based format of HTML code. To tackle these challenges, we introduce Waffle, a new fine-tuning strategy that uses a structure-aware attention mechanism to improve LLMs' understanding of HTML's structure and a contrastive fine-tuning approach to align LLMs' understanding of UI images and HTML code. Models fine-tuned with Waffle show up to 9.00 pp (percentage point) higher HTML match, 0.0982 higher CW-SSIM, 32.99 higher CLIP, and 27.12 pp higher LLEM on our new benchmark WebSight-Test and an existing benchmark Design2Code, outperforming current fine-tuning methods.",
-      "authors": [
-        "Shanchao Liang",
-        "Nan Jiang",
-        "Shangshu Qian",
-        "Lin Tan"
-      ],
-      "last_revised_date": "2025/06/24",
-      "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2410.18362",
-        "HTML": "https://arxiv.org/html/2410.18362",
-        "PDF": "https://arxiv.org/pdf/2410.18362"
-      },
-      "subjects": [
-        "Software Engineering (cs.SE)",
-        "Computation and Language (cs.CL)",
-        "Computer Vision and Pattern Recognition (cs.CV)"
-      ],
-      "submission_historys": [
-        {
-          "date": "Thu, 24 Oct 2024 01:49:49 GMT",
-          "size": "5906kb",
-          "version": "v1"
-        },
-        {
-          "date": "Tue, 24 Jun 2025 20:35:02 GMT",
-          "size": "5316kb",
-          "version": "v2"
-        }
-      ],
-      "submitted_date": "2025/06/24",
-      "title": "WAFFLE: Finetuning Multi-Modal Model for Automated Front-End Development",
-      "relevance": {
-        "keyword": "train_data",
-        "level": "strong",
-        "reason": "The paper discusses a fine-tuning strategy for LLMs in the context of UI-to-HTML code generation, which involves aspects of adapting models through specific datasets, making it strongly related to LLM training data."
-      },
-      "models": [
-        {
-          "model_path": "lt-asset/Waffle_VLM_WebSight",
-          "downloads": "32",
-          "likes": "12",
-          "trending_score": "0.0",
-          "link": "https://huggingface.co/lt-asset/Waffle_VLM_WebSight"
-        }
-      ],
-      "tasks": [
-        "Code Generation",
-        "SSIM"
+        "Inductive knowledge graph completion",
+        "Knowledge Graph Completion"
       ],
       "repo_urls": [
-        "https://github.com/lt-asset/Waffle"
-      ]
-    },
-    {
-      "id": "2412.06413",
-      "abstract": "Vision-and-Language Navigation (VLN) is a challenging task that requires an agent to navigate through photorealistic environments following natural-language instructions. One main obstacle existing in VLN is data scarcity, leading to poor generalization performance over unseen environments. Though data argumentation is a promising way for scaling up the dataset, how to generate VLN data both diverse and world-consistent remains problematic. To cope with this issue, we propose the world-consistent data generation (WCGEN), an efficacious data-augmentation framework satisfying both diversity and world-consistency, aimed at enhancing the generalization of agents to novel environments. Roughly, our framework consists of two stages, the trajectory stage which leverages a point-cloud based technique to ensure spatial coherency among viewpoints, and the viewpoint stage which adopts a novel angle synthesis method to guarantee spatial and wraparound consistency within the entire observation. By accurately predicting viewpoint changes with 3D knowledge, our approach maintains the world-consistency during the generation procedure. Experiments on a wide range of datasets verify the effectiveness of our method, demonstrating that our data augmentation strategy enables agents to achieve new state-of-the-art results on all navigation tasks, and is capable of enhancing the VLN agents' generalization ability to unseen environments.",
-      "authors": [
-        "Yu Zhong",
-        "Rui Zhang",
-        "Zihao Zhang",
-        "Shuo Wang",
-        "Chuan Fang",
-        "Xishan Zhang",
-        "Jiaming Guo",
-        "Shaohui Peng",
-        "Di Huang",
-        "Yanyang Yan",
-        "Xing Hu",
-        "Qi Guo"
-      ],
-      "last_revised_date": "2025/06/25",
-      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2412.06413",
-        "HTML": "https://arxiv.org/html/2412.06413",
-        "PDF": "https://arxiv.org/pdf/2412.06413"
-      },
-      "subjects": [
-        "Computer Vision and Pattern Recognition (cs.CV)"
-      ],
-      "submission_historys": [
-        {
-          "date": "Mon, 09 Dec 2024 11:40:54 GMT",
-          "size": "3216kb",
-          "version": "v1"
-        },
-        {
-          "date": "Wed, 25 Jun 2025 10:03:04 GMT",
-          "size": "2467kb",
-          "version": "v2"
-        }
-      ],
-      "submitted_date": "2025/06/25",
-      "title": "World-Consistent Data Generation for Vision-and-Language Navigation",
-      "relevance": {
-        "keyword": "train_data",
-        "level": "strong",
-        "reason": "The paper discusses data generation and augmentation specifically for enhancing generalization in vision-and-language navigation tasks, emphasizing world-consistent data generation methods. This is directly relevant to LLM training data as it addresses how data can be curated and augmented to improve model generalization."
-      },
-      "tasks": [
-        "Data Augmentation",
-        "Navigate",
-        "Vision and Language Navigation"
+        "https://github.com/HarryShomer/Better-Inductive-KGC"
       ]
     },
     {
@@ -845,7 +654,7 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper is directly related to LLM training data as it addresses issues with instruction fine-tuning datasets affecting LLM truthfulness, proposing methods for dataset modification to improve model performance."
+        "reason": "The paper proposes new instruction fine-tuning paradigms ($UNIT_{cut}$ and $UNIT_{ref}$) that involve processing IFT datasets to improve LLM truthfulness, directly involving training-stage data processing tasks."
       },
       "tasks": []
     },
@@ -885,7 +694,7 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper directly discusses selection and quality measurement of training data for LLMs, presenting a framework for high-quality long-context data selection, clearly focusing on LLM training data."
+        "reason": "The paper introduces a novel framework, LADM, specifically for selecting long-context training data for LLMs. The framework addresses data quality in a large-scale, multi-domain pre-training corpus, which is directly related to processing LLM training data."
       },
       "models": [
         {
@@ -907,96 +716,59 @@
       "tasks": []
     },
     {
-      "id": "2503.16789",
-      "abstract": "Human-LLM conversations are increasingly becoming more pervasive in peoples' professional and personal lives, yet many users still struggle to elicit helpful responses from LLM Chatbots. One of the reasons for this issue is users' lack of understanding in crafting effective prompts that accurately convey their information needs. Meanwhile, the existence of real-world conversational datasets on the one hand, and the text understanding faculties of LLMs on the other, present a unique opportunity to study this problem, and its potential solutions at scale. Thus, in this paper we present the first LLM-centric study of real human-AI chatbot conversations, focused on investigating aspects in which user queries fall short of expressing information needs, and the potential of using LLMs to rewrite suboptimal user prompts. Our findings demonstrate that rephrasing ineffective prompts can elicit better responses from a conversational system, while preserving the user's original intent. Notably, the performance of rewrites improves in longer conversations, where contextual inferences about user needs can be made more accurately. Additionally, we observe that LLMs often need to -- and inherently do -- make \\emph{plausible} assumptions about a user's intentions and goals when interpreting prompts. Our findings largely hold true across conversational domains, user intents, and LLMs of varying sizes and families, indicating the promise of using prompt rewriting as a solution for better human-AI interactions.",
+      "id": "2503.08727",
+      "abstract": "Dynamically integrating new or rapidly evolving information after (Large) Language Model pre-training remains challenging, particularly in low-data scenarios or when dealing with private and specialized documents. In-context learning and retrieval-augmented generation (RAG) face limitations, including their high inference costs and their inability to capture global document information. In this paper, we propose a way of modularizing knowledge by training document-level Knowledge Modules (KMs). KMs are lightweight components implemented as parameter-efficient LoRA modules, which are trained to store information about new documents and can be easily plugged into models on demand. We show that next-token prediction performs poorly as the training objective for KMs. We instead propose Deep Context Distillation: we learn KMs parameters such as to simulate hidden states and logits of a teacher that takes the document in context. Our method outperforms standard next-token prediction and pre-instruction training techniques, across two datasets. Finally, we highlight synergies between KMs and RAG.",
       "authors": [
-        "Rupak Sarkar",
-        "Bahareh Sarrafzadeh",
-        "Nirupama Chandrasekaran",
-        "Nagu Rangan",
-        "Philip Resnik",
-        "Longqi Yang",
-        "Sujay Kumar Jauhar"
+        "Lucas Caccia",
+        "Alan Ansell",
+        "Edoardo Ponti",
+        "Ivan Vuli\\'c",
+        "Alessandro Sordoni"
       ],
       "last_revised_date": "2025/06/25",
-      "license": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
       "links": {
-        "Abstract": "https://arxiv.org/abs/2503.16789",
-        "HTML": "https://arxiv.org/html/2503.16789",
-        "PDF": "https://arxiv.org/pdf/2503.16789"
-      },
-      "subjects": [
-        "Computation and Language (cs.CL)"
-      ],
-      "submission_historys": [
-        {
-          "date": "Fri, 21 Mar 2025 02:01:02 GMT",
-          "size": "9434kb",
-          "version": "v1"
-        },
-        {
-          "date": "Wed, 25 Jun 2025 06:44:58 GMT",
-          "size": "9678kb",
-          "version": "v2"
-        }
-      ],
-      "submitted_date": "2025/06/25",
-      "title": "Conversational User-AI Intervention: A Study on Prompt Rewriting for Improved LLM Response Generation",
-      "relevance": {
-        "keyword": "train_data",
-        "level": "strong",
-        "reason": "The paper focuses on improving LLM responses through prompt rewriting, indicating a reliance on conversational datasets for analysis. This shows an explicit focus on LLM training data, especially in terms of understanding user prompts and data representing human-AI interactions."
-      },
-      "tasks": [
-        "Chatbot",
-        "Response Generation"
-      ]
-    },
-    {
-      "id": "2504.08377",
-      "abstract": "We consider a model for explainable AI in which an explanation for a prediction $h(x)=y$ consists of a subset $S'$ of the training data (if it exists) such that all classifiers $h' \\in H$ that make at most $b$ mistakes on $S'$ predict $h'(x)=y$. Such a set $S'$ serves as a proof that $x$ indeed has label $y$ under the assumption that (1) the target function $h^\\star$ belongs to $H$, and (2) the set $S$ contains at most $b$ corrupted points. For example, if $b=0$ and $H$ is the family of linear classifiers in $\\mathbb{R}^d$, and if $x$ lies inside the convex hull of the positive data points in $S$ (and hence every consistent linear classifier labels $x$ as positive), then Carath\\'eodory's theorem states that $x$ lies inside the convex hull of $d+1$ of those points. So, a set $S'$ of size $d+1$ could be released as an explanation for a positive prediction, and would serve as a short proof of correctness of the prediction under the assumption of realizability.\n  In this work, we consider this problem more generally, for general hypothesis classes $H$ and general values $b\\geq 0$. We define the notion of the robust hollow star number of $H$ (which generalizes the standard hollow star number), and show that it precisely characterizes the worst-case size of the smallest certificate achievable, and analyze its size for natural classes. We also consider worst-case distributional bounds on certificate size, as well as distribution-dependent bounds that we show tightly control the sample size needed to get a certificate for any given test example. In particular, we define a notion of the certificate coefficient $\\varepsilon_x$ of an example $x$ with respect to a data distribution $D$ and target function $h^\\star$, and prove matching upper and lower bounds on sample size as a function of $\\varepsilon_x$, $b$, and the VC dimension $d$ of $H$.",
-      "authors": [
-        "Avrim Blum",
-        "Steve Hanneke",
-        "Chirag Pabbaraju",
-        "Donya Saless"
-      ],
-      "last_revised_date": "2025/06/24",
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2504.08377",
-        "HTML": "https://arxiv.org/html/2504.08377",
-        "PDF": "https://arxiv.org/pdf/2504.08377"
+        "Abstract": "https://arxiv.org/abs/2503.08727",
+        "HTML": "https://arxiv.org/html/2503.08727",
+        "PDF": "https://arxiv.org/pdf/2503.08727"
       },
       "subjects": [
         "Machine Learning (cs.LG)",
-        "Machine Learning (stat.ML)"
+        "Artificial Intelligence (cs.AI)"
       ],
       "submission_historys": [
         {
-          "date": "Fri, 11 Apr 2025 09:26:37 GMT",
-          "size": "35kb",
+          "date": "Tue, 11 Mar 2025 01:07:57 GMT",
+          "size": "68kb",
           "version": "v1"
         },
         {
-          "date": "Fri, 09 May 2025 23:30:17 GMT",
-          "size": "37kb",
+          "date": "Tue, 29 Apr 2025 17:11:44 GMT",
+          "size": "731kb",
           "version": "v2"
         },
         {
-          "date": "Tue, 24 Jun 2025 19:55:51 GMT",
-          "size": "38kb",
+          "date": "Wed, 25 Jun 2025 14:45:56 GMT",
+          "size": "147kb",
           "version": "v3"
         }
       ],
-      "submitted_date": "2025/06/24",
-      "title": "Proofs as Explanations: Short Certificates for Reliable Predictions",
+      "submitted_date": "2025/06/25",
+      "title": "Training Plug-n-Play Knowledge Modules with Deep Context Distillation",
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper discusses using subsets of the training data to provide explanations for predictions, which is directly connected to the use and properties of training datasets in models."
+        "reason": "The paper discusses modularizing knowledge and training document-level Knowledge Modules (KMs) using Deep Context Distillation, which directly pertains to the processing and preparation of training data for LLMs post-training, particularly in low-data scenarios."
       },
-      "tasks": []
+      "tasks": [
+        "In-Context Learning",
+        "Language Modeling",
+        "Language Modelling",
+        "Large Language Model",
+        "RAG",
+        "Retrieval",
+        "Retrieval-augmented Generation"
+      ]
     },
     {
       "id": "2505.12434",
@@ -1035,7 +807,7 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "This paper is explicitly focused on LLM training data as it discusses creating new datasets (VideoRFT-CoT-102K and VideoRFT-RL-310K) for training MLLMs and outlines methods for dataset curation and annotation pertinent to enhancing LLMs' video reasoning capabilities."
+        "reason": "The paper's primary contribution is the construction of a novel video CoT curation pipeline to create high-quality datasets (VideoRFT-CoT-102K and VideoRFT-RL-310K) for fine-tuning LLMs, directly addressing the challenges in large-scale data generation and processing."
       },
       "tasks": [
         "Reinforcement Learning (RL)"
@@ -1089,7 +861,7 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper focuses on using LLMs to generate synthetic training data to improve search models, highlighting the impact and quality of LLM-generated data."
+        "reason": "The paper primarily focuses on generating synthetic training data using LLMs to enhance EBR models, describing processes like query generation, product listing enhancement, and analysis of their impact on model training."
       },
       "tasks": [
         "Data Augmentation",
@@ -1099,75 +871,58 @@
       ]
     },
     {
-      "id": "2505.20767",
-      "abstract": "Faithfulness hallucinations are claims generated by a Large Language Model (LLM) not supported by contexts provided to the LLM. Lacking assessment standards, existing benchmarks focus on \"factual statements\" that rephrase source materials while overlooking \"cognitive statements\" that involve making inferences from the given context. Consequently, evaluating and detecting the hallucination of cognitive statements remains challenging. Inspired by how evidence is assessed in the legal domain, we design a rigorous framework to assess different levels of faithfulness of cognitive statements and introduce the CogniBench dataset where we reveal insightful statistics. To keep pace with rapidly evolving LLMs, we further develop an automatic annotation pipeline that scales easily across different models. This results in a large-scale CogniBench-L dataset, which facilitates training accurate detectors for both factual and cognitive hallucinations. We release our model and datasets at: https://github.com/FUTUREEEEEE/CogniBench",
+      "id": "2505.23018",
+      "abstract": "In recent years, emotion recognition plays a critical role in applications such as human-computer interaction, mental health monitoring, and sentiment analysis. While datasets for emotion analysis in languages such as English have proliferated, there remains a pressing need for high-quality, comprehensive datasets tailored to the unique linguistic, cultural, and multimodal characteristics of Chinese. In this work, we propose \\textbf{EmotionTalk}, an interactive Chinese multimodal emotion dataset with rich annotations. This dataset provides multimodal information from 19 actors participating in dyadic conversational settings, incorporating acoustic, visual, and textual modalities. It includes 23.6 hours of speech (19,250 utterances), annotations for 7 utterance-level emotion categories (happy, surprise, sad, disgust, anger, fear, and neutral), 5-dimensional sentiment labels (negative, weakly negative, neutral, weakly positive, and positive) and 4-dimensional speech captions (speaker, speaking style, emotion and overall). The dataset is well-suited for research on unimodal and multimodal emotion recognition, missing modality challenges, and speech captioning tasks. To our knowledge, it represents the first high-quality and versatile Chinese dialogue multimodal emotion dataset, which is a valuable contribution to research on cross-cultural emotion analysis and recognition. Additionally, we conduct experiments on EmotionTalk to demonstrate the effectiveness and quality of the dataset. It will be open-source and freely available for all academic purposes. The dataset and codes will be made available at: https://github.com/NKU-HLT/EmotionTalk.",
       "authors": [
-        "Xiaqiang Tang",
-        "Jian Li",
-        "Keyu Hu",
-        "Du Nan",
-        "Xiaolong Li",
-        "Xi Zhang",
-        "Weigao Sun",
-        "Sihong Xie"
+        "Haoqin Sun",
+        "Xuechen Wang",
+        "Jinghua Zhao",
+        "Shiwan Zhao",
+        "Jiaming Zhou",
+        "Hui Wang",
+        "Jiabei He",
+        "Aobo Kong",
+        "Xi Yang",
+        "Yequan Wang",
+        "Yonghua Lin",
+        "Yong Qin"
       ],
       "last_revised_date": "2025/06/25",
-      "license": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
       "links": {
-        "Abstract": "https://arxiv.org/abs/2505.20767",
-        "HTML": "https://arxiv.org/html/2505.20767",
-        "PDF": "https://arxiv.org/pdf/2505.20767"
+        "Abstract": "https://arxiv.org/abs/2505.23018",
+        "HTML": "https://arxiv.org/html/2505.23018",
+        "PDF": "https://arxiv.org/pdf/2505.23018"
       },
       "subjects": [
-        "Computation and Language (cs.CL)",
-        "Artificial Intelligence (cs.AI)"
+        "Multimedia (cs.MM)"
       ],
       "submission_historys": [
         {
-          "date": "Tue, 27 May 2025 06:16:27 GMT",
-          "size": "8274kb",
+          "date": "Thu, 29 May 2025 02:56:08 GMT",
+          "size": "984kb",
           "version": "v1"
         },
         {
-          "date": "Wed, 28 May 2025 06:17:19 GMT",
-          "size": "8492kb",
+          "date": "Fri, 30 May 2025 05:09:13 GMT",
+          "size": "984kb",
           "version": "v2"
         },
         {
-          "date": "Fri, 30 May 2025 08:16:51 GMT",
-          "size": "3733kb",
+          "date": "Wed, 25 Jun 2025 09:38:19 GMT",
+          "size": "984kb",
           "version": "v3"
-        },
-        {
-          "date": "Wed, 25 Jun 2025 14:02:19 GMT",
-          "size": "3825kb",
-          "version": "v4"
         }
       ],
       "submitted_date": "2025/06/25",
-      "title": "CogniBench: A Legal-inspired Framework and Dataset for Assessing Cognitive Faithfulness of Large Language Models",
+      "title": "EmotionTalk: An Interactive Chinese Multimodal Emotion Dataset With Rich Annotations",
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper introduces a dataset, CogniBench, which is relevant for assessing the faithfulness of LLMs, directly involving training data aspects."
+        "reason": "The paper introduces EmotionTalk, a comprehensive Chinese multimodal emotion dataset with rich annotations, directly relevant to the construction and processing of training data for LLMs, particularly for emotion recognition tasks."
       },
-      "models": [
-        {
-          "model_path": "future7/CogniDet",
-          "downloads": "95",
-          "likes": "1",
-          "trending_score": "0.0",
-          "link": "https://huggingface.co/future7/CogniDet"
-        }
-      ],
-      "tasks": [
-        "Hallucination",
-        "Language Modeling",
-        "Language Modelling",
-        "Large Language Model"
-      ],
       "repo_urls": [
-        "https://github.com/futureeeeee/cognibench"
+        "https://github.com/nku-hlt/emotiontalk"
       ]
     },
     {
@@ -1211,60 +966,9 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper proposes a method to enhance pre-training data quality and quantity by recycling web data, directly addressing LLM training data concerns such as data filtering and enrichment."
+        "reason": "The paper contributes a novel method (REWIRE) for transforming and recycling discarded web data to enhance pre-training data quality and quantity for language models, directly addressing data filtering and enrichment in LLM data engineering."
       },
       "tasks": []
-    },
-    {
-      "id": "2506.08400",
-      "abstract": "Large Language models (LLMs) have demonstrated impressive performance on a wide range of tasks, including in multimodal settings such as speech. However, their evaluation is often limited to English and a few high-resource languages. For low-resource languages, there is no standardized evaluation benchmark. In this paper, we address this gap by introducing mSTEB, a new benchmark to evaluate the performance of LLMs on a wide range of tasks covering language identification, text classification, question answering, and translation tasks on both speech and text modalities. We evaluated the performance of leading LLMs such as Gemini 2.0 Flash and GPT-4o (Audio) and state-of-the-art open models such as Qwen 2 Audio and Gemma 3 27B. Our evaluation shows a wide gap in performance between high-resource and low-resource languages, especially for languages spoken in Africa and Americas/Oceania. Our findings show that more investment is needed to address their under-representation in LLMs coverage.",
-      "authors": [
-        "Luel Hagos Beyene",
-        "Vivek Verma",
-        "Min Ma",
-        "Jesujoba O. Alabi",
-        "Fabian David Schmidt",
-        "Joyce Nakatumba-Nabende",
-        "David Ifeoluwa Adelani"
-      ],
-      "last_revised_date": "2025/06/25",
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2506.08400",
-        "HTML": "https://arxiv.org/html/2506.08400",
-        "PDF": "https://arxiv.org/pdf/2506.08400"
-      },
-      "subjects": [
-        "Computation and Language (cs.CL)",
-        "Machine Learning (cs.LG)",
-        "Sound (cs.SD)",
-        "Audio and Speech Processing (eess.AS)"
-      ],
-      "submission_historys": [
-        {
-          "date": "Tue, 10 Jun 2025 03:15:08 GMT",
-          "size": "347kb",
-          "version": "v1"
-        },
-        {
-          "date": "Wed, 25 Jun 2025 00:58:19 GMT",
-          "size": "347kb",
-          "version": "v2"
-        }
-      ],
-      "submitted_date": "2025/06/25",
-      "title": "mSTEB: Massively Multilingual Evaluation of LLMs on Speech and Text Tasks",
-      "relevance": {
-        "keyword": "train_data",
-        "level": "strong",
-        "reason": "The paper introduces a multilingual evaluation benchmark for LLMs, focusing on testing performance across different languages. This involves considerations of dataset and language representativeness for LLMs, hence strongly related to LLM training data."
-      },
-      "tasks": [
-        "Language Identification",
-        "Question Answering",
-        "text-classification",
-        "Text Classification"
-      ]
     },
     {
       "id": "2506.14293",
@@ -1308,7 +1012,7 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper presents a large-scale pre-training dataset for music modeling, explicitly discussing data collection and quality, which are directly relevant to the creation and use of LLM training datasets."
+        "reason": "This paper's primary contribution involves the creation of 'Sleeping-DISCO 9M', a large-scale dataset for pre-training generative music models, which falls within training data processing by constructing a novel dataset for model training."
       },
       "datasets": [
         {
@@ -1364,7 +1068,7 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "This paper is concerned with datasets for multimodal document understanding, specifically improving data quality and employing a pre-trained model to evaluate data, directly related to LLM training data quality."
+        "reason": "The paper contributes significantly to data quality optimization for multimodal document understanding by proposing a method for filtering and enhancing synthetic data. It involves data processing strategies relevant to LLM training stages, such as ensuring high-quality training data."
       }
     },
     {
@@ -1423,7 +1127,7 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper explicitly mentions the development of data construction pipelines and datasets for training a generative model. This is closely related to LLM training data as it involves the processes of collecting and curating datasets used for model training."
+        "reason": "The paper describes the development of comprehensive data construction pipelines, specifically for image editing and in-context generation data, which are crucial for training the OmniGen2 model. This indicates a significant focus on the processing and preparation of training data."
       },
       "models": [
         {
@@ -1484,29 +1188,25 @@
       "relevance": {
         "keyword": "train_data",
         "level": "strong",
-        "reason": "The paper explicitly focuses on the diversity of LLM-generated data and its impact on model fine-tuning, directly relating to training data quality and content."
+        "reason": "This paper examines the diversity and its impact on model fine-tuning, specifically addressing the use of LLM-generated data as a training strategy to enhance downstream model performance. It highlights methods for using synthetic data from LLM outputs, which is directly related to LLM data processing."
       }
     }
   ],
   "subjects": [
     "Computer Vision and Pattern Recognition (cs.CV)",
+    "Multimedia (cs.MM)",
     "Computation and Language (cs.CL)",
     "Sound (cs.SD)",
-    "Systems and Control (eess.SY)",
     "Cryptography and Security (cs.CR)",
     "Information Retrieval (cs.IR)",
     "Artificial Intelligence (cs.AI)",
-    "Disordered Systems and Neural Networks (cond-mat.dis-nn)",
-    "Data Analysis, Statistics and Probability (physics.data-an)",
-    "Systems and Control (cs.SY)",
     "Audio and Speech Processing (eess.AS)",
     "Machine Learning (stat.ML)",
-    "Computers and Society (cs.CY)",
     "Software Engineering (cs.SE)",
     "Machine Learning (cs.LG)"
   ],
   "prompt": {
-    "train_data": "\nYou are an expert in information retrieval. I will provide you with a list of research papers from arXiv, specifically in the *cs* (Computer Science) category.\n\nYour task is to analyze each paper and determine its relevance to the topic of **LLM training data** \u2014 that is, any content, methodology, or discussion related to data used in training large language models (LLMs), such as data collection, curation, filtering, privacy, quality, or representativeness.\n\nClassify each paper into one of the following relevance levels:\n\n* `\"strong\"`: The paper is explicitly focused on LLM training data (e.g., it proposes a dataset, evaluates dataset quality, or discusses training data's impact on LLMs).\n* `\"weak\"`: The paper touches on topics indirectly related to LLM training data (e.g., discusses user-generated content, data annotation, or ethics in data use) but it's not the main focus.\n* `\"none\"`: The paper is not related to LLM training data.\n\nReturn your results in the following JSON format:\n\n```json\n{\n  \"result\": [\n    {\n      \"id\": \"paper id\",\n      \"level\": \"strong | weak | none\",\n      \"reason\": \"Brief justification based on the paper content\"\n    },\n    {\n      \"id\": \"paper id\",\n      \"level\": \"strong | weak | none\",\n      \"reason\": \"Brief justification based on the paper content\"\n    }\n  ]\n}\n```\n\nBe concise but specific in your reasoning. Mention key terms (e.g., \u201ctraining data\u201d, \u201cdataset\u201d, \u201ccorpus\u201d, \u201cdata collection\u201d) or specific sections (e.g., abstract, methodology) that informed your decision when applicable.\n"
+    "train_data": "\nYou are a computer science expert specializing in training data processing and data engineering for large language models (LLMs). You are skilled at identifying technical content in research papers that is related to **LLM training data**. I will provide you with a list of research papers from the arXiv (cs.\\*) domain.\n\n---\n\n### **Task Objective**\n\nFor each paper, determine whether it is directly related to the **processing of training data for LLMs**. Focus on identifying contributions in the following two areas:\n\n1. **Data Engineering Stage**:\n\n   * Includes tasks such as data collection, construction, cleaning, noise reduction, deduplication, filtering, format transformation, and data quality enhancement.\n\n2. **Training-Stage Data Processing**:\n\n   * Includes data preparation and processing for pre-training and post-training stages (e.g., fine-tuning, supervised fine-tuning (SFT), instruction tuning, etc.).\n\n---\n\n### **Relevance Level Classification Criteria**\n\n* `\"strong\"`: The paper's primary contribution involves the design, construction, or processing of LLM training data\u2014for example, proposing a novel data pipeline, creating large-scale training data, or contributing new methods for improving data quality.\n* `\"weak\"`: The paper mentions data sources or preprocessing briefly in the background or experiments section, uses public datasets or existing tools, and does not propose new data-related methods.\n* `\"none\"`: The paper does not address any aspect of LLM training data collection, construction, or processing.\n\n---\n\n### **Output Format (strictly follow this JSON schema)**\n\n```json\n{\n  \"result\": [\n    {\n      \"id\": \"<paper id>\",\n      \"level\": \"strong | weak | none\",\n      \"reason\": \"A 1-2 sentence explanation citing key parts of the abstract or methodology that justify the classification\"\n    }\n    // More papers...\n  ]\n}\n"
   },
   "description": "Data source: https://arxiv.org/list/cs/new"
 }
