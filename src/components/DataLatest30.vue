@@ -81,6 +81,7 @@
             />
           </el-select>
         </div>
+        
       </div>
       <div style="display: flex; justify-content: end">
         <el-button @click="clearAllFilters">清除所有筛选</el-button>
@@ -268,12 +269,14 @@ const subjectValue = ref("All"); // 主题筛选值，默认为All
 const relevanceValue = ref("All"); // 相关性筛选值，默认为All
 
 const relevanceList = ref([]);
-if (props.type === "Creativity") {
-  relevanceList.value = ["Creativity"];
-  relevanceValue.value = "Creativity"; // 默认选择Creativity
-} else {
-  relevanceList.value = ["All"];
-}
+relevanceList.value = ["All","strong", "weak", "none"];
+
+// if (props.type === "Creativity") {
+  
+//   relevanceValue.value = "All"; // 默认选择Creativity
+// } else {
+//   relevanceList.value = ["All"];
+// }
 
 // 分页相关状态
 const currentPage = ref(1);
@@ -297,6 +300,13 @@ const filteredData = computed(() => {
   if (subjectValue.value && subjectValue.value !== "All") {
     result = result.filter((item) => {
       return item.subjects && item.subjects.includes(subjectValue.value);
+    });
+  }
+
+  // 按relevance.level筛选
+  if (relevanceValue.value && relevanceValue.value !== "All") {
+    result = result.filter((item) => {
+      return item.relevance && item.relevance.level === relevanceValue.value;
     });
   }
 
@@ -379,11 +389,17 @@ const clearDateFilter = () => {
 const clearAllFilters = () => {
   dateRange.value = null;
   subjectValue.value = "All";
+  relevanceValue.value = "All";
   currentPage.value = 1;
 };
 
 // Subject筛选变化处理
 watch(subjectValue, () => {
+  currentPage.value = 1; // 重置到第一页
+});
+
+// Relevance筛选变化处理
+watch(relevanceValue, () => {
   currentPage.value = 1; // 重置到第一页
 });
 
