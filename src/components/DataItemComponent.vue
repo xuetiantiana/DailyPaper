@@ -1,7 +1,7 @@
 <template>
   <div class="data-item-component">
     <div class="dt">
-      <a>[{{ num }}]&nbsp;&nbsp;</a>
+      <a style="color: #000">[{{ num }}]&nbsp;&nbsp;</a>
       <a :href="dataItem.links.Abstract" title="Abstract" target="_blank"
         >{{ dataItem.source }}:{{ dataItem.id }}</a
       >
@@ -34,94 +34,115 @@
       </div>
       <div class="abstract">{{ dataItem.abstract }}</div>
       <div class="relevance" style="margin-top: 1em">
-        <p><b>Relevance Rating:</b> <span style="text-transform: capitalize;">{{ dataItem.relevance.level }}</span></p>
+        <p>
+          <b>Relevance Rating:</b>
+          <span style="text-transform: capitalize">{{
+            dataItem.relevance.level
+          }}</span>
+        </p>
         <p><b>Relevance Summary:</b> {{ dataItem.relevance.reason }}</p>
       </div>
-      <div>
+
+      <!-- 折叠/展开控制 -->
+      <div class="toggle-header" @click="toggleExpanded">
+        <span>{{ isExpanded ? "Hide" : "Show" }} Details</span>
+        <el-icon :class="{ rotate: isExpanded }">
+          <ArrowDown />
+        </el-icon>
+      </div>
+
+      <!-- 可折叠的内容 -->
+      <div class="toggle-content" :class="{ expanded: isExpanded }">
+        <!-- 需要折叠起来 -->
+        <!-- <div>
         <b>Last_revised_date:</b>
         {{ dataItem.last_revised_date }}
       </div>
-      <div>
-        <b>License:</b>
-        <a :href="dataItem.license" target="_blank">{{ dataItem.license }}</a>
-      </div>
-      <p v-if="dataItem.type"><b>Type: </b> {{ dataItem.type }}</p>
-      <p v-if="dataItem.repo_urls">
-        <b>Repo_urls: </b>
-        <span v-for="(value, index) in dataItem.repo_urls" :key="index">
-          <a :href="value" target="_blank">{{ value }}</a
-          ><span v-if="index < dataItem.repo_urls.length - 1"
-            >, &nbsp;&nbsp;
+      <p v-if="dataItem.type"><b>Type: </b> {{ dataItem.type }}</p> -->
+        <p><b>Submission_historys:</b> {{ dataItem.submission_historys }}</p>
+        <div>
+          <b>License: </b>
+          <a :href="dataItem.license" target="_blank">{{ dataItem.license }}</a>
+        </div>
+        <p v-if="dataItem.tasks">
+          <b>Tasks: </b>
+          <span v-for="(value, index) in dataItem.tasks" :key="index">
+            {{ value
+            }}<span v-if="index < dataItem.tasks.length - 1"
+              >, &nbsp;&nbsp;
+            </span>
           </span>
-        </span>
-      </p>
-      <p v-if="dataItem.conference">
-        <b>Conference: </b>{{ dataItem.conference }}
-      </p>
-      <p v-if="dataItem.conference_url_abs">
-        <b>Conference_url_abs:</b
-        ><a :href="dataItem.conference_url_abs" target="_blank">{{
-          dataItem.conference_url_abs
-        }}</a>
-      </p>
-      <p v-if="dataItem.tasks">
-        <b>Tasks: </b>
-        <span v-for="(value, index) in dataItem.tasks" :key="index">
-          {{ value
-          }}<span v-if="index < dataItem.tasks.length - 1"
-            >, &nbsp;&nbsp;
-          </span>
-        </span>
-      </p>
-      <p v-if="dataItem.comments"><b>comments: </b>{{ dataItem.comments }}</p>
+        </p>
 
-      <div class="flex-item" v-if="dataItem.datasets">
-        <b>Datasets:</b>
-        <div>
-          <p v-for="(dataset, index) in dataItem.datasets" :key="index">
-            <span v-for="(value, key, index) in dataset" :key="index">
-              {{ key }}:
-              <template v-if="key == 'link'">
-                <a :href="value" target="_blank">{{ value }}</a>
-              </template>
-              <template v-else>
-                {{ value }}
-              </template>
-              <span v-if="index < Object.entries(dataset).length - 1"
-                >, &nbsp;&nbsp;
-              </span>
+        <p v-if="dataItem.repo_urls">
+          <b>Repo_urls: </b>
+          <span v-for="(value, index) in dataItem.repo_urls" :key="index">
+            <a :href="value" target="_blank">{{ value }}</a
+            ><span v-if="index < dataItem.repo_urls.length - 1"
+              >, &nbsp;&nbsp;
             </span>
-          </p>
-        </div>
-      </div>
-      <div class="flex-item" v-if="dataItem.models">
-        <b>Models:</b>
-        <div>
-          <p v-for="(dataset, index) in dataItem.models" :key="index">
-            <span v-for="(value, key, index) in dataset" :key="index">
-              {{ key }}:
-              <template v-if="key == 'link'">
-                <a :href="value" target="_blank">{{ value }}</a>
-              </template>
-              <template v-else>
-                {{ value }}
-              </template>
-              <span v-if="index < Object.entries(dataset).length - 1"
-                >, &nbsp;&nbsp;
+          </span>
+        </p>
+        <p v-if="dataItem.conference">
+          <b>Conference: </b>{{ dataItem.conference }}
+        </p>
+        <p v-if="dataItem.conference_url_abs">
+          <b>Conference_url_abs:</b
+          ><a :href="dataItem.conference_url_abs" target="_blank">{{
+            dataItem.conference_url_abs
+          }}</a>
+        </p>
+
+        <p v-if="dataItem.comments"><b>comments: </b>{{ dataItem.comments }}</p>
+
+        <div class="flex-item" v-if="dataItem.datasets">
+          <b>Datasets:</b>
+          <div>
+            <p v-for="(dataset, index) in dataItem.datasets" :key="index">
+              <span v-for="(value, key, index) in dataset" :key="index">
+                {{ key }}:
+                <template v-if="key == 'link'">
+                  <a :href="value" target="_blank">{{ value }}</a>
+                </template>
+                <template v-else>
+                  {{ value }}
+                </template>
+                <span v-if="index < Object.entries(dataset).length - 1"
+                  >, &nbsp;&nbsp;
+                </span>
               </span>
-            </span>
-          </p>
+            </p>
+          </div>
         </div>
+        <div class="flex-item" v-if="dataItem.models">
+          <b>Models:</b>
+          <div>
+            <p v-for="(dataset, index) in dataItem.models" :key="index">
+              <span v-for="(value, key, index) in dataset" :key="index">
+                {{ key }}:
+                <template v-if="key == 'link'">
+                  <a :href="value" target="_blank">{{ value }}</a>
+                </template>
+                <template v-else>
+                  {{ value }}
+                </template>
+                <span v-if="index < Object.entries(dataset).length - 1"
+                  >, &nbsp;&nbsp;
+                </span>
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <p><b>Submitted_date:</b> {{ dataItem.submitted_date }}</p>
       </div>
-      <p><b>Submission_historys:</b> {{ dataItem.submission_historys }}</p>
-      <p><b>submitted_date:</b> {{ dataItem.submitted_date }}</p>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, watch, defineProps, nextTick } from "vue";
-import selectComponent from "@/components/selectComponent.vue";
+import { ref, computed, watch, defineProps, nextTick, defineExpose } from "vue";
+import { ArrowDown } from "@element-plus/icons-vue";
 
 const props = defineProps({
   dataItem: {
@@ -134,6 +155,22 @@ const props = defineProps({
     required: true,
     default: 0,
   },
+});
+
+const isExpanded = ref(false);
+
+const toggleExpanded = () => {
+  isExpanded.value = !isExpanded.value;
+};
+
+// 外部控制展开状态的方法
+const setExpandedState = (state) => {
+  isExpanded.value = state;
+};
+
+// 暴露方法给父组件
+defineExpose({
+  setExpandedState,
 });
 </script>
 
@@ -176,8 +213,40 @@ const props = defineProps({
     display: flex;
     flex-direction: row;
     & > b {
-      margin-top: 0.2em;
       margin-right: 0.2em;
+    }
+  }
+
+  .toggle-header {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    padding: 0.5em 0;
+    margin-top: 1em;
+    user-select: none;
+    gap: 0 0.5em;
+    &:hover {
+      color: #409eff;
+    }
+
+    .el-icon {
+      &.rotate {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .toggle-content {
+    overflow: hidden;
+    background: #fafafa;
+    padding: 0 1em;
+    display: none;
+
+    &.expanded {
+      display: block;
+      padding: 1em;
     }
   }
 }

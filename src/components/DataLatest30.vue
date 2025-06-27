@@ -120,6 +120,14 @@
         <span v-if="dateRange && dateRange.length === 2" class="filter-info">
           （已筛选：{{ dateRange[0] }} 至 {{ dateRange[1] }}）
         </span>
+
+        <!-- 统一展开/收起控制 -->
+        <div class="toggle-all-control" @click="toggleAllDetails">
+          <el-icon :class="{ rotate: isAllExpanded }">
+            <ArrowDown />
+          </el-icon>
+          <span>{{ isAllExpanded ? "Collapse All" : "Expand All" }}</span>
+        </div>
       </div>
 
       <ul class="result-list" style="margin-top: 1em">
@@ -132,6 +140,7 @@
           <DataItemComponent
             :dataItem="item"
             :num="(currentPage - 1) * pageSize + index + 1"
+            :ref="(el) => setItemRef(el, index)"
           ></DataItemComponent>
         </li>
       </ul>
@@ -157,6 +166,7 @@
 
 <script setup>
 import { ref, computed, watch, defineProps, nextTick } from "vue";
+import { ArrowDown } from "@element-plus/icons-vue";
 import selectComponent from "@/components/selectComponent.vue";
 import DataItemComponent from "@/components/DataItemComponent.vue";
 
@@ -395,6 +405,35 @@ const getCurrentDate = () => {
     day: "numeric",
   });
 };
+
+const isAllExpanded = ref(false);
+const itemRefs = ref([]);
+
+// 设置子组件引用
+const setItemRef = (el, index) => {
+  if (el) {
+    itemRefs.value[index] = el;
+  }
+};
+
+// 统一展开/收起所有详情
+const toggleAllDetails = () => {
+  isAllExpanded.value = !isAllExpanded.value;
+
+  nextTick(() => {
+    itemRefs.value.forEach((item) => {
+      if (item && item.setExpandedState) {
+        item.setExpandedState(isAllExpanded.value);
+      }
+    });
+  });
+};
+
+// 监听分页数据变化，重置引用数组
+watch(paginatedData, () => {
+  itemRefs.value = [];
+  isAllExpanded.value = false;
+});
 </script>
 
 <style scoped lang="scss">
@@ -435,6 +474,28 @@ const getCurrentDate = () => {
     color: #666;
     font-size: 14px;
     margin-bottom: 0em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .toggle-all-control {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      cursor: pointer;
+      color: #409eff;
+      font-size: 14px;
+
+      &:hover {
+        color: #66b1ff;
+      }
+
+      .el-icon {
+        &.rotate {
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
 
   .pagination-container {
