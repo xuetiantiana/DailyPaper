@@ -30831,5 +30831,11 @@
   "prompt": {
     "train_data": "\nYou are a computer science expert specializing in training data processing and data engineering for large language models (LLMs). You are skilled at identifying technical content in research papers that is related to **LLM training data**. I will provide you with a list of research papers from the arXiv (cs.\\*) domain.\n\n---\n\n### **Task Objective**\n\nFor each paper, determine whether it is directly related to the **processing of training data for LLMs**. Focus on identifying contributions in the following two areas:\n\n1. **Data Engineering Stage**:\n\n   * Includes tasks such as data collection, construction, cleaning, noise reduction, deduplication, filtering, format transformation, and data quality enhancement.\n\n2. **Training-Stage Data Processing**:\n\n   * Includes data preparation and processing for pre-training and post-training stages (e.g., fine-tuning, supervised fine-tuning (SFT), instruction tuning, etc.).\n\n---\n\n### **Relevance Level Classification Criteria**\n\n* `\"strong\"`: The paper's primary contribution involves the design, construction, or processing of LLM training data\u2014for example, proposing a novel data pipeline, creating large-scale training data, or contributing new methods for improving data quality.\n* `\"weak\"`: The paper mentions data sources or preprocessing briefly in the background or experiments section, uses public datasets or existing tools, and does not propose new data-related methods.\n* `\"none\"`: The paper does not address any aspect of LLM training data collection, construction, or processing.\n\n---\n\n### **Output Format (strictly follow this JSON schema)**\n\n```json\n{\n  \"result\": [\n    {\n      \"id\": \"<paper id>\",\n      \"level\": \"strong | weak | none\",\n      \"reason\": \"A 1-2 sentence explanation citing key parts of the abstract or methodology that justify the classification\"\n    }\n    // More papers...\n  ]\n}\n"
   },
-  "description": "Data source: https://arxiv.org/list/cs/new"
+  "description": "Data source: https://arxiv.org/list/cs/new",
+  "level_tatistics": {
+    "core": 39,
+    "none-irrelevant": 616,
+    "partial": 99
+  },
+  "arxiv_update_date": "2025-06-27"
 }
