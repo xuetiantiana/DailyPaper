@@ -54,7 +54,6 @@
 <script setup>
 import { ref, onMounted, computed } from "vue";
 import axios from "axios";
-import selectComponent from "@/components/selectComponent.vue";
 import DataLatest30 from "@/components/DataLatest30.vue";
 const currentIndex = ref(0);
 
@@ -102,7 +101,6 @@ onMounted(async () => {
 .home-template {
   padding: 1em 0;
   margin: 0 auto;
-  color: #070707;
   h2 {
     font-size: 2.5em;
     margin: 0.3em 0;

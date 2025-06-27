@@ -1,10 +1,7 @@
 <template>
-  <div class="">
-    <div class="box" style="margin-top: .8em;">
-      <div
-        class="prompt-box"
-        :class="{ expanded: isPromptExpanded }"
-      >
+  <div class="data-list-template">
+    <div class="box" style="margin-top: 0.8em">
+      <div class="prompt-box" :class="{ expanded: isPromptExpanded }">
         <p style="margin-bottom: 0.2em">
           <b v-html="formatDescription(description)"></b>
         </p>
@@ -17,75 +14,102 @@
         </el-button>
       </div>
     </div>
+    <div class="summary-box">
+      <p>Showing new listings for {{ getCurrentDate() }}</p>
+      <p>
+        Total of {{ props.dataList.length }} entries ({{ strongCount }} Strong,
+        {{ weakCount }} Weak, {{ noneCount }} None)
+      </p>
+    </div>
     <!-- Data Latest 30 标签页添加分页功能 -->
     <div>
       <!-- 日期范围筛选 -->
       <!-- <selectComponent></selectComponent> -->
-      <div class="filter-container" style="margin-top: 2em">
-        <div>
-          <span class="demonstration" style="margin-right: em"
-            >Subject : &nbsp;&nbsp;</span
-          >
-          <el-select
-            v-model="subjectValue"
-            filterable
-            placeholder="Select subject"
-            style="width: 400px"
-          >
-            <el-option label="All" value="All" />
-            <el-option
-              v-for="item in subjects"
-              :key="item"
-              :label="item"
-              :value="item"
+      <div class="filter-box">
+        <div class="filter-container">
+          <div>
+            <span class="demonstration" style="margin-right: em"
+              >Subject : &nbsp;&nbsp;</span
+            >
+            <el-select
+              v-model="subjectValue"
+              filterable
+              placeholder="Select subject"
+              style="width: 400px"
+            >
+              <el-option label="All" value="All" />
+              <el-option
+                v-for="item in subjects"
+                :key="item"
+                :label="item"
+                :value="item"
+              />
+            </el-select>
+          </div>
+          <div>
+            <span class="demonstration" style="margin-right: em"
+              >日期范围 : &nbsp;&nbsp;</span
+            >
+            <el-date-picker
+              v-model="dateRange"
+              type="daterange"
+              range-separator="至"
+              start-placeholder="开始日期"
+              end-placeholder="结束日期"
+              format="YYYY-MM-DD"
+              value-format="YYYY-MM-DD"
+              :disabled-date="disabledDate"
+              @change="handleDateRangeChange"
+              style="width: 400"
             />
-          </el-select>
-        </div>
-        <div>
-          <span class="demonstration" style="margin-right: em"
-            >日期范围 : &nbsp;&nbsp;</span
-          >
-          <el-date-picker
-            v-model="dateRange"
-            type="daterange"
-            range-separator="至"
-            start-placeholder="开始日期"
-            end-placeholder="结束日期"
-            format="YYYY-MM-DD"
-            value-format="YYYY-MM-DD"
-            :disabled-date="disabledDate"
-            @change="handleDateRangeChange"
-            style="width: 400"
-          />
-          <el-button @click="clearDateFilter" style="margin-left: 1em"
-            >清除日期筛选</el-button
-          >
-        </div>
+            <el-button @click="clearDateFilter" style="margin-left: 0.2em"
+              >清除日期筛选</el-button
+            >
+          </div>
 
-        <div>
-          <span class="demonstration" style="margin-right: em"
-            >相关性 : &nbsp;&nbsp;</span
+          <div>
+            <span class="demonstration">Relevance : &nbsp;&nbsp;</span>
+            <el-select
+              v-model="relevanceValue"
+              filterable
+              placeholder=""
+              style="width: 200px"
+            >
+              <!-- <el-option label="All" value="All" /> -->
+              <el-option
+                v-for="item in relevanceList"
+                :key="item"
+                :label="item"
+                :value="item"
+                style="text-transform: capitalize"
+              />
+            </el-select>
+          </div>
+
+          <!-- <div>
+          <span class="demonstration"
+            >version : &nbsp;&nbsp;</span
           >
           <el-select
-            v-model="relevanceValue"
+            v-model="versionValue"
             filterable
             placeholder=""
-            style="width: 400px"
+            style="width: 200px"
           >
-            <!-- <el-option label="All" value="All" /> -->
             <el-option
-              v-for="item in relevanceList"
+              v-for="item in versionList"
               :key="item"
               :label="item"
               :value="item"
             />
           </el-select>
+        </div> -->
         </div>
-        
-      </div>
-      <div style="display: flex; justify-content: end">
-        <el-button @click="clearAllFilters">清除所有筛选</el-button>
-        <!-- <el-button type="primary">保存此次筛选</el-button> -->
+
+        <div class="button-box">
+          <el-button @click="clearAllFilters">清除所有筛选</el-button>
+          <!-- <el-button type="primary">保存此次筛选</el-button> -->
+        </div>
       </div>
 
       <!-- 分页信息显示 -->
@@ -105,117 +129,10 @@
           :key="index"
           class="result-item"
         >
-          <div>
-            <span>{{ (currentPage - 1) * pageSize + index + 1 }}</span>
-          </div>
-          <div>
-            <p v-if="item.relevance"><b>relevance: </b>{{ item.relevance }}</p>
-            <p v-if="item.reason"><b>reason: </b> {{ item.reason }}</p>
-            <p v-if="item.source"><b>source: </b>{{ item.source }}</p>
-            <p v-if="item.type"><b>type: </b> {{ item.type }}</p>
-
-            <h3>title: {{ item.title }}</h3>
-            <p>
-              <b>authors: </b>
-              <span v-for="(author, index) in item.authors" :key="index">
-                {{ author }}
-                <span v-if="index < item.authors.length - 1"
-                  >, &nbsp;&nbsp;</span
-                >
-              </span>
-            </p>
-            <p v-if="item.comments"><b>comments: </b>{{ item.comments }}</p>
-            <p>
-              <b>last_revised_date:</b>
-              {{ item.last_revised_date ? item.last_revised_date : "null" }}
-            </p>
-            <p>
-              <b>subjects : </b>
-              <span v-for="(subject, index) in item.subjects" :key="index">
-                {{ subject
-                }}<span v-if="index < item.subjects.length - 1"
-                  >, &nbsp;&nbsp;</span
-                >
-              </span>
-            </p>
-
-            <p>
-              <b>links: </b>
-              <span v-for="(value, key, index) in item.links" :key="index">
-                {{ key }}: <a :href="value" target="_blank">{{ value }}</a
-                ><span v-if="index < Object.entries(item.links).length - 1"
-                  >, &nbsp;&nbsp;
-                </span>
-              </span>
-            </p>
-            <p v-if="item.repo_urls">
-              <b>repo_urls: </b>
-              <span v-for="(value, index) in item.repo_urls" :key="index">
-                <a :href="value" target="_blank">{{ value }}</a
-                ><span v-if="index < item.repo_urls.length - 1"
-                  >, &nbsp;&nbsp;
-                </span>
-              </span>
-            </p>
-            <p v-if="item.conference">
-              <b>conference: </b>{{ item.conference }}
-            </p>
-            <p v-if="item.conference_url_abs">
-              <b>conference_url_abs:</b
-              ><a :href="item.conference_url_abs" target="_blank">{{
-                item.conference_url_abs
-              }}</a>
-            </p>
-            <p v-if="item.tasks">
-              <b>tasks: </b>
-              <span v-for="(value, index) in item.tasks" :key="index">
-                {{ value
-                }}<span v-if="index < item.tasks.length - 1"
-                  >, &nbsp;&nbsp;
-                </span>
-              </span>
-            </p>
-
-            <div class="flex-item" v-if="item.datasets">
-              <b>datasets:</b>
-              <div>
-                <p v-for="(dataset, index) in item.datasets" :key="index">
-                  <span v-for="(value, key, index) in dataset" :key="index">
-                    {{ key }}:
-                    <template v-if="key == 'link'">
-                      <a :href="value" target="_blank">{{ value }}</a>
-                    </template>
-                    <template v-else>
-                      {{ value }}
-                    </template>
-                    <span v-if="index < Object.entries(dataset).length - 1"
-                      >, &nbsp;&nbsp;
-                    </span>
-                  </span>
-                </p>
-              </div>
-            </div>
-            <div class="flex-item" v-if="item.models">
-              <b>models:</b>
-              <div>
-                <p v-for="(dataset, index) in item.models" :key="index">
-                  <span v-for="(value, key, index) in dataset" :key="index">
-                    {{ key }}:
-                    <template v-if="key == 'link'">
-                      <a :href="value" target="_blank">{{ value }}</a>
-                    </template>
-                    <template v-else>
-                      {{ value }}
-                    </template>
-                    <span v-if="index < Object.entries(dataset).length - 1"
-                      >, &nbsp;&nbsp;
-                    </span>
-                  </span>
-                </p>
-              </div>
-            </div>
-            <p><b>abstract</b>: {{ item.abstract }}</p>
-          </div>
+          <DataItemComponent
+            :dataItem="item"
+            :num="(currentPage - 1) * pageSize + index + 1"
+          ></DataItemComponent>
         </li>
       </ul>
 
@@ -224,7 +141,7 @@
         <el-pagination
           v-model:current-page="currentPage"
           v-model:page-size="pageSize"
-          :page-sizes="[10, 20, 50, 100]"
+          :page-sizes="[100, 200, 500, 1000]"
           :small="false"
           :disabled="false"
           :background="true"
@@ -241,6 +158,7 @@
 <script setup>
 import { ref, computed, watch, defineProps, nextTick } from "vue";
 import selectComponent from "@/components/selectComponent.vue";
+import DataItemComponent from "@/components/DataItemComponent.vue";
 
 const props = defineProps({
   dataList: {
@@ -267,12 +185,16 @@ const props = defineProps({
 
 const subjectValue = ref("All"); // 主题筛选值，默认为All
 const relevanceValue = ref("All"); // 相关性筛选值，默认为All
+const versionValue = ref("All"); // version筛选值，默认为All
 
 const relevanceList = ref([]);
-relevanceList.value = ["All","strong", "weak", "none"];
+relevanceList.value = ["All", "strong", "weak", "none"];
+
+const versionList = ref([]);
+versionList.value = ["All", "v1", "v2", "v3"];
 
 // if (props.type === "Creativity") {
-  
+
 //   relevanceValue.value = "All"; // 默认选择Creativity
 // } else {
 //   relevanceList.value = ["All"];
@@ -280,7 +202,7 @@ relevanceList.value = ["All","strong", "weak", "none"];
 
 // 分页相关状态
 const currentPage = ref(1);
-const pageSize = ref(10);
+const pageSize = ref(100);
 
 // 日期筛选相关状态
 const dateRange = ref(null);
@@ -307,6 +229,22 @@ const filteredData = computed(() => {
   if (relevanceValue.value && relevanceValue.value !== "All") {
     result = result.filter((item) => {
       return item.relevance && item.relevance.level === relevanceValue.value;
+    });
+  }
+
+  // 按version筛选（通过submission_historys中最后一项的version）
+  if (versionValue.value && versionValue.value !== "All") {
+    result = result.filter((item) => {
+      if (
+        !item.submission_historys ||
+        !Array.isArray(item.submission_historys) ||
+        item.submission_historys.length === 0
+      ) {
+        return false;
+      }
+      const lastSubmission =
+        item.submission_historys[item.submission_historys.length - 1];
+      return lastSubmission && lastSubmission.version === versionValue.value;
     });
   }
 
@@ -390,6 +328,7 @@ const clearAllFilters = () => {
   dateRange.value = null;
   subjectValue.value = "All";
   relevanceValue.value = "All";
+  versionValue.value = "All";
   currentPage.value = 1;
 };
 
@@ -400,6 +339,11 @@ watch(subjectValue, () => {
 
 // Relevance筛选变化处理
 watch(relevanceValue, () => {
+  currentPage.value = 1; // 重置到第一页
+});
+
+// Version筛选变化处理
+watch(versionValue, () => {
   currentPage.value = 1; // 重置到第一页
 });
 
@@ -418,23 +362,50 @@ const formatDescription = (text) => {
 
   return text.replace(urlRegex, '<a href="$1" target="_blank">$1</a>');
 };
+
+// 计算各种相关性级别的数量（使用原始数据）
+const strongCount = computed(() => {
+  return props.dataList.filter(
+    (item) => item.relevance && item.relevance.level === "strong"
+  ).length;
+});
+
+const weakCount = computed(() => {
+  return props.dataList.filter(
+    (item) => item.relevance && item.relevance.level === "weak"
+  ).length;
+});
+
+const noneCount = computed(() => {
+  return props.dataList.filter(
+    (item) => item.relevance && item.relevance.level === "none"
+  ).length;
+});
+
+// 获取当前日期的前一天
+const getCurrentDate = () => {
+  const today = new Date();
+  const yesterday = new Date(today);
+  yesterday.setDate(today.getDate() - 1);
+
+  return yesterday.toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+};
 </script>
 
 <style scoped lang="scss">
-.home-template {
-  padding: 1em 0;
-  margin: 0 auto;
-  color: #070707;
-  h2 {
-    font-size: 2.5em;
-    margin: 0.3em 0;
-  }
-  .button-container {
-    .el-button {
-      font-size: 1.2em;
-      padding: 0.5em 1.5em;
-      min-width: 7em;
-      height: 2.5em;
+.data-list-template {
+  .summary-box {
+    margin: 2em 0 1em;
+    font-size: 14px;
+    & > p:nth-child(1) {
+      font-weight: bold;
+      font-size: 17px;
+      margin-bottom: 0.5em;
     }
   }
 
@@ -472,19 +443,28 @@ const formatDescription = (text) => {
     margin-top: 2em;
     padding: 1em 0;
   }
-
-  .filter-container {
-    display: flex;
-    align-items: center;
+  .filter-box {
     margin-bottom: 1em;
     padding: 1em 0;
-    gap: 1em 2em;
-    flex-wrap: wrap;
-    // background: #f8f9fa;
-    // border-radius: 8px;
-    // border: 1px solid #e9ecef;
-    .demonstration {
-      font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    .button-box {
+      align-self: flex-end;
+    }
+    .filter-container {
+      display: flex;
+      align-items: center;
+      padding: 1em 0 0;
+      gap: 1em 2em;
+      flex-wrap: wrap;
+      // background: #f8f9fa;
+      // border-radius: 8px;
+      // border: 1px solid #e9ecef;
+      .demonstration {
+        font-weight: bold;
+      }
     }
   }
 
@@ -492,15 +472,6 @@ const formatDescription = (text) => {
     color: #28a745;
     font-weight: 500;
     margin-left: 0.5em;
-  }
-}
-
-.flex-item {
-  display: flex;
-  flex-direction: row;
-  & > b {
-    margin-top: 0.2em;
-    margin-right: 0.2em;
   }
 }
 
