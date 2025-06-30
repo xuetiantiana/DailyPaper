@@ -29,6 +29,8 @@
         :description="HCIResultList.description"
         :prompt="HCIResultList.prompt?.creativity"
         type="Creativity"
+        :arxiv_update_date="HCIResultList.arxiv_update_date"
+        :level_tatistics="HCIResultList.level_tatistics"
       />
     </div>
 
@@ -38,6 +40,8 @@
         :subjects="DataResultList.subjects"
         :description="DataResultList.description"
         :prompt="DataResultList.prompt?.train_data"
+        :arxiv_update_date="DataResultList.arxiv_update_date"
+        :level_tatistics="DataResultList.level_tatistics"
       />
     </div>
 
@@ -66,7 +70,7 @@ const data_latest_30_result = ref([]);
 onMounted(async () => {
   try {
     const response = await axios.get(
-      "./data/cs_HC.json?v=" + new Date().getTime()
+      "./data/creativity.json?v=" + new Date().getTime()
     );
     
     // 过滤数据，只保留 relevance 为 'creativity' 的数据
@@ -80,7 +84,7 @@ onMounted(async () => {
     HCIResultList.value = filteredData;
 
     const response2 = await axios.get(
-      "./data/data_result.json?v=" + new Date().getTime()
+      "./data/llm_training_data.json?v=" + new Date().getTime()
     );
     DataResultList.value = response2.data;
 
@@ -165,4 +169,5 @@ onMounted(async () => {
     margin-left: 0.5em;
   }
 }
+
 </style>

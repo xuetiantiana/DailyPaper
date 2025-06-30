@@ -2,7 +2,8 @@
   <div class="data-item-component">
     <div class="dt">
       <a style="color: #000">[{{ num }}]&nbsp;&nbsp;</a>
-      <a :href="dataItem.links.Abstract" title="Abstract" target="_blank"
+      <template v-if="dataItem.links">
+        <a :href="dataItem.links.Abstract" title="Abstract" target="_blank"
         >{{ dataItem.source }}:{{ dataItem.id }}</a
       >
       &nbsp;&nbsp; [
@@ -14,6 +15,11 @@
           </template>
         </template> </template
       >]
+      </template>
+      <template v-else>
+        <b>{{ dataItem.source }}:{{ dataItem.id }}</b>
+      </template>
+      
     </div>
     <div class="dd">
       <div class="title">{{ dataItem.title }}</div>
@@ -33,9 +39,9 @@
         </span>
       </div>
       <div class="abstract">{{ dataItem.abstract }}</div>
-      <div class="relevance" style="margin-top: 1em">
+      <div class="relevance" style="margin-top: 1em" v-if="dataItem.relevance">
         <p>
-          <b>Relevance Rating:</b>
+          <b>Relevance Rating: </b>
           <span style="text-transform: capitalize">{{
             dataItem.relevance.level
           }}</span>
@@ -134,7 +140,7 @@
           </div>
         </div>
 
-        <p><b>Submitted_date:</b> {{ dataItem.submitted_date }}</p>
+        <!-- <p><b>Submitted_date:</b> {{ dataItem.submitted_date }}</p> -->
       </div>
     </div>
   </div>
@@ -243,6 +249,7 @@ defineExpose({
     background: #fafafa;
     padding: 0 1em;
     display: none;
+    font-size: 13px;
 
     &.expanded {
       display: block;

@@ -16,9 +16,9 @@
     </div>
     <div class="summary-box">
       <p>Showing new listings for {{ getCurrentDate() }}</p>
-      <p>
-        Total of {{ props.dataList.length }} entries ({{ strongCount }} Strong,
-        {{ weakCount }} Weak, {{ noneCount }} None)
+      <p v-if="level_tatistics">
+        Total of {{ props.dataList.length }} entries ({{ level_tatistics.core }} Core,
+        {{ level_tatistics.partial }} Partial, {{ level_tatistics["none-irrelevant"] }} Irrelevant)
       </p>
     </div>
     <!-- Data Latest 30 标签页添加分页功能 -->
@@ -74,6 +74,7 @@
               filterable
               placeholder=""
               style="width: 200px"
+              class="relevance-select"
             >
               <!-- <el-option label="All" value="All" /> -->
               <el-option
@@ -191,6 +192,15 @@ const props = defineProps({
     type: String,
     required: false, // 确保type是必需的
   },
+  arxiv_update_date: {
+    type: String,
+    required: false, // 确保type是必需的
+  },
+  level_tatistics: {
+    type: Object,
+    Default: () => ({}), // 确保level_tatistics是可选的
+    required: false,
+  },
 });
 
 const subjectValue = ref("All"); // 主题筛选值，默认为All
@@ -198,7 +208,7 @@ const relevanceValue = ref("All"); // 相关性筛选值，默认为All
 const versionValue = ref("All"); // version筛选值，默认为All
 
 const relevanceList = ref([]);
-relevanceList.value = ["All", "strong", "weak", "none"];
+relevanceList.value = ["All", "core", "partial", "irrelevant"];
 
 const versionList = ref([]);
 versionList.value = ["All", "v1", "v2", "v3"];
@@ -238,7 +248,9 @@ const filteredData = computed(() => {
   // 按relevance.level筛选
   if (relevanceValue.value && relevanceValue.value !== "All") {
     result = result.filter((item) => {
-      return item.relevance && item.relevance.level === relevanceValue.value;
+      return item.relevance && 
+        item.relevance.level && 
+        item.relevance.level.toLowerCase().includes(relevanceValue.value.toLowerCase());
     });
   }
 
@@ -374,29 +386,35 @@ const formatDescription = (text) => {
 };
 
 // 计算各种相关性级别的数量（使用原始数据）
-const strongCount = computed(() => {
+const coreCount = computed(() => {
   return props.dataList.filter(
-    (item) => item.relevance && item.relevance.level === "strong"
+    (item) => item.relevance && 
+      item.relevance.level && 
+      item.relevance.level.toLowerCase().includes("core")
   ).length;
 });
 
-const weakCount = computed(() => {
+const partialCount = computed(() => {
   return props.dataList.filter(
-    (item) => item.relevance && item.relevance.level === "weak"
+    (item) => item.relevance && 
+      item.relevance.level && 
+      item.relevance.level.toLowerCase().includes("partial")
   ).length;
 });
 
-const noneCount = computed(() => {
+const irrelevantCount = computed(() => {
   return props.dataList.filter(
-    (item) => item.relevance && item.relevance.level === "none"
+    (item) => item.relevance && 
+      item.relevance.level && 
+      item.relevance.level.toLowerCase().includes("irrelevant")
   ).length;
 });
 
 // 获取当前日期的前一天
 const getCurrentDate = () => {
-  const today = new Date();
+  const today = new Date("2025-06-30");
   const yesterday = new Date(today);
-  yesterday.setDate(today.getDate() - 1);
+  yesterday.setDate(today.getDate());
 
   return yesterday.toLocaleDateString("en-US", {
     weekday: "long",
@@ -578,6 +596,11 @@ watch(paginatedData, () => {
     &:hover {
       background: rgba(255, 255, 255, 1);
     }
+  }
+}
+:deep(.relevance-select){
+  .el-select__selected-item {
+    text-transform: capitalize;
   }
 }
 </style>
