@@ -7,7 +7,7 @@
         </p>
         <div class="prompt-content">
           <b>prompt：</b>
-          <pre>{{ prompt }}</pre>
+          <pre>{{ prompt || "null" }}</pre>
         </div>
         <el-button class="expand-btn" @click="togglePrompt" text size="small">
           {{ isPromptExpanded ? "收起" : "展开" }}
@@ -16,9 +16,9 @@
     </div>
     <div class="summary-box">
       <p>Showing new listings for {{ getCurrentDate() }}</p>
-      <p v-if="level_tatistics">
-        Total of {{ props.dataList.length }} entries ({{ level_tatistics.core }} Core,
-        {{ level_tatistics.partial }} Partial, {{ level_tatistics["none-irrelevant"] }} Irrelevant)
+      <p>
+        Total of {{ props.dataList.length }} entries ({{ level_tatistics?.core || "0"}} Core,
+        {{ level_tatistics?.partial || "0" }} Partial, {{ level_tatistics?.["none-irrelevant"] || "0" }} Irrelevant)
       </p>
     </div>
     <!-- Data Latest 30 标签页添加分页功能 -->
@@ -412,7 +412,7 @@ const irrelevantCount = computed(() => {
 
 // 获取当前日期的前一天
 const getCurrentDate = () => {
-  const today = new Date("2025-06-30");
+  const today = new Date(props.arxiv_update_date);
   const yesterday = new Date(today);
   yesterday.setDate(today.getDate());
 
@@ -563,6 +563,7 @@ watch(paginatedData, () => {
 .prompt-box {
   position: relative;
   height: 4.4em;
+  min-height: 4.4em;
   overflow: hidden;
   transition: height 0.3s ease;
 

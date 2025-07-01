@@ -24,32 +24,32 @@
 
     <div v-show="currentIndex == 0">
       <DataLatest30
-        :dataList="HCIResultList.data"
-        :subjects="HCIResultList.subjects"
-        :description="HCIResultList.description"
-        :prompt="HCIResultList.prompt?.creativity"
+        :dataList="HCIResultList?.data || []"
+        :subjects="HCIResultList?.subjects || []"
+        :description="HCIResultList?.description || ''"
+        :prompt="HCIResultList?.prompt?.creativity || ''"
         type="Creativity"
-        :arxiv_update_date="HCIResultList.arxiv_update_date"
-        :level_tatistics="HCIResultList.level_tatistics"
+        :arxiv_update_date="HCIResultList?.arxiv_update_date || ''"
+        :level_tatistics="HCIResultList?.level_tatistics || {}"
       />
     </div>
 
     <div v-show="currentIndex == 1">
       <DataLatest30
-        :dataList="DataResultList.data"
-        :subjects="DataResultList.subjects"
-        :description="DataResultList.description"
-        :prompt="DataResultList.prompt?.train_data"
-        :arxiv_update_date="DataResultList.arxiv_update_date"
-        :level_tatistics="DataResultList.level_tatistics"
+        :dataList="DataResultList?.data || []"
+        :subjects="DataResultList?.subjects || []"
+        :description="DataResultList?.description || ''"
+        :prompt="DataResultList?.prompt?.train_data || ''"
+        :arxiv_update_date="DataResultList?.arxiv_update_date || ''"
+        :level_tatistics="DataResultList?.level_tatistics || {}"
       />
     </div>
 
     <!-- Data Latest 30 标签页添加分页功能 -->
     <div v-show="currentIndex == 2">
       <DataLatest30
-        :dataList="data_latest_30_result.data"
-        :subjects="data_latest_30_result.subjects"
+        :dataList="data_latest_30_result?.data || []"
+        :subjects="data_latest_30_result?.subjects || []"
       ></DataLatest30>
     </div>
   </div>
@@ -74,14 +74,14 @@ onMounted(async () => {
     );
     
     // 过滤数据，只保留 relevance 为 'creativity' 的数据
-    const originalData = response.data;
-    const filteredData = {
-      ...originalData,
-      data: originalData.data?.filter(item => 
-        item.relevance && item.relevance.keyword  === 'creativity'
-      ) || []
-    };
-    HCIResultList.value = filteredData;
+    // const originalData = response.data;
+    // const filteredData = {
+    //   ...originalData,
+    //   data: originalData.data?.filter(item => 
+    //     item.relevance && item.relevance.keyword  === 'creativity'
+    //   ) || []
+    // };
+    HCIResultList.value = response.data;
 
     const response2 = await axios.get(
       "./data/llm_training_data.json?v=" + new Date().getTime()

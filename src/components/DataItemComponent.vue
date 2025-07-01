@@ -22,7 +22,7 @@
       
     </div>
     <div class="dd">
-      <div class="title">{{ dataItem.title }}</div>
+      <div class="title">{{ dataItem.title  || "title" }}</div>
       <div class="authors">
         <span v-for="(author, index) in dataItem.authors" :key="index">
           {{ author }}
