@@ -1,7 +1,7 @@
 <template>
   <div class="data-list-template">
     <div style="display: flex;justify-content: flex-end;">
-      <p style="margin-top: 1em;">The data is expected to be updated daily at 10:30. The last update was on {{updated_at || null}}.</p>
+      <p style="margin-top: 1em;">Search results are automatically retrieved from arXiv and updated daily at 11:00 a.m. (UTC+8).</p>
     </div>
     <div class="box" style="margin-top: 0.8em">
       <div class="prompt-box" :class="{ expanded: isPromptExpanded }">
@@ -21,7 +21,7 @@
       <p>Showing new listings for {{ getCurrentDate() }}</p>
       <p>
         Total of {{ props.dataList.length }} entries ({{ level_tatistics?.core || "0"}} Core,
-        {{ level_tatistics?.partial || "0" }} Partial, {{ level_tatistics?.["none-irrelevant"] || "0" }} Irrelevant)
+        {{ level_tatistics?.partial || "0" }} Partial, {{ level_tatistics?.irrelevant || "0" }} Irrelevant)
       </p>
     </div>
     <!-- Data Latest 30 标签页添加分页功能 -->
