@@ -264,6 +264,14 @@
         "level": "partial",
         "reason": "The paper mentions using LLM-based text features for patient data analysis but focuses on clinical risk prediction. There is brief mention of data used but no new methods for LLM training data processing are proposed."
       },
+      "datasets": [
+        {
+          "dataset_name": "juliawang2024/longcovid-risk-eventtimeseries",
+          "downloads": "39",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/juliawang2024/longcovid-risk-eventtimeseries"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -5434,30 +5442,30 @@
       "models": [
         {
           "model_path": "Menlo/Jan-nano-gguf",
-          "downloads": "43058",
+          "downloads": "70807",
           "likes": "128",
-          "trending_score": "9.0",
+          "trending_score": "7.0",
           "link": "https://huggingface.co/Menlo/Jan-nano-gguf"
         },
         {
           "model_path": "Menlo/Jan-nano-128k",
-          "downloads": "2341",
-          "likes": "169",
-          "trending_score": "169.0",
+          "downloads": "2681",
+          "likes": "171",
+          "trending_score": "171.0",
           "link": "https://huggingface.co/Menlo/Jan-nano-128k"
         },
         {
           "model_path": "Menlo/Jan-nano",
-          "downloads": "32416",
-          "likes": "429",
-          "trending_score": "59.0",
+          "downloads": "34247",
+          "likes": "432",
+          "trending_score": "50.0",
           "link": "https://huggingface.co/Menlo/Jan-nano"
         },
         {
           "model_path": "Menlo/Jan-nano-128k-gguf",
-          "downloads": "7361",
-          "likes": "44",
-          "trending_score": "44.0",
+          "downloads": "39281",
+          "likes": "45",
+          "trending_score": "45.0",
           "link": "https://huggingface.co/Menlo/Jan-nano-128k-gguf"
         }
       ],
@@ -6872,6 +6880,15 @@
         "level": "partial",
         "reason": "The paper discusses listener-augmented RL for aligning vision-language models with human preferences and covers some aspects of supervised fine-tuning, which relates to training-stage data processing but does not focus primarily on data processing for LLMs."
       },
+      "models": [
+        {
+          "model_path": "alexgambashidze/qwen2.5vl_image_preference_reasoner",
+          "downloads": "0",
+          "likes": "0",
+          "trending_score": "0.0",
+          "link": "https://huggingface.co/alexgambashidze/qwen2.5vl_image_preference_reasoner"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -7303,6 +7320,14 @@
         "level": "core",
         "reason": "DICE-BENCH introduces a novel framework for constructing datasets to evaluate LLMs' function-calling capabilities in complex dialogues, which involves specific data-engineering processes."
       },
+      "datasets": [
+        {
+          "dataset_name": "OfficerChul/DICE-BENCH",
+          "downloads": "0",
+          "likes": "1",
+          "link": "https://huggingface.co/datasets/OfficerChul/DICE-BENCH"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -10404,6 +10429,15 @@
         "level": "partial",
         "reason": "This paper introduces Ovis-U1, a multimodal model that includes training from a language model. It mentions unified training approaches but does not focus on LLM training data processing or offer novel data pipeline contributions."
       },
+      "models": [
+        {
+          "model_path": "AIDC-AI/Ovis-U1-3B",
+          "downloads": "322",
+          "likes": "106",
+          "trending_score": "106.0",
+          "link": "https://huggingface.co/AIDC-AI/Ovis-U1-3B"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -11790,6 +11824,14 @@
         "level": "partial",
         "reason": "The paper introduces INDIC-BIAS, a benchmark for evaluating LLM fairness regarding biases in Indian contexts, involving data collection but not focusing on novel methods for LLM training data processing."
       },
+      "datasets": [
+        {
+          "dataset_name": "ai4bharat/Indic-Bias",
+          "downloads": "0",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/ai4bharat/Indic-Bias"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -11863,6 +11905,96 @@
         "level": "core",
         "reason": "The paper proposes MoCa, which includes Modality-aware Continual Pre-training and data utilization methods for enhancing multimodal embeddings, directly involving LLM training data processing, particularly in pre-training and the use of large unlabeled datasets."
       },
+      "models": [
+        {
+          "model_path": "moca-embed/MoCa-Qwen25VL-7B",
+          "downloads": "83",
+          "likes": "0",
+          "trending_score": "0.0",
+          "link": "https://huggingface.co/moca-embed/MoCa-Qwen25VL-7B"
+        },
+        {
+          "model_path": "moca-embed/MoCa-Qwen25VL-3B",
+          "downloads": "69",
+          "likes": "0",
+          "trending_score": "0.0",
+          "link": "https://huggingface.co/moca-embed/MoCa-Qwen25VL-3B"
+        }
+      ],
+      "datasets": [
+        {
+          "dataset_name": "moca-embed/pixelprose_commonpool",
+          "downloads": "108",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/moca-embed/pixelprose_commonpool"
+        },
+        {
+          "dataset_name": "moca-embed/docmatix",
+          "downloads": "61",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/moca-embed/docmatix"
+        },
+        {
+          "dataset_name": "moca-embed/MAmmoTH-VL-Instruct-12M",
+          "downloads": "248",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/moca-embed/MAmmoTH-VL-Instruct-12M"
+        },
+        {
+          "dataset_name": "moca-embed/MMEB-train",
+          "downloads": "88",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/moca-embed/MMEB-train"
+        },
+        {
+          "dataset_name": "moca-embed/pixelprose_cc12m_sub_005",
+          "downloads": "100",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/moca-embed/pixelprose_cc12m_sub_005"
+        },
+        {
+          "dataset_name": "moca-embed/pixelprose_redcaps_sub_010",
+          "downloads": "77",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/moca-embed/pixelprose_redcaps_sub_010"
+        },
+        {
+          "dataset_name": "moca-embed/visrag_ind",
+          "downloads": "136",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/moca-embed/visrag_ind"
+        },
+        {
+          "dataset_name": "moca-embed/visrag_syn",
+          "downloads": "200",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/moca-embed/visrag_syn"
+        },
+        {
+          "dataset_name": "moca-embed/tevatron_colpali",
+          "downloads": "149",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/moca-embed/tevatron_colpali"
+        },
+        {
+          "dataset_name": "moca-embed/vdr_multi",
+          "downloads": "182",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/moca-embed/vdr_multi"
+        },
+        {
+          "dataset_name": "moca-embed/MoCa-CL-Pairs",
+          "downloads": "0",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/moca-embed/MoCa-CL-Pairs"
+        },
+        {
+          "dataset_name": "moca-embed/dclm_20b",
+          "downloads": "202",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/moca-embed/dclm_20b"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -12487,6 +12619,14 @@
         "level": "partial",
         "reason": "The paper introduces a new benchmark for Deep Search with a synthetic data pipeline but focuses primarily on the evaluation of retrieval-augmented generation systems using this benchmark, not on novel methods for LLM training data processing itself."
       },
+      "datasets": [
+        {
+          "dataset_name": "Salesforce/HERB",
+          "downloads": "0",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/Salesforce/HERB"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -12731,6 +12871,50 @@
         "level": "irrelevant",
         "reason": "This paper is about efficient memory usage in optical flow estimation, unrelated to any aspect of training data processing for LLMs."
       },
+      "models": [
+        {
+          "model_path": "egorchistov/MEMFOF-Tartan",
+          "downloads": "11",
+          "likes": "0",
+          "trending_score": "0.0",
+          "link": "https://huggingface.co/egorchistov/MEMFOF-Tartan"
+        },
+        {
+          "model_path": "egorchistov/MEMFOF-Tartan-T",
+          "downloads": "7",
+          "likes": "0",
+          "trending_score": "0.0",
+          "link": "https://huggingface.co/egorchistov/MEMFOF-Tartan-T"
+        },
+        {
+          "model_path": "egorchistov/MEMFOF-Tartan-T-TSKH",
+          "downloads": "69",
+          "likes": "0",
+          "trending_score": "0.0",
+          "link": "https://huggingface.co/egorchistov/MEMFOF-Tartan-T-TSKH"
+        },
+        {
+          "model_path": "egorchistov/MEMFOF-Tartan-T-TSKH-spring",
+          "downloads": "58",
+          "likes": "0",
+          "trending_score": "0.0",
+          "link": "https://huggingface.co/egorchistov/MEMFOF-Tartan-T-TSKH-spring"
+        },
+        {
+          "model_path": "egorchistov/MEMFOF-Tartan-T-TSKH-kitti",
+          "downloads": "17",
+          "likes": "0",
+          "trending_score": "0.0",
+          "link": "https://huggingface.co/egorchistov/MEMFOF-Tartan-T-TSKH-kitti"
+        },
+        {
+          "model_path": "egorchistov/MEMFOF-Tartan-T-TSKH-sintel",
+          "downloads": "47",
+          "likes": "0",
+          "trending_score": "0.0",
+          "link": "https://huggingface.co/egorchistov/MEMFOF-Tartan-T-TSKH-sintel"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -14507,6 +14691,14 @@
         "level": "irrelevant",
         "reason": "This paper introduces a method for visual explanation of multimodal LLMs, but does not cover LLM training data processes or data engineering."
       },
+      "datasets": [
+        {
+          "dataset_name": "yili7eli/TAM",
+          "downloads": "0",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/yili7eli/TAM"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -20530,6 +20722,14 @@
         "level": "core",
         "reason": "The paper proposes a novel synthetic lecture slide generation pipeline to improve transfer learning, addressing the challenge of labeling data for training. This directly pertains to creating and utilizing training data for improving model performance."
       },
+      "datasets": [
+        {
+          "dataset_name": "NerdyVisky/SynSlides",
+          "downloads": "0",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/NerdyVisky/SynSlides"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -23823,6 +24023,14 @@
         "level": "partial",
         "reason": "The paper discusses fine-tuning a model using expert data. While it involves data usage during the model fine-tuning process, it does not focus on novel methods for LLM training data processing itself."
       },
+      "datasets": [
+        {
+          "dataset_name": "aandreychuk/MAPF-GPT-DDG",
+          "downloads": "0",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/aandreychuk/MAPF-GPT-DDG"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -25034,6 +25242,15 @@
         "level": "partial",
         "reason": "This paper discusses pretraining and finetuning processes for symbolic piano performance generation using transformer models. However, it does not focus on novel methods for processing LLM training data."
       },
+      "models": [
+        {
+          "model_path": "loubb/aria-medium-base",
+          "downloads": "118",
+          "likes": "0",
+          "trending_score": "0.0",
+          "link": "https://huggingface.co/loubb/aria-medium-base"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -28558,6 +28775,30 @@
         "level": "irrelevant",
         "reason": "The paper introduces SPIRAL for reasoning development using self-play in zero-sum games, not focusing on LLM training data processing or engineering stages."
       },
+      "models": [
+        {
+          "model_path": "spiral-rl/Spiral-Qwen3-4B",
+          "downloads": "2",
+          "likes": "0",
+          "trending_score": "0.0",
+          "link": "https://huggingface.co/spiral-rl/Spiral-Qwen3-4B"
+        },
+        {
+          "model_path": "spiral-rl/Spiral-DeepSeek-R1-Distill-Qwen-7B",
+          "downloads": "1",
+          "likes": "0",
+          "trending_score": "0.0",
+          "link": "https://huggingface.co/spiral-rl/Spiral-DeepSeek-R1-Distill-Qwen-7B"
+        }
+      ],
+      "datasets": [
+        {
+          "dataset_name": "spiral-rl/Spiral-Kuhn-Poker-Qwen3-32B-SFT",
+          "downloads": "0",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/spiral-rl/Spiral-Kuhn-Poker-Qwen3-32B-SFT"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -33904,35 +34145,35 @@
       "models": [
         {
           "model_path": "Finnish-NLP/llama-7b-finnish",
-          "downloads": "90",
+          "downloads": "88",
           "likes": "4",
           "trending_score": "0.0",
           "link": "https://huggingface.co/Finnish-NLP/llama-7b-finnish"
         },
         {
           "model_path": "Finnish-NLP/llama-3b-finnish",
-          "downloads": "430",
+          "downloads": "426",
           "likes": "5",
           "trending_score": "0.0",
           "link": "https://huggingface.co/Finnish-NLP/llama-3b-finnish"
         },
         {
           "model_path": "Finnish-NLP/Ahma-3B",
-          "downloads": "1561",
+          "downloads": "1535",
           "likes": "12",
           "trending_score": "0.0",
           "link": "https://huggingface.co/Finnish-NLP/Ahma-3B"
         },
         {
           "model_path": "Finnish-NLP/Ahma-7B",
-          "downloads": "105",
+          "downloads": "98",
           "likes": "8",
           "trending_score": "0.0",
           "link": "https://huggingface.co/Finnish-NLP/Ahma-7B"
         },
         {
           "model_path": "RichardErkhov/Finnish-NLP_-_llama-7b-finnish-gguf",
-          "downloads": "165",
+          "downloads": "216",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/RichardErkhov/Finnish-NLP_-_llama-7b-finnish-gguf"
@@ -33946,21 +34187,21 @@
         },
         {
           "model_path": "RichardErkhov/Finnish-NLP_-_llama-3b-finnish-gguf",
-          "downloads": "251",
+          "downloads": "297",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/RichardErkhov/Finnish-NLP_-_llama-3b-finnish-gguf"
         },
         {
           "model_path": "RichardErkhov/Finnish-NLP_-_Ahma-3B-gguf",
-          "downloads": "243",
+          "downloads": "244",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/RichardErkhov/Finnish-NLP_-_Ahma-3B-gguf"
         },
         {
           "model_path": "RichardErkhov/Finnish-NLP_-_Ahma-7B-4bits",
-          "downloads": "4",
+          "downloads": "3",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/RichardErkhov/Finnish-NLP_-_Ahma-7B-4bits"
@@ -40093,77 +40334,77 @@
       "models": [
         {
           "model_path": "SparseLLM/sparsing-law-0.1b-relu",
-          "downloads": "78",
+          "downloads": "74",
           "likes": "2",
           "trending_score": "0.0",
           "link": "https://huggingface.co/SparseLLM/sparsing-law-0.1b-relu"
         },
         {
           "model_path": "SparseLLM/sparsing-law-0.1b-silu",
-          "downloads": "96",
+          "downloads": "93",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/SparseLLM/sparsing-law-0.1b-silu"
         },
         {
           "model_path": "SparseLLM/sparsing-law-0.2b-relu",
-          "downloads": "17",
+          "downloads": "13",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/SparseLLM/sparsing-law-0.2b-relu"
         },
         {
           "model_path": "SparseLLM/sparsing-law-0.8b-relu",
-          "downloads": "15",
+          "downloads": "12",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/SparseLLM/sparsing-law-0.8b-relu"
         },
         {
           "model_path": "SparseLLM/sparsing-law-0.4b-relu",
-          "downloads": "34",
+          "downloads": "31",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/SparseLLM/sparsing-law-0.4b-relu"
         },
         {
           "model_path": "SparseLLM/sparsing-law-1.2b-relu",
-          "downloads": "14",
+          "downloads": "11",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/SparseLLM/sparsing-law-1.2b-relu"
         },
         {
           "model_path": "SparseLLM/sparsing-law-0.2b-silu",
-          "downloads": "16",
+          "downloads": "13",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/SparseLLM/sparsing-law-0.2b-silu"
         },
         {
           "model_path": "SparseLLM/sparsing-law-0.4b-silu",
-          "downloads": "17",
+          "downloads": "14",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/SparseLLM/sparsing-law-0.4b-silu"
         },
         {
           "model_path": "SparseLLM/sparsing-law-0.8b-silu",
-          "downloads": "16",
+          "downloads": "11",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/SparseLLM/sparsing-law-0.8b-silu"
         },
         {
           "model_path": "SparseLLM/sparsing-law-1.2b-silu",
-          "downloads": "34",
+          "downloads": "30",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/SparseLLM/sparsing-law-1.2b-silu"
         },
         {
           "model_path": "SparseLLM/sparsing-law-2.4b-relu",
-          "downloads": "21",
+          "downloads": "28",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/SparseLLM/sparsing-law-2.4b-relu"
@@ -40413,9 +40654,9 @@
       "models": [
         {
           "model_path": "EarthSpeciesProject/NatureLM-audio",
-          "downloads": "413",
-          "likes": "8",
-          "trending_score": "1.0",
+          "downloads": "437",
+          "likes": "9",
+          "trending_score": "2.0",
           "link": "https://huggingface.co/EarthSpeciesProject/NatureLM-audio"
         }
       ],
@@ -41881,7 +42122,7 @@
         {
           "dataset_name": "clinia/CUREv1",
           "downloads": "773",
-          "likes": "4",
+          "likes": "5",
           "link": "https://huggingface.co/datasets/clinia/CUREv1"
         }
       ],
@@ -42640,7 +42881,7 @@
       "models": [
         {
           "model_path": "OpenGVLab/VideoChat-TPO",
-          "downloads": "25",
+          "downloads": "30",
           "likes": "5",
           "trending_score": "0.0",
           "link": "https://huggingface.co/OpenGVLab/VideoChat-TPO"
@@ -44926,31 +45167,31 @@
       "models": [
         {
           "model_path": "birder-project/rope_vit_reg4_b14_capi",
-          "downloads": "102",
+          "downloads": "103",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/birder-project/rope_vit_reg4_b14_capi"
         },
         {
           "model_path": "birder-project/rope_vit_reg4_b14_capi-imagenet21k",
-          "downloads": "153",
+          "downloads": "158",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/birder-project/rope_vit_reg4_b14_capi-imagenet21k"
         },
         {
-          "model_path": "birder-project/rope_vit_reg4_b14_capi-inat21",
-          "downloads": "109",
-          "likes": "0",
-          "trending_score": "0.0",
-          "link": "https://huggingface.co/birder-project/rope_vit_reg4_b14_capi-inat21"
-        },
-        {
           "model_path": "birder-project/rope_vit_reg4_b14_capi-places365",
-          "downloads": "53",
+          "downloads": "51",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/birder-project/rope_vit_reg4_b14_capi-places365"
+        },
+        {
+          "model_path": "birder-project/rope_vit_reg4_b14_capi-inat21",
+          "downloads": "115",
+          "likes": "0",
+          "trending_score": "0.0",
+          "link": "https://huggingface.co/birder-project/rope_vit_reg4_b14_capi-inat21"
         }
       ],
       "tasks": [
@@ -45004,155 +45245,155 @@
       },
       "models": [
         {
+          "model_path": "WebOrganizer/TopicClassifier",
+          "downloads": "17821",
+          "likes": "12",
+          "trending_score": "1.0",
+          "link": "https://huggingface.co/WebOrganizer/TopicClassifier"
+        },
+        {
+          "model_path": "WebOrganizer/FormatClassifier",
+          "downloads": "31461",
+          "likes": "7",
+          "trending_score": "1.0",
+          "link": "https://huggingface.co/WebOrganizer/FormatClassifier"
+        },
+        {
           "model_path": "WebOrganizer/TopicClassifier-NoURL",
-          "downloads": "2179",
+          "downloads": "2239",
           "likes": "9",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/TopicClassifier-NoURL"
         },
         {
-          "model_path": "WebOrganizer/TopicClassifier",
-          "downloads": "17221",
-          "likes": "11",
-          "trending_score": "0.0",
-          "link": "https://huggingface.co/WebOrganizer/TopicClassifier"
-        },
-        {
           "model_path": "WebOrganizer/FormatClassifier-NoURL",
-          "downloads": "3520",
+          "downloads": "3940",
           "likes": "5",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/FormatClassifier-NoURL"
         },
         {
-          "model_path": "WebOrganizer/FormatClassifier",
-          "downloads": "31083",
-          "likes": "6",
-          "trending_score": "0.0",
-          "link": "https://huggingface.co/WebOrganizer/FormatClassifier"
-        },
-        {
           "model_path": "WebOrganizer/LM-1b_1x-Baseline",
-          "downloads": "75",
+          "downloads": "73",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-Baseline"
         },
         {
           "model_path": "WebOrganizer/LM-1b_1x-Sampling_over_KMeans_for_MMLU",
-          "downloads": "59",
+          "downloads": "58",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-Sampling_over_KMeans_for_MMLU"
         },
         {
           "model_path": "WebOrganizer/LM-1b_1x-Sampling_over_Topics_for_MMLU",
-          "downloads": "35",
+          "downloads": "33",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-Sampling_over_Topics_for_MMLU"
         },
         {
           "model_path": "WebOrganizer/LM-1b_1x-Sampling_over_Formats_for_MMLU",
-          "downloads": "64",
+          "downloads": "62",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-Sampling_over_Formats_for_MMLU"
         },
         {
           "model_path": "WebOrganizer/LM-1b_1x-Sampling_over_Topics_x_Formats_for_MMLU",
-          "downloads": "12",
+          "downloads": "10",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-Sampling_over_Topics_x_Formats_for_MMLU"
         },
         {
           "model_path": "WebOrganizer/LM-1b_1x-Sampling_over_KMeans_for_HellaSwag",
-          "downloads": "42",
+          "downloads": "39",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-Sampling_over_KMeans_for_HellaSwag"
         },
         {
           "model_path": "WebOrganizer/LM-1b_1x-Sampling_over_Topics_for_HellaSwag",
-          "downloads": "26",
+          "downloads": "23",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-Sampling_over_Topics_for_HellaSwag"
         },
         {
           "model_path": "WebOrganizer/LM-1b_1x-Sampling_over_Formats_for_HellaSwag",
-          "downloads": "28",
+          "downloads": "26",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-Sampling_over_Formats_for_HellaSwag"
         },
         {
           "model_path": "WebOrganizer/LM-1b_1x-Sampling_over_Topics_x_Formats_for_HellaSwag",
-          "downloads": "27",
+          "downloads": "25",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-Sampling_over_Topics_x_Formats_for_HellaSwag"
         },
         {
           "model_path": "WebOrganizer/LM-1b_1x-Sampling_over_KMeans_for_MMLU_and_HellaSwag",
-          "downloads": "16",
+          "downloads": "15",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-Sampling_over_KMeans_for_MMLU_and_HellaSwag"
         },
         {
           "model_path": "WebOrganizer/LM-1b_1x-Sampling_over_Topics_for_MMLU_and_Hellaswag",
-          "downloads": "26",
+          "downloads": "24",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-Sampling_over_Topics_for_MMLU_and_Hellaswag"
         },
         {
           "model_path": "WebOrganizer/LM-1b_1x-Sampling_over_Formats_for_MMLU_and_Hellaswag",
-          "downloads": "13",
+          "downloads": "8",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-Sampling_over_Formats_for_MMLU_and_Hellaswag"
         },
         {
           "model_path": "WebOrganizer/LM-1b_1x-Sampling_over_Topics_x_Formats_for_MMLU_and_Hellaswag",
-          "downloads": "17",
+          "downloads": "14",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-Sampling_over_Topics_x_Formats_for_MMLU_and_Hellaswag"
         },
         {
           "model_path": "WebOrganizer/LM-1b_1x-FineWebEdu",
-          "downloads": "10",
+          "downloads": "11",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-FineWebEdu"
         },
         {
           "model_path": "WebOrganizer/LM-1b_1x-FineWebEdu_over_Topics_x_Formats_for_MMLU_and_Hellaswag",
-          "downloads": "12",
+          "downloads": "10",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-FineWebEdu_over_Topics_x_Formats_for_MMLU_and_Hellaswag"
         },
         {
           "model_path": "WebOrganizer/LM-1b_1x-DCLMFasttext",
-          "downloads": "9",
+          "downloads": "7",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-DCLMFasttext"
         },
         {
           "model_path": "WebOrganizer/LM-1b_1x-DCLMFasttext_over_Topics_x_Formats_for_MMLU_and_Hellaswag",
-          "downloads": "28",
+          "downloads": "27",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/WebOrganizer/LM-1b_1x-DCLMFasttext_over_Topics_x_Formats_for_MMLU_and_Hellaswag"
         },
         {
           "model_path": "davanstrien/ModernBERT-web-topics-1m",
-          "downloads": "18",
+          "downloads": "13",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/davanstrien/ModernBERT-web-topics-1m"
@@ -46035,7 +46276,7 @@
       "models": [
         {
           "model_path": "wangkevin02/USP",
-          "downloads": "31",
+          "downloads": "40",
           "likes": "1",
           "trending_score": "1.0",
           "link": "https://huggingface.co/wangkevin02/USP"
@@ -46733,7 +46974,7 @@
         {
           "dataset_name": "1Konny/t2m4lvo-truebones-zoo",
           "downloads": "0",
-          "likes": "2",
+          "likes": "3",
           "link": "https://huggingface.co/datasets/1Konny/t2m4lvo-truebones-zoo"
         }
       ],
@@ -47046,14 +47287,14 @@
       "models": [
         {
           "model_path": "Ricky06662/Seg-Zero-7B",
-          "downloads": "2642",
+          "downloads": "2533",
           "likes": "2",
           "trending_score": "0.0",
           "link": "https://huggingface.co/Ricky06662/Seg-Zero-7B"
         },
         {
           "model_path": "Ricky06662/Seg-Zero-7B-Best-on-ReasonSegTest",
-          "downloads": "2189",
+          "downloads": "2271",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/Ricky06662/Seg-Zero-7B-Best-on-ReasonSegTest"
@@ -49946,7 +50187,7 @@
       "models": [
         {
           "model_path": "Metin/LLaMA-3-8B-Math-Majority-Vote-GRPO",
-          "downloads": "16",
+          "downloads": "15",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/Metin/LLaMA-3-8B-Math-Majority-Vote-GRPO"
@@ -52138,9 +52379,9 @@
       "models": [
         {
           "model_path": "Alibaba-NLP/WebDancer-32B",
-          "downloads": "60",
-          "likes": "21",
-          "trending_score": "17.0",
+          "downloads": "111",
+          "likes": "23",
+          "trending_score": "18.0",
           "link": "https://huggingface.co/Alibaba-NLP/WebDancer-32B"
         }
       ],
@@ -60574,6 +60815,15 @@
         "level": "partial",
         "reason": "The paper mentions the creation of AudioCoT, a dataset with structured reasoning annotations, but the main focus is on a framework for video-to-audio generation rather than the processing of LLM training data."
       },
+      "models": [
+        {
+          "model_path": "liuhuadai/ThinkSound",
+          "downloads": "0",
+          "likes": "0",
+          "trending_score": "0.0",
+          "link": "https://huggingface.co/liuhuadai/ThinkSound"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -61599,15 +61849,8 @@
       },
       "models": [
         {
-          "model_path": "loubb/aria-medium-base",
-          "downloads": "117",
-          "likes": "0",
-          "trending_score": "0.0",
-          "link": "https://huggingface.co/loubb/aria-medium-base"
-        },
-        {
           "model_path": "loubb/aria-medium-embedding",
-          "downloads": "0",
+          "downloads": "1",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/loubb/aria-medium-embedding"
@@ -64202,5 +64445,5 @@
     "core": 54
   },
   "arxiv_update_date": "2025-07-01",
-  "updated_at": "2025-07-01 15:14:58"
+  "updated_at": "2025-07-01 23:50:56"
 }
