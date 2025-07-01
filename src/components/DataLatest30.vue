@@ -1,5 +1,8 @@
 <template>
   <div class="data-list-template">
+    <div style="display: flex;justify-content: flex-end;">
+      <p style="margin-top: 1em;">The data is expected to be updated daily at 10:30. The last update was on {{updated_at || null}}.</p>
+    </div>
     <div class="box" style="margin-top: 0.8em">
       <div class="prompt-box" :class="{ expanded: isPromptExpanded }">
         <p style="margin-bottom: 0.2em">
@@ -200,6 +203,10 @@ const props = defineProps({
     type: Object,
     Default: () => ({}), // 确保level_tatistics是可选的
     required: false,
+  },
+  updated_at: {
+    type: String,
+    required: false, // 确保updated_at是可选的
   },
 });
 

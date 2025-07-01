@@ -1,6 +1,9 @@
 <template>
   <div class="home-template main-container">
-    <h2>Daily Paper</h2>
+    <div style="margin: 0.3em 0;display: flex;justify-content: space-between;align-items:end">
+      <h2>Daily Paper</h2>
+      <!-- <div>The data is expected to be updated daily between 9:00 AM and 10:00 AM.</div> -->
+    </div>
     <div class="button-container" style="margin-top: 2em">
       <el-button
         :type="currentIndex == 0 ? 'primary' : ''"
@@ -31,6 +34,7 @@
         type="Creativity"
         :arxiv_update_date="HCIResultList?.arxiv_update_date || ''"
         :level_tatistics="HCIResultList?.level_tatistics || {}"
+        :updated_at="HCIResultList?.updated_at || ''"
       />
     </div>
 
@@ -42,16 +46,17 @@
         :prompt="DataResultList?.prompt?.train_data || ''"
         :arxiv_update_date="DataResultList?.arxiv_update_date || ''"
         :level_tatistics="DataResultList?.level_tatistics || {}"
+        :updated_at="DataResultList?.updated_at || ''"
       />
     </div>
 
     <!-- Data Latest 30 标签页添加分页功能 -->
-    <div v-show="currentIndex == 2">
+    <!-- <div v-show="currentIndex == 2">
       <DataLatest30
         :dataList="data_latest_30_result?.data || []"
         :subjects="data_latest_30_result?.subjects || []"
       ></DataLatest30>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -107,7 +112,6 @@ onMounted(async () => {
   margin: 0 auto;
   h2 {
     font-size: 2.5em;
-    margin: 0.3em 0;
   }
   .button-container {
     .el-button {
