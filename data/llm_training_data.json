@@ -915,6 +915,22 @@
         "level": "partial",
         "reason": "RoboBrain 2.0 includes a description of data construction and multi-stage training strategies, which is somewhat related to training-stage data processing for LLMs but is not the primary focus."
       },
+      "models": [
+        {
+          "model_path": "BAAI/RoboBrain2.0-32B",
+          "downloads": "11",
+          "likes": "9",
+          "trending_score": "9.0",
+          "link": "https://huggingface.co/BAAI/RoboBrain2.0-32B"
+        },
+        {
+          "model_path": "BAAI/RoboBrain2.0-7B",
+          "downloads": "3931",
+          "likes": "84",
+          "trending_score": "4.0",
+          "link": "https://huggingface.co/BAAI/RoboBrain2.0-7B"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -1384,6 +1400,14 @@
         "level": "partial",
         "reason": "This work presents a Chinese bias evaluation benchmark for LLMs and evaluates existing models. It focuses on bias evaluation rather than the data engineering or core processing methods for creating or refining LLM training data."
       },
+      "datasets": [
+        {
+          "dataset_name": "Velikaya/McBE",
+          "downloads": "134",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/Velikaya/McBE"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -3644,6 +3668,14 @@
         "level": "irrelevant",
         "reason": "This paper discusses a cooperative infrastructure perception system and dataset for autonomous driving under adverse weather conditions, which is unrelated to LLM training data processing or data engineering."
       },
+      "datasets": [
+        {
+          "dataset_name": "MinghaoNing/CoInfra",
+          "downloads": "0",
+          "likes": "1",
+          "link": "https://huggingface.co/datasets/MinghaoNing/CoInfra"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -5690,6 +5722,14 @@
         "level": "irrelevant",
         "reason": "The paper introduces LocalDyGS for dynamic scene modeling using multi-view data, which is unrelated to LLM training data processing as it focuses on scene modeling techniques rather than LLM training methodologies."
       },
+      "datasets": [
+        {
+          "dataset_name": "BestWJH/VRU_Basketball",
+          "downloads": "107",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/BestWJH/VRU_Basketball"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -12231,6 +12271,26 @@
         "level": "partial",
         "reason": "The paper mentions that training data composition affects the self-correction capabilities of LLMs, but it primarily focuses on the self-correction limitation rather than proposing new data processing methods for LLMs."
       },
+      "datasets": [
+        {
+          "dataset_name": "kenhktsui/scli5",
+          "downloads": "96",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/kenhktsui/scli5"
+        },
+        {
+          "dataset_name": "kenhktsui/gsm8k_sc",
+          "downloads": "190",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/kenhktsui/gsm8k_sc"
+        },
+        {
+          "dataset_name": "kenhktsui/prm800k_sc",
+          "downloads": "60",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/kenhktsui/prm800k_sc"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -12741,6 +12801,15 @@
         "level": "partial",
         "reason": "The paper discusses TriMap video diffusion and Language Quantized Compressor for 3D scene reconstruction, touching upon large-scale training datasets but does not directly focus on LLM data processing innovations."
       },
+      "models": [
+        {
+          "model_path": "chijw/LangScene-X",
+          "downloads": "0",
+          "likes": "2",
+          "trending_score": "2.0",
+          "link": "https://huggingface.co/chijw/LangScene-X"
+        }
+      ],
       "source": "arXiv"
     },
     {
@@ -14162,7 +14231,7 @@
       "models": [
         {
           "model_path": "bilalzafar/FinAI-BERT",
-          "downloads": "73",
+          "downloads": "79",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/bilalzafar/FinAI-BERT"
@@ -21142,7 +21211,7 @@
       "models": [
         {
           "model_path": "xg-chu/ARTalk",
-          "downloads": "61",
+          "downloads": "51",
           "likes": "1",
           "trending_score": "0.0",
           "link": "https://huggingface.co/xg-chu/ARTalk"
@@ -23468,14 +23537,14 @@
         },
         {
           "model_path": "Code2Logic/GameQA-Qwen2.5-VL-7B",
-          "downloads": "25",
+          "downloads": "24",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/Code2Logic/GameQA-Qwen2.5-VL-7B"
         },
         {
           "model_path": "Code2Logic/GameQA-llava-onevision-qwen2-7b-ov-hf",
-          "downloads": "22",
+          "downloads": "20",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/Code2Logic/GameQA-llava-onevision-qwen2-7b-ov-hf"
@@ -23597,16 +23666,16 @@
       },
       "datasets": [
         {
-          "dataset_name": "nlp-waseda/VisRecall",
-          "downloads": "57",
-          "likes": "0",
-          "link": "https://huggingface.co/datasets/nlp-waseda/VisRecall"
-        },
-        {
           "dataset_name": "nlp-waseda/KnowRecall",
           "downloads": "80",
           "likes": "0",
           "link": "https://huggingface.co/datasets/nlp-waseda/KnowRecall"
+        },
+        {
+          "dataset_name": "nlp-waseda/VisRecall",
+          "downloads": "57",
+          "likes": "0",
+          "link": "https://huggingface.co/datasets/nlp-waseda/VisRecall"
         }
       ],
       "tasks": [
@@ -24749,9 +24818,9 @@
       "models": [
         {
           "model_path": "TeleAI-AI-Flow/AI-Flow-Ruyi-7B-Preview0704",
-          "downloads": "0",
-          "likes": "1",
-          "trending_score": "1.0",
+          "downloads": "2",
+          "likes": "3",
+          "trending_score": "3.0",
           "link": "https://huggingface.co/TeleAI-AI-Flow/AI-Flow-Ruyi-7B-Preview0704"
         }
       ],
@@ -25435,7 +25504,7 @@
         {
           "dataset_name": "osunlp/Mind2Web-2",
           "downloads": "0",
-          "likes": "10",
+          "likes": "11",
           "link": "https://huggingface.co/datasets/osunlp/Mind2Web-2"
         }
       ],
@@ -26430,7 +26499,7 @@
         },
         {
           "model_path": "Levideus/llava-sp-pooling-lora",
-          "downloads": "4",
+          "downloads": "7",
           "likes": "0",
           "trending_score": "0.0",
           "link": "https://huggingface.co/Levideus/llava-sp-pooling-lora"
@@ -27033,57 +27102,57 @@
       },
       "models": [
         {
+          "model_path": "Skywork/Skywork-Reward-V2-Llama-3.1-8B-40M",
+          "downloads": "29",
+          "likes": "3",
+          "trending_score": "3.0",
+          "link": "https://huggingface.co/Skywork/Skywork-Reward-V2-Llama-3.1-8B-40M"
+        },
+        {
+          "model_path": "Skywork/Skywork-Reward-V2-Qwen3-1.7B",
+          "downloads": "11",
+          "likes": "2",
+          "trending_score": "2.0",
+          "link": "https://huggingface.co/Skywork/Skywork-Reward-V2-Qwen3-1.7B"
+        },
+        {
+          "model_path": "Skywork/Skywork-Reward-V2-Qwen3-4B",
+          "downloads": "7",
+          "likes": "2",
+          "trending_score": "2.0",
+          "link": "https://huggingface.co/Skywork/Skywork-Reward-V2-Qwen3-4B"
+        },
+        {
+          "model_path": "Skywork/Skywork-Reward-V2-Qwen3-8B",
+          "downloads": "13",
+          "likes": "2",
+          "trending_score": "2.0",
+          "link": "https://huggingface.co/Skywork/Skywork-Reward-V2-Qwen3-8B"
+        },
+        {
           "model_path": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
-          "downloads": "1",
+          "downloads": "17",
           "likes": "2",
           "trending_score": "2.0",
           "link": "https://huggingface.co/Skywork/Skywork-Reward-V2-Llama-3.1-8B"
         },
         {
-          "model_path": "Skywork/Skywork-Reward-V2-Llama-3.1-8B-40M",
-          "downloads": "1",
-          "likes": "2",
-          "trending_score": "2.0",
-          "link": "https://huggingface.co/Skywork/Skywork-Reward-V2-Llama-3.1-8B-40M"
-        },
-        {
           "model_path": "Skywork/Skywork-Reward-V2-Qwen3-0.6B",
-          "downloads": "1",
+          "downloads": "17",
           "likes": "1",
           "trending_score": "1.0",
           "link": "https://huggingface.co/Skywork/Skywork-Reward-V2-Qwen3-0.6B"
         },
         {
-          "model_path": "Skywork/Skywork-Reward-V2-Qwen3-1.7B",
-          "downloads": "0",
-          "likes": "1",
-          "trending_score": "1.0",
-          "link": "https://huggingface.co/Skywork/Skywork-Reward-V2-Qwen3-1.7B"
-        },
-        {
-          "model_path": "Skywork/Skywork-Reward-V2-Qwen3-4B",
-          "downloads": "2",
-          "likes": "1",
-          "trending_score": "1.0",
-          "link": "https://huggingface.co/Skywork/Skywork-Reward-V2-Qwen3-4B"
-        },
-        {
-          "model_path": "Skywork/Skywork-Reward-V2-Qwen3-8B",
-          "downloads": "1",
-          "likes": "1",
-          "trending_score": "1.0",
-          "link": "https://huggingface.co/Skywork/Skywork-Reward-V2-Qwen3-8B"
-        },
-        {
           "model_path": "Skywork/Skywork-Reward-V2-Llama-3.2-1B",
-          "downloads": "1",
+          "downloads": "6",
           "likes": "1",
           "trending_score": "1.0",
           "link": "https://huggingface.co/Skywork/Skywork-Reward-V2-Llama-3.2-1B"
         },
         {
           "model_path": "Skywork/Skywork-Reward-V2-Llama-3.2-3B",
-          "downloads": "1",
+          "downloads": "43",
           "likes": "1",
           "trending_score": "1.0",
           "link": "https://huggingface.co/Skywork/Skywork-Reward-V2-Llama-3.2-3B"
@@ -31030,6 +31099,7 @@
       "title": "Matrix majorization in large samples with varying support restrictions",
       "links": {
         "Abstract": "https://arxiv.org/abs/2407.16581",
+        "HTML": "https://arxiv.org/html/2407.16581",
         "PDF": "https://arxiv.org/pdf/2407.16581"
       },
       "relevance": {
@@ -31901,5 +31971,5 @@
     "core": 27
   },
   "arxiv_update_date": "2025-07-04",
-  "updated_at": "2025-07-04 10:12:13"
+  "updated_at": "2025-07-05 23:55:29"
 }
