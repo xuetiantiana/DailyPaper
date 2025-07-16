@@ -12,6 +12,14 @@ const router = createRouter({
       meta: {
         keepAlive: true
       }
+    },
+    {
+      path: '/conference',
+      name: 'conference',
+      component: import('../views/ConferenceView.vue'),
+      meta: {
+        keepAlive: true
+      }
     }
   ]
 })
