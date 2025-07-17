@@ -30262,6 +30262,7 @@
       "title": "Mutual information and the encoding of contingency tables",
       "links": {
         "Abstract": "https://arxiv.org/abs/2405.05393",
+        "HTML": "https://arxiv.org/html/2405.05393",
         "PDF": "https://arxiv.org/pdf/2405.05393"
       },
       "relevance": {
@@ -31134,6 +31135,7 @@
       "title": "Computational Complexity of Model-Checking Quantum Pushdown Systems",
       "links": {
         "Abstract": "https://arxiv.org/abs/2506.18439",
+        "HTML": "https://arxiv.org/html/2506.18439",
         "PDF": "https://arxiv.org/pdf/2506.18439"
       },
       "relevance": {
@@ -31220,6 +31222,7 @@
       "title": "Data-Free Model-Related Attacks: Unleashing the Potential of Generative AI",
       "links": {
         "Abstract": "https://arxiv.org/abs/2501.16671",
+        "HTML": "https://arxiv.org/html/2501.16671",
         "PDF": "https://arxiv.org/pdf/2501.16671"
       },
       "relevance": {
@@ -31506,6 +31509,7 @@
       "title": "Truncated Kernel Stochastic Gradient Descent on Spheres",
       "links": {
         "Abstract": "https://arxiv.org/abs/2410.01570",
+        "HTML": "https://arxiv.org/html/2410.01570",
         "PDF": "https://arxiv.org/pdf/2410.01570"
       },
       "relevance": {
@@ -31624,6 +31628,7 @@
       "title": "Predictive Modeling, Pattern Recognition, and Spatiotemporal Representations of Plant Growth in Simulated and Controlled Environments: A Comprehensive Review",
       "links": {
         "Abstract": "https://arxiv.org/abs/2412.10538",
+        "HTML": "https://arxiv.org/html/2412.10538",
         "PDF": "https://arxiv.org/pdf/2412.10538"
       },
       "relevance": {
@@ -32861,7 +32866,7 @@
     "Numerical Analysis (math.NA)"
   ],
   "prompt": {
-    "train_data": "\nHigh-quality training data is critical to LLM performance. You are a computer science expert specializing in data engineering for large language model (LLM) training data. Your task is to analyze a set of arXiv papers and identify those that focus on processing LLM training data.\n\n---\n\n### **Task Objective**\n\nFor each paper, determine whether it makes a technical contribution to **LLM training data processing**. In particular, focus on papers that involve **training-data processing** , including but not limited to:\n\n1. **Data processing during pretraining or fine-tuning**\n   * Preparation of data for LLM pretraining, instruction tuning, supervised fine-tuning (SFT), alignment tuning, etc.\n2. **training-data processing**\n   * Common data engineering operations, including data collection, data generation, data deduplication, data filtering, etc.\n   * Any methods or techniques that significantly improve data quality.\n   * Creation of a new dataset **with clear, detailed data processing steps.**\n\n**Note:** Ignore papers that merely use existing training datasets for downstream tasks (e.g., QA, reasoning), propose new model architectures, or conduct evaluation benchmarks\u2014unless they also **substantively modify or process the training data itself**.\n\n---\n\n### **Relevance Level Classification**\n\n* **`core`**: The paper\u2019s primary contribution lies in processing or creating LLM training data, or in constructing a higher-quality dataset from existing data\u2014e.g., dataset creation, data generation or synthesis, pipeline design, filtering methods, or other data\u2011engineering operations that improve data quality.\n* **`partial`**: The paper briefly mentions training data or standard preprocessing (e.g., using a standard dataset or tokenization, it focuses on model architecture, tasks, evaluation, prompting methods) but does **not** focus primarily on data processing.\n* **`irrelevant`**: The paper does **not** discuss any aspect of LLM training data collection, processing, or engineering.\n\n---\n\n### **Output Format (strictly follow this JSON schema)**\n\n```json\n{\n  \"result\": [\n    {\n      \"id\": \"<paper ID>\",\n      \"level\": \"core | partial | irrelevant\",\n      \"reason\": \"A 1-2 sentence explanation citing the key part of the abstract or methodology that justifies your classification\"\n    }\n    // \u2026additional papers\n  ]\n}\n```\n"
+    "train_data": "\nHigh-quality training data is critical to the performance of large language models (LLMs). You are a computer science expert specializing in LLM training data processing. Your task is to analyze a set of arXiv papers and determine their relevance to **LLM training data processing**.\n\n### **Task Objective**\n\nFor each paper, assess whether it makes a technical contribution to **LLM training data processing**.\n\n1. First, the paper must relate to data processing for **pretraining or fine-tuning**, including stages such as LLM pretraining, instruction fine-tuning, supervised fine-tuning (SFT), or alignment fine-tuning.\n2. Second, the paper must involve **training data processing** operations, such as:\n\n   * Data engineering operations, including data collection, data generation, deduplication, filtering, etc.;\n   * Techniques or methods that significantly improve data quality;\n   * Creation or generation of new datasets.\n\n### Answer: **Relevance Classification**\n\n**`core`**: The paper makes a direct contribution to LLM training data processing. Examples include: creation, generation, or synthesis of new datasets; building higher-quality datasets from existing ones; novel data processing techniques; or any data engineering operations that substantially improve data quality.\n\n**`partial`**: The paper briefly discusses training data processing, but the main focus lies elsewhere\u2014such as model architecture, task design, evaluation, or prompt engineering\u2014rather than training data processing.\n\n**`irrelevant`**: The paper does not address any aspect of LLM training data processing.\n\n### **Output Format (strictly follow this JSON structure)**\n\n```json\n{\n  \"result\": [\n    {\n      \"id\": \"<Paper ID>\",\n      \"answer\": \"core | partial | irrelevant\",\n      \"reason\": \"A 1\u20132 sentence explanation of your classification, citing key content from the abstract or methodology section.\"\n    }\n    // \u2026additional papers\n  ]\n}\n```\n\n### Example\n\ninput:\n\n```\n[\n    {\n        \"id\": \"2411.12372\",\n        \"title\": \"RedPajama: an Open Dataset for Training Large Language Models\",\n        \"abstract\": \"Large language models are increasingly becoming a cornerstone technology in artificial intelligence, the sciences, and society as a whole, yet the optimal strategies for dataset composition and filtering remain largely elusive. Many of the top-performing models lack transparency in their dataset curation and model development processes, posing an obstacle to the development of fully open language models. In this paper, we identify three core data-related challenges that must be addressed to advance open-source language models. These include (1) transparency in model development, including the data curation process, (2) access to large quantities of high-quality data, and (3) availability of artifacts and metadata for dataset curation and analysis. To address these challenges, we release RedPajama-V1, an open reproduction of the LLaMA training dataset. In addition, we release RedPajama-V2, a massive web-only dataset consisting of raw, unfiltered text data together with quality signals and metadata. Together, the RedPajama datasets comprise over 100 trillion tokens spanning multiple domains and with their quality signals facilitate the filtering of data, aiming to inspire the development of numerous new datasets. To date, these datasets have already been used in the training of strong language models used in production, such as Snowflake Arctic, Salesforce's XGen and AI2's OLMo. To provide insight into the quality of RedPajama, we present a series of analyses and ablation studies with decoder-only language models with up to 1.6B parameters. Our findings demonstrate how quality signals for web data can be effectively leveraged to curate high-quality subsets of the dataset, underscoring the potential of RedPajama to advance the development of transparent and high-performing language models at scale.\"\n    },\n    {\n        \"id\": \"2306.01116\",\n        \"title\": \"The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only\",\n        \"abstract\": \"Large language models are commonly trained on a mixture of filtered web data and curated high-quality corpora, such as social media conversations, books, or technical papers. This curation process is believed to be necessary to produce performant models with broad zero-shot generalization abilities. However, as larger models requiring pretraining on trillions of tokens are considered, it is unclear how scalable is curation and whether we will run out of unique high-quality data soon. At variance with previous beliefs, we show that properly filtered and deduplicated web data alone can lead to powerful models; even significantly outperforming models from the state-of-the-art trained on The Pile. Despite extensive filtering, the high-quality data we extract from the web is still plentiful, and we are able to obtain five trillion tokens from CommonCrawl. We publicly release an extract of 600 billion tokens from our RefinedWeb dataset, and 1.3/7.5B parameters language models trained on it.\"\n    }\n]\n```\n\noutput:\n\n```\n{\n  \"result\": [\n    {\n      \"id\": \"2411.12372\",\n      \"answer\": \"core\",\n      \"reason\": \"This paper releases RedPajama-V1 and V2 datasets, comprising over 100 trillion tokens, and introduces quality signals for filtering. It involves data collection, deduplication, filtering, and quality assessment, making a significant contribution to LLM training data processing.\"\n    },\n    {\n      \"id\": \"2306.01116\",\n      \"answer\": \"core\",\n      \"reason\": \"The paper presents the RefinedWeb dataset, which uses only deduplicated and filtered web data to train LLMs. It challenges the conventional reliance on mixed curated corpora and publicly releases both the dataset and models, representing a core contribution to high-quality data construction.\"\n    }\n  ]\n}\n\n```\n"
   },
   "description": "Data source: https://arxiv.org/list/cs/new",
   "level_tatistics": {
@@ -32870,5 +32875,5 @@
     "core": 17
   },
   "arxiv_update_date": "2025-07-17",
-  "updated_at": "2025-07-17 10:20:23"
+  "updated_at": "2025-07-17 10:33:10"
 }
