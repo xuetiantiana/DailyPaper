@@ -16,7 +16,7 @@
     <div v-show="currentIndex == 0">
       <DataLatest
         :dataList="CreativityMetting?.data || []"
-        :years="CreativityMetting?.years || []"
+        :years="CreativityMetting?.years || ['2025', '2024']"
 
       />
     </div>
@@ -38,7 +38,7 @@ const CreativityMetting = ref([]);
 onMounted(async () => {
   try {
     const response = await axios.get(
-      "./data/creativity_metting.json?v=" + new Date().getTime()
+      "./data/conference_data.json?v=" + new Date().getTime()
     );
 
     CreativityMetting.value = response.data;

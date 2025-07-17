@@ -1,6 +1,13 @@
 <template>
   <div class="home-template main-container">
-    <div style="margin: 0.3em 0;display: flex;justify-content: space-between;align-items:end">
+    <div
+      style="
+        margin: 0.3em 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+      "
+    >
       <h2>Daily Paper</h2>
       <!-- <div>The data is expected to be updated daily between 9:00 AM and 10:00 AM.</div> -->
     </div>
@@ -17,12 +24,13 @@
         @click="currentIndex = 1"
         >LLM Training Data</el-button
       >
-      <!-- <el-button
+
+      <el-button
         :type="currentIndex == 2 ? 'primary' : ''"
         :class="currentIndex == 2 ? 'on' : ''"
         @click="currentIndex = 2"
-        >Data Latest 30</el-button
-      > -->
+        >RL Data</el-button
+      >
     </div>
 
     <div v-show="currentIndex == 0">
@@ -50,6 +58,18 @@
       />
     </div>
 
+    <div v-show="currentIndex == 2">
+      <DataLatest30
+        :dataList="RLDataResultList?.data || []"
+        :subjects="RLDataResultList?.subjects || []"
+        :description="RLDataResultList?.description || ''"
+        :prompt="RLDataResultList?.prompt?.RL_data || ''"
+        :arxiv_update_date="RLDataResultList?.arxiv_update_date || ''"
+        :level_tatistics="RLDataResultList?.level_tatistics || {}"
+        :updated_at="RLDataResultList?.updated_at || ''"
+      />
+    </div>
+
     <!-- Data Latest 30 标签页添加分页功能 -->
     <!-- <div v-show="currentIndex == 2">
       <DataLatest30
@@ -71,21 +91,14 @@ const HCIResultList = ref([]);
 const DataResultList = ref([]);
 const data_latest_30_result = ref([]);
 
+const RLDataResultList = ref([]);
+
 // 生命周期钩子：组件挂载时请求 JSON 数据
 onMounted(async () => {
   try {
     const response = await axios.get(
       "./data/creativity.json?v=" + new Date().getTime()
     );
-    
-    // 过滤数据，只保留 relevance 为 'creativity' 的数据
-    // const originalData = response.data;
-    // const filteredData = {
-    //   ...originalData,
-    //   data: originalData.data?.filter(item => 
-    //     item.relevance && item.relevance.keyword  === 'creativity'
-    //   ) || []
-    // };
     HCIResultList.value = response.data;
 
     const response2 = await axios.get(
@@ -94,9 +107,9 @@ onMounted(async () => {
     DataResultList.value = response2.data;
 
     const response3 = await axios.get(
-      "./data/data_latest_30.json?v=" + new Date().getTime()
+      "./data/RL_data.json?v=" + new Date().getTime()
     );
-    data_latest_30_result.value = response3.data;
+    RLDataResultList.value = response3.data;
   } catch (error) {
     console.error("获取 JSON 数据失败:", error);
   }
@@ -173,5 +186,4 @@ onMounted(async () => {
     margin-left: 0.5em;
   }
 }
-
 </style>

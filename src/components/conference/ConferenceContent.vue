@@ -1,11 +1,38 @@
 <template>
   <div class="data-list-template">
+    <div class="summary-box">
+      <!-- <p>Showing new listings for {{ getCurrentDate() }}</p> -->
+       <p></p>
+      <p>
+        Total of {{ props.dataList.length }} entries ({{ coreCount || "0"}} Core,
+        {{ partialCount || "0" }} Partial, {{ irrelevantCount || "0" }} Irrelevant)
+      </p>
+    </div>
     <!-- Data Latest 30 标签页添加分页功能 -->
     <div>
       <!-- 日期范围筛选 -->
       <!-- <selectComponent></selectComponent> -->
       <div class="filter-box">
         <div class="filter-container">
+          <div>
+            <span class="demonstration">Relevance : &nbsp;&nbsp;</span>
+            <el-select
+              v-model="relevanceValue"
+              filterable
+              placeholder=""
+              style="width: 200px"
+              class="relevance-select"
+            >
+              <!-- <el-option label="All" value="All" /> -->
+              <el-option
+                v-for="item in relevanceList"
+                :key="item"
+                :label="item"
+                :value="item"
+                style="text-transform: capitalize"
+              />
+            </el-select>
+          </div>
           <div>
             <span class="demonstration" style="margin-right: em"
               >years : &nbsp;&nbsp;</span
@@ -14,7 +41,7 @@
               v-model="yearValue"
               filterable
               placeholder="Select Years"
-              style="width: 400px"
+              style="width: 200px"
             >
               <el-option label="All" value="All" />
               <el-option
@@ -40,12 +67,12 @@
         {{ Math.min(currentPage * pageSize, filteredData.length) }} 条
 
         <!-- 统一展开/收起控制 -->
-        <!-- <div class="toggle-all-control" @click="toggleAllDetails">
+        <div class="toggle-all-control" @click="toggleAllDetails">
           <el-icon :class="{ rotate: isAllExpanded }">
             <ArrowDown />
           </el-icon>
           <span>{{ isAllExpanded ? "Collapse All" : "Expand All" }}</span>
-        </div> -->
+        </div>
       </div>
 
       <ul class="result-list" style="margin-top: 1em">
@@ -84,6 +111,8 @@
 
 <script setup>
 import { ref, computed, watch, defineProps, nextTick } from "vue";
+import { ArrowDown } from "@element-plus/icons-vue";
+import selectComponent from "@/components/selectComponent.vue";
 import DataItemComponent from "@/components/conference/ConferenceItem.vue";
 
 const props = defineProps({
@@ -95,22 +124,109 @@ const props = defineProps({
     type: Array,
     default: () => [],
   },
+  type: {
+    type: String,
+    required: false, // 确保type是必需的
+  },
+  description: {
+    type: String,
+    required: false, // 确保type是必需的
+  },
+  prompt: {
+    type: String,
+    required: false, // 确保type是必需的
+  },
+  arxiv_update_date: {
+    type: String,
+    required: false, // 确保type是必需的
+  },
+  level_tatistics: {
+    type: Object,
+    Default: () => ({}), // 确保level_tatistics是可选的
+    required: false,
+  },
+  updated_at: {
+    type: String,
+    required: false, // 确保updated_at是可选的
+  },
 });
 
 const yearValue = ref("All"); // 主题筛选值，默认为All
+const relevanceValue = ref("All"); // 相关性筛选值，默认为All
+const versionValue = ref("All"); // version筛选值，默认为All
+
+const relevanceList = ref([]);
+relevanceList.value = ["All", "core", "partial", "irrelevant"];
+
+const versionList = ref([]);
+versionList.value = ["All", "v1", "v2", "v3"];
+
+// if (props.type === "Creativity") {
+
+//   relevanceValue.value = "All"; // 默认选择Creativity
+// } else {
+//   relevanceList.value = ["All"];
+// }
 
 // 分页相关状态
 const currentPage = ref(1);
 const pageSize = ref(100);
 
+// 日期筛选相关状态
+const dateRange = ref(null);
+
+// 禁用今天之后的日期
+const disabledDate = (time) => {
+  const today = new Date();
+  today.setHours(23, 59, 59, 999);
+  return time.getTime() > today.getTime();
+};
+
 // 计算筛选后的数据（基于父组件传入的dataList）
 const filteredData = computed(() => {
   let result = props.dataList;
 
-  // 按subject筛选
+  // 按year筛选
   if (yearValue.value && yearValue.value !== "All") {
     result = result.filter((item) => {
       return item.year && item.year == yearValue.value;
+    });
+  }
+
+  // 按relevance.level筛选
+  if (relevanceValue.value && relevanceValue.value !== "All") {
+    result = result.filter((item) => {
+      return item.relevance && 
+        item.relevance.level && 
+        item.relevance.level.toLowerCase().includes(relevanceValue.value.toLowerCase());
+    });
+  }
+
+  // 按version筛选（通过submission_historys中最后一项的version）
+  if (versionValue.value && versionValue.value !== "All") {
+    result = result.filter((item) => {
+      if (
+        !item.submission_historys ||
+        !Array.isArray(item.submission_historys) ||
+        item.submission_historys.length === 0
+      ) {
+        return false;
+      }
+      const lastSubmission =
+        item.submission_historys[item.submission_historys.length - 1];
+      return lastSubmission && lastSubmission.version === versionValue.value;
+    });
+  }
+
+  // 按日期范围筛选
+  if (dateRange.value && dateRange.value.length === 2) {
+    const [startDate, endDate] = dateRange.value;
+    result = result.filter((item) => {
+      if (!item.last_revised_date) return false;
+
+      // 将日期格式从 2025/06/20 转换为 2025-06-20 以便比较
+      const itemDate = item.last_revised_date.replace(/\//g, "-");
+      return itemDate >= startDate && itemDate <= endDate;
     });
   }
 
@@ -130,6 +246,7 @@ watch(
   () => {
     currentPage.value = 1;
     yearValue.value = "All";
+    dateRange.value = null;
   },
   { immediate: true }
 );
@@ -165,6 +282,17 @@ const handleCurrentChange = (newPage) => {
   scrollToTop();
 };
 
+// 日期范围变化处理
+const handleDateRangeChange = () => {
+  currentPage.value = 1; // 重置到第一页
+};
+
+// 清除日期筛选
+const clearDateFilter = () => {
+  dateRange.value = null;
+  currentPage.value = 1;
+};
+
 // 清除所有筛选
 const clearAllFilters = () => {
   dateRange.value = null;
@@ -174,7 +302,75 @@ const clearAllFilters = () => {
   currentPage.value = 1;
 };
 
+// year筛选变化处理
+watch(yearValue, () => {
+  currentPage.value = 1; // 重置到第一页
+});
+
+// Relevance筛选变化处理
+watch(relevanceValue, () => {
+  currentPage.value = 1; // 重置到第一页
+});
+
+// Version筛选变化处理
+watch(versionValue, () => {
+  currentPage.value = 1; // 重置到第一页
+});
+
 const isPromptExpanded = ref(false);
+
+const togglePrompt = () => {
+  isPromptExpanded.value = !isPromptExpanded.value;
+};
+
+// 格式化描述文本，将URL转换为链接
+const formatDescription = (text) => {
+  if (!text) return "";
+
+  // URL 正则表达式
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+
+  return text.replace(urlRegex, '<a href="$1" target="_blank">$1</a>');
+};
+
+// 计算各种相关性级别的数量（使用原始数据）
+const coreCount = computed(() => {
+  return props.dataList.filter(
+    (item) => item.relevance && 
+      item.relevance.level && 
+      item.relevance.level.toLowerCase().includes("core")
+  ).length;
+});
+
+const partialCount = computed(() => {
+  return props.dataList.filter(
+    (item) => item.relevance && 
+      item.relevance.level && 
+      item.relevance.level.toLowerCase().includes("partial")
+  ).length;
+});
+
+const irrelevantCount = computed(() => {
+  return props.dataList.filter(
+    (item) => item.relevance && 
+      item.relevance.level && 
+      item.relevance.level.toLowerCase().includes("irrelevant")
+  ).length;
+});
+
+// 获取当前日期的前一天
+const getCurrentDate = () => {
+  const today = new Date(props.arxiv_update_date);
+  const yesterday = new Date(today);
+  yesterday.setDate(today.getDate());
+
+  return yesterday.toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+};
 
 const isAllExpanded = ref(false);
 const itemRefs = ref([]);

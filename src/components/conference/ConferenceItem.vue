@@ -2,33 +2,77 @@
   <div class="data-item-component">
     <div class="dt">
       <a style="color: #000">[{{ num }}]&nbsp;&nbsp;</a>
+      <template v-if="dataItem.links">
+        <a :href="dataItem.links.Abstract" title="Abstract" target="_blank"
+        >ACM:{{ dataItem.id }}</a
+      >
+      &nbsp;&nbsp; [
+      <template v-for="(value, key, index) in dataItem.links" :key="index">
+        <template v-if="key !== 'Abstract'">
+          <a :href="value" target="_blank">{{ key }}</a>
+          <template v-if="index < Object.entries(dataItem.links).length - 1"
+            >,&nbsp;
+          </template>
+        </template> </template
+      >]
+      </template>
+      <template v-else>
+        <b>{{ dataItem.source }}:{{ dataItem.id }}</b>
+      </template>
+      
     </div>
     <div class="dd">
-      <div class="title">
-        <a :href="dataItem.url" target="_blank">{{ dataItem.title  || "title" }}</a>
+      <div class="title">{{ dataItem.title  || "title" }}</div>
+      <div v-if="dataItem.author" class="author">{{ dataItem.author  || "author" }}</div>
+      <div class="abstract" style="margin-bottom: 1em;">{{ dataItem.abstract }}</div>
+
+      <div class="relevance" style="margin-top: 1em" v-if="dataItem.relevance">
+        <p>
+          <b>Relevance Rating: </b>
+          <span style="text-transform: capitalize">{{
+            dataItem.relevance.level
+          }}</span>
+        </p>
+        <p><b>Relevance Summary:</b> {{ dataItem.relevance.reason }}</p>
       </div>
-      <div class="author">{{ dataItem.author  || "author" }}</div>
-      <div class="abstract">{{ dataItem.abstract }}</div>
-      <div class="doi"><b>doi: </b>{{ dataItem.doi }}</div>
-      <div class="booktitle"><b>booktitle: </b>{{ dataItem.booktitle }}</div>
-      <div class="year"><b>year: </b>{{ dataItem.year }}</div>
-      <div class="publisher"><b>publisher: </b>{{ dataItem.publisher }}</div>
-      <div class="series"><b>series: </b>{{ dataItem.series }}</div>
+
+      
+     
       
       
 
       <!-- 折叠/展开控制 -->
-      <!-- <div class="toggle-header" @click="toggleExpanded">
+      <div class="toggle-header" @click="toggleExpanded">
         <span>{{ isExpanded ? "Hide" : "Show" }} Details</span>
         <el-icon :class="{ rotate: isExpanded }">
           <ArrowDown />
         </el-icon>
-      </div> -->
+      </div>
 
       <!-- 可折叠的内容 -->
-      <!-- <div class="toggle-content" :class="{ expanded: isExpanded }">
-        <p><b>Submission_historys:</b> {{ dataItem.submission_historys }}</p>
-      </div> -->
+      <div class="toggle-content" :class="{ expanded: isExpanded }">
+        <div class="year"><b class="capitalize">year: </b>{{ dataItem.year }}</div>
+        <p><b class="capitalize">conference_name:</b> {{ dataItem.conference_name }}</p>
+        <p><b class="capitalize">keywords:</b> {{ dataItem.keywords }}</p>
+        <p><b class="capitalize">address:</b> {{ dataItem.address }}</p>
+        <p><b class="capitalize">booktitle:</b> {{ dataItem.booktitle }}</p>
+        
+        <p><b class="capitalize">id:</b> {{ dataItem.id }}</p>
+        <p><b class="capitalize">isbn:</b> {{ dataItem.isbn }}</p>
+        
+        <p><b class="capitalize">location:</b> {{ dataItem.location }}</p>
+        
+        <p><b class="capitalize">publisher:</b> {{ dataItem.publisher }}</p>
+        
+        <p><b class="capitalize">series:</b> {{ dataItem.series }}</p>
+
+        <p><b class="capitalize">numpages:</b> {{ dataItem.numpages }}</p>
+        <p><b class="capitalize" v-if="dataItem.pages">pages:</b> {{ dataItem.pages }}</p>
+        <p><b class="capitalize">number_of_citation:</b> {{ dataItem.number_of_citation }}</p>
+        <p><b class="capitalize">number_of_total_download:</b> {{ dataItem.number_of_total_download }}</p>
+        <p><b class="capitalize">open_access:</b> {{ dataItem.open_access }}</p>
+        
+      </div>
     </div>
   </div>
 </template>
@@ -71,16 +115,6 @@ defineExpose({
 .data-item-component {
   font-size: 14px;
   color: #000;
-  display: flex;
-  .title{
-    margin-bottom: .2em;
-    a{
-      color: #000;
-      &:hover{
-        color: #0000ee;
-      }
-    }
-  }
   a {
     color: #0000ee;
   }
@@ -91,7 +125,8 @@ defineExpose({
   }
   .dd {
     line-height: 130%;
-    margin-left: 3em;
+    margin-left: 5em;
+    margin-top: 0.5em;
     .title {
       font-size: 18px;
       font-weight: bold;
@@ -105,8 +140,8 @@ defineExpose({
     }
     .authors {
     }
-    b {
-      // text-transform: capitalize;
+    b.capitalize {
+      text-transform: capitalize;
     }
   }
 
