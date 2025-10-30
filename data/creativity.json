@@ -1,1656 +1,202 @@
 {
   "data": [
     {
-      "id": "2510.23840",
+      "id": "2510.24720",
       "paper_version": "v1",
-      "abstract": "Reality Distortion Room (RDR) is a proof-of-concept augmented reality system using projection mapping and unencumbered interaction with the Microsoft RoomAlive system to study a user's locomotive response to visual effects that seemingly transform the physical room the user is in. This study presents five effects that augment the appearance of a physical room to subtly encourage user motion. Our experiment demonstrates users' reactions to the different distortion and augmentation effects in a standard living room, with the distortion effects projected as wall grids, furniture holograms, and small particles in the air. The augmented living room can give the impression of becoming elongated, wrapped, shifted, elevated, and enlarged. The study results support the implementation of AR experiences in limited physical spaces by providing an initial understanding of how users can be subtly encouraged to move throughout a room.",
+      "abstract": "Accurate recognition of human emotions is critical for adaptive human-computer interaction, yet remains challenging in dynamic, conversation-like settings. This work presents a personality-aware multimodal framework that integrates eye-tracking sequences, Big Five personality traits, and contextual stimulus cues to predict both perceived and felt emotions. Seventy-three participants viewed speech-containing clips from the CREMA-D dataset while providing eye-tracking signals, personality assessments, and emotion ratings. Our neural models captured temporal gaze dynamics and fused them with trait and stimulus information, yielding consistent gains over SVM and literature baselines. Results show that (i) stimulus cues strongly enhance perceived-emotion predictions (macro F1 up to 0.77), while (ii) personality traits provide the largest improvements for felt emotion recognition (macro F1 up to 0.58). These findings highlight the benefit of combining physiological, trait-level, and contextual information to address the inherent subjectivity of emotion. By distinguishing between perceived and felt responses, our approach advances multimodal affective computing and points toward more personalized and ecologically valid emotion-aware systems.",
       "authors": [
-        "You-Jin Kim",
-        "Andrew D. Wilson",
-        "Jennifer Jacobs",
-        "Tobias H\\\"ollerer"
-      ],
-      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-      "subjects": [
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-27T20:25:26+00:00",
-          "link": "https://arxiv.org/abs/2510.23840v1",
-          "size": "7753kb",
-          "version": "v1"
-        }
-      ],
-      "title": "Reality Distortion Room: A Study of User Locomotion Responses to Spatial Augmented Reality Effects",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.23840",
-        "HTML": "https://arxiv.org/html/2510.23840v1",
-        "PDF": "https://arxiv.org/pdf/2510.23840"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "The paper focuses on studying locomotion responses to spatial augmented reality effects, with no apparent connection to creativity as a research theme."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.23848",
-      "paper_version": "v1",
-      "abstract": "Spatial Orchestra demonstrates how easy it is to play musical instruments using basic input like natural locomotion, which is accessible to most. Unlike many musical instruments, our work allows individuals of all skill levels to effortlessly create music by walking into virtual bubbles. Our Augmented Reality experience involves interacting with ever-shifting sound bubbles that the user engages with by stepping into color-coded bubbles within the assigned area using a standalone AR headset. Each bubble corresponds to a cello note, and omits sound from the center of the bubble, and lets the user hear and express in spatial audio, effectively transforming participants into musicians. This interactive element enables users to explore the intersection of spatial awareness, musical rhythm that extends to bodily expression through playful movements and dance-like gestures within the bubble-filled environment. This unique experience illuminates the intricate relationship between spatial awareness and the art of musical performance.",
-      "authors": [
-        "You-Jin Kim",
-        "Myungin Lee",
-        "Marko Peljhan",
-        "JoAnn Kuchera-Morin",
-        "Tobias H\\\"ollerer"
-      ],
-      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-      "subjects": [
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-27T20:40:49+00:00",
-          "link": "https://arxiv.org/abs/2510.23848v1",
-          "size": "3097kb",
-          "version": "v1"
-        }
-      ],
-      "title": "Spatial Orchestra: Locomotion Music Instruments through Spatial Exploration",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.23848",
-        "HTML": "https://arxiv.org/html/2510.23848v1",
-        "PDF": "https://arxiv.org/pdf/2510.23848"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "core",
-        "reason": "The paper centers on a system that allows users to create music through spatial exploration, emphasizing creative engagement through musical performance and bodily expression. Creativity is a primary focus, as the system enables users to perform and generate music creatively."
-      },
-      "paper_reviewer": "**Summary:**\nThe paper presents \"Spatial Orchestra,\" a novel augmented reality experience that transforms musical instrument interaction through natural locomotion. This system allows users, regardless of skill level, to play music by entering virtual bubbles that emit cello notes. By combining spatial awareness with musical rhythm, users can engage in a playful and immersive environment that encourages physical expression through movement and dance-like gestures. This approach eliminates the need for traditional musical training, making music creation more accessible. The work explores how spatial exploration can enhance musical performance and encourages users to discover creative ways to compose and play music harmoniously.\n\n**Strengths:**\n- The paper introduces an innovative interaction mechanism for music creation through spatial awareness and natural locomotion.\n- Provides a unique and engaging experience that lowers the barrier to entry for musical expression using augmented reality.\n- Incorporates user feedback for continuous improvement, as seen with the enhancements made to virtual bubble representation.\n- The project emphasizes accessibility, demonstrated by the implementation of an Accessibility Mode for wheelchair users.\n\n**Weaknesses:**\n- Limited empirical evaluation; the feedback from a university event is primarily anecdotal.\n- Potential lack of generalizability as testing primarily involved university students in a controlled environment.\n- The paper could benefit from more detailed methodological description and quantitative analysis of user engagement and interaction patterns.\n\n**Questions:**\n- How does the system handle tracking accuracy in more diverse environments outside the controlled settings?\n- Are there any long-term plans to refine and expand the functionality of this system for broader applications or more complex musical compositions?\n\n**Soundness:**\n3 good\n\n**Presentation:**\n3 good\n\n**Contribution:**\n3 good\n\n**Data Analysis:**\n- **Strengths**: Utilizes user feedback for iterative improvements.\n- **Weaknesses**: Lacks rigorous quantitative analysis of user experience and interaction data.\nData Analysis result: Commentary and qualitative feedback, but limited statistical evidence presented.\n\n**Rating:**\n6 marginally above the acceptance threshold\n\n**Paper Decision:**\n- Decision: Accept\n- Reasons: The paper offers an innovative and creative approach to musical interaction within an augmented reality setting, emphasizing accessibility and broadening the scope of user engagement with music. Despite limited empirical evaluation, the concept and initial user feedback suggest a promising direction for future developments. The paper provides valuable insight into utilizing spatial awareness in immersive environments and meets the acceptance criteria for originality, significance, and potential impact. However, future work should aim to incorporate more rigorous data analysis and extend the evaluation to more diverse user populations.",
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.23875",
-      "paper_version": "v1",
-      "abstract": "While Large Language Model (LLM)-based agents can be used to create highly engaging interactive applications through prompting personality traits and contextual data, effectively assessing their personalities has proven challenging. This novel interdisciplinary approach addresses this gap by combining agent development and linguistic analysis to assess the prompted personality of LLM-based agents in a poetry explanation task. We developed a novel, flexible question bank, informed by linguistic assessment criteria and human cognitive learning levels, offering a more comprehensive evaluation than current methods. By evaluating agent responses with natural language processing models, other LLMs, and human experts, our findings illustrate the limitations of purely deep learning solutions and emphasize the critical role of interdisciplinary design in agent development.",
-      "authors": [
-        "Eswari Jayakumar",
-        "Niladri Sekhar Dash",
-        "Debasmita Mukherjee"
-      ],
-      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-      "subjects": [
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-27T21:30:12+00:00",
-          "link": "https://arxiv.org/abs/2510.23875v1",
-          "size": "9714kb",
-          "version": "v1"
-        }
-      ],
-      "title": "Large Language Model Agent Personality and Response Appropriateness: Evaluation by Human Linguistic Experts, LLM-as-Judge, and Natural Language Processing Model",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.23875",
-        "HTML": "https://arxiv.org/html/2510.23875v1",
-        "PDF": "https://arxiv.org/pdf/2510.23875"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "partial",
-        "reason": "Creativity emerges in the context of assessing LLM-based agents' personalities during a poetry explanation task, which can involve creative interpretation. However, the focus is primarily on personality evaluation and not directly on creative processes, making creativity a secondary theme."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.23887",
-      "paper_version": "v1",
-      "abstract": "Speech sound disorder is among the most common communication challenges in preschool children. Home-based practice is essential for effective therapy and for acquiring generalization of target sounds, yet sustaining engaging and consistent practice remains difficult. Existing story-based activities, despite their potential for sound generalization and educational benefits, are often underutilized due to limited interactivity. Moreover, many practice tools fail to sufficiently integrate speech--language pathologists into the process, resulting in weak alignment with clinical treatment plans. To address these limitations, we present MORA, an interactive story-based practice system. MORA introduces three key innovations. First, it embeds target sounds and vocabulary into dynamic, character-driven conversational narratives, requiring children to actively produce speech to progress the story, thereby creating natural opportunities for exposure, repetition, and generalization. Second, it provides visual cues, explicit instruction, and feedback, allowing children to practice effectively either independently or with caregivers. Third, it supports an AI-in-the-loop workflow, enabling SLPs to configure target materials, review logged speech with phoneme-level scoring, and adapt therapy plans asynchronously -- bridging the gap between clinic and home practice while respecting professional expertise. A formative study with six licensed SLPs informed the system's design rationale, and an expert review with seven SLPs demonstrated strong alignment with established articulation-based treatments, as well as potential to enhance children's engagement and literacy. Furthermore, discussions highlight the design considerations for professional support and configurability, adaptive and multimodal child interaction, while highlighting MORA's broader applicability across speech and language disorders.",
-      "authors": [
-        "Sumin Hong",
-        "Xavier Briggs",
-        "Qingxiao Zheng",
-        "Yao Du",
-        "Jinjun Xiong",
-        "Toby Jia-jun Li"
-      ],
-      "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
-      "subjects": [
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-27T21:55:55+00:00",
-          "link": "https://arxiv.org/abs/2510.23887v1",
-          "size": "6374kb",
-          "version": "v1"
-        }
-      ],
-      "title": "MORA: AI-Mediated Story-Based practice for Speech Sound Disorder from Clinic to Home",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.23887",
-        "HTML": "https://arxiv.org/html/2510.23887v1",
-        "PDF": "https://arxiv.org/pdf/2510.23887"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "While the paper discusses innovative approaches to speech sound disorder treatment with story-based systems, there is no explicit focus on creativity in terms of research or outcomes related to creative processes."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.23904",
-      "paper_version": "v1",
-      "abstract": "Most AI systems today are designed to manage tasks and execute predefined steps. This makes them effective for process coordination but limited in their ability to engage in joint problem-solving with humans or contribute new ideas. We introduce MultiColleagues, a multi-agent conversational system that shows how AI agents can act as colleagues by conversing with each other, sharing new ideas, and actively involving users in collaborative ideation. In a within-subjects study with 20 participants, we compared MultiColleagues to a single-agent baseline. Results show that MultiColleagues fostered stronger perceptions of social presence, produced ideas rated significantly higher in quality and novelty, and encouraged deeper elaboration. These findings demonstrate the potential of AI agents to move beyond process partners toward colleagues that share intent, strengthen group dynamics, and collaborate with humans to advance ideas.",
-      "authors": [
-        "Kexin Quan",
-        "Dina Albassam",
-        "Mengke Wu",
-        "Zijian Ding",
-        "Jessie Chin"
-      ],
-      "license": "http://creativecommons.org/licenses/by-sa/4.0/",
-      "subjects": [
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-27T22:21:10+00:00",
-          "link": "https://arxiv.org/abs/2510.23904v1",
-          "size": "5770kb",
-          "version": "v1"
-        }
-      ],
-      "title": "Towards AI as Colleagues: Multi-Agent System Improves Structured Professional Ideation",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.23904",
-        "HTML": "https://arxiv.org/html/2510.23904v1",
-        "PDF": "https://arxiv.org/pdf/2510.23904"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "core",
-        "reason": "This paper is highly relevant to creativity as it presents a multi-agent system designed to enhance collaborative ideation, fostering creative problem-solving and idea generation. Creativity is a primary focus, demonstrated through improved idea quality and novelty in experiments."
-      },
-      "paper_reviewer": "**Summary:**  \nThe paper introduces MultiColleagues, a multi-agent conversational system designed to transform AI from task managers to collaborative colleagues in ideation processes. The system enables AI's role as partners by enhancing social presence and fostering creativity through role-differentiated agents. A study with 20 participants compared MultiColleagues to a single-agent baseline, demonstrating improved perceptions of creativity, novelty, and engagement in ideation tasks. The findings highlight the system\u2019s potential in shifting AI roles toward team collaboration, contributing to the evolving landscape of AI-human interactions by introducing new engagement patterns and enhancing team dynamics.\n\n**Strengths:**  \n- The study demonstrates significant improvements in social presence and creative outcomes with the MultiColleagues system.\n- It innovatively uses multi-agent frameworks to facilitate human-AI collaboration, offering a new dimension to AI research and development.\n- The paper provides a comprehensive examination of the role of AI as collaborative partners, supported by detailed participant responses and metrics.\n\n**Weaknesses:**  \n- The limited sample size of 20 participants may not adequately represent diverse user perspectives.\n- There is a lack of extended testing durations, which might miss long-term interaction patterns and outcomes.\n- The study uses self-reported measures, which could be subjective and may not fully capture all aspects of engagement and creativity.\n\n**Questions:**  \n- How scalable is the MultiColleagues system for larger and more diverse teams in practical applications?\n- What measures are in place to ensure that the AI does not dominate the ideation process and that human users retain control?\n- Could the system be adapted for use in other collaborative scenarios beyond ideation?\n\n**Soundness:**  \n3 good  \nThe research uses robust methods to evaluate MultiColleagues, though further testing with larger and varied samples would solidify findings.\n\n**Presentation:**  \n4 excellent  \nThe paper is well-organized and clearly presents the complex functionality of the system, alongside comprehensive experimental data and analysis.\n\n**Contribution:**  \n4 excellent  \nThe study makes a significant contribution to the field of human-AI collaboration, proposing a novel use of multi-agent systems.\n\n**Data Analysis:**  \n- **Strengths**: Extensive participant feedback and detailed examination of linguistic style and conversational patterns enhance understanding of system impact.\n- **Weaknesses**: The reliance on quantitative measures may miss some qualitative insights into user experience.  \nData Analysis result: 3 good\n\n**Rating:**  \n7 accept, but needs minor improvements  \nThough the findings are strong, the study could benefit from broader participant diversity and extended interaction periods.\n\n**Paper Decision:**  \n- Decision: Accept  \n- Reasons: The paper presents innovative research on AI collaboration, offering valuable insights and proving the MultiColleagues system's effectiveness in transforming AI from tool to colleague. The comprehensive methodology and significant findings make it a strong candidate for acceptance, contributing meaningfully to advancing AI-human interaction paradigms.",
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.23947",
-      "paper_version": "v1",
-      "abstract": "LLM-powered multimodal systems are increasingly used to interpret human social behavior, yet how researchers apply the models' 'social competence' remains poorly understood. This paper presents a systematic literature review of 176 publications across different application domains (e.g., healthcare, education, and entertainment). Using a four-dimensional coding framework (application, technical, evaluative, and ethical), we find (1) frequent use of pattern recognition and information extraction from multimodal sources, but limited support for adaptive, interactive reasoning; (2) a dominant 'modality-to-text' pipeline that privileges language over rich audiovisual cues, striping away nuanced social cues; (3) evaluation practices reliant on static benchmarks, with socially grounded, human-centered assessments rare; and (4) Ethical discussions focused mainly on legal and rights-related risks (e.g., privacy), leaving societal risks (e.g., deception) overlooked--or at best acknowledged but left unaddressed. We outline a research agenda for evaluating socially competent, ethically informed, and interaction-aware multi-modal systems.",
-      "authors": [
-        "Zihan Liu",
-        "Parisa Rabbani",
-        "Veda Duddu",
-        "Kyle Fan",
-        "Madison Lee",
-        "Yun Huang"
+        "Meisam J. Seikavandi",
+        "Jostein Fimland",
+        "Fabricio Batista Narcizo",
+        "Maria Barrett",
+        "Ted Vucurevich",
+        "Jesper B\\\"unsow Boldt",
+        "Andrew Burke Dittberner",
+        "Paolo Burelli"
       ],
       "license": "http://creativecommons.org/licenses/by/4.0/",
       "subjects": [
-        "Human-Computer Interaction (cs.HC)"
+        "Human-Computer Interaction (cs.HC)",
+        "Artificial Intelligence (cs.AI)",
+        "Computer Vision and Pattern Recognition (cs.CV)"
       ],
       "submission_historys": [
         {
-          "date": "2025-10-28T00:02:42+00:00",
-          "link": "https://arxiv.org/abs/2510.23947v1",
-          "size": "2010kb",
+          "date": "2025-09-19T16:05:23+00:00",
+          "link": "https://arxiv.org/abs/2510.24720v1",
+          "size": "867kb",
           "version": "v1"
         }
       ],
-      "title": "Toward Socially-Aware LLMs: A Survey of Multimodal Approaches to Human Behavior Understanding",
+      "title": "Modelling the Interplay of Eye-Tracking Temporal Dynamics and Personality for Emotion Detection in Face-to-Face Settings",
       "links": {
-        "Abstract": "https://arxiv.org/abs/2510.23947",
-        "HTML": "https://arxiv.org/html/2510.23947v1",
-        "PDF": "https://arxiv.org/pdf/2510.23947"
+        "Abstract": "https://arxiv.org/abs/2510.24720",
+        "HTML": "https://arxiv.org/html/2510.24720v1",
+        "PDF": "https://arxiv.org/pdf/2510.24720"
       },
       "relevance": {
         "keyword": "creativity",
         "level": "irrelevant",
-        "reason": "The paper focuses on socially aware LLMs and the evaluation of multimodal systems in interpreting human social behavior. While it outlines a research agenda for social and ethical aspects of such systems, there is no clear connection or mention of creativity-related themes."
+        "reason": "The paper focuses on the detection of emotions using eye-tracking and personality analysis in conversational settings. It does not address creativity as a theme or incorporate creative processes."
       },
       "source": "arXiv"
     },
     {
-      "id": "2510.24004",
+      "id": "2510.24724",
       "paper_version": "v1",
-      "abstract": "We study attention in mobile Augmented Reality (AR) using object recall as a proxy outcome. We observe that the ability to recall an object (physical or virtual) that was encountered in a mobile AR experience depends on many possible impact factors and attributes, with some objects being readily recalled while others are not, and some people recalling objects overall much better or worse than others. This opens up a potential cognitive attack in which adversaries might create conditions that make an AR user not recall certain potentially mission-critical objects. We explore whether a calibrated predictor of object recall can help shield against such cognitive attacks. We pool data from four mobile AR studies (with a total of 1,152 object recall probes) and fit a Partial Least Squares Structural Equation Model (PLS-SEM) with formative Object, Scene, and User State composites predicting recall, also benchmarking against Random Forest and multilayer perceptron classifiers. PLS-SEM attains the best F1 score in three of four studies. Additionally, path estimates identify lighting, augmentation density, AR registration stability, cognitive load, and AR familiarity as primary drivers. The model outputs per-object recall probabilities that can drive interface adjustments when predicted recall falls. Overall, PLS-SEM provides competitive accuracy with interpretable levers for design and evaluation in mobile AR.",
+      "abstract": "This study presents AmarDoctor, a multilingual voice-interactive digital health app designed to provide comprehensive patient triage and AI-driven clinical decision support for Bengali speakers, a population largely underserved in access to digital healthcare. AmarDoctor adopts a data-driven approach to strengthen primary care delivery and enable personalized health management. While platforms such as AdaHealth, WebMD, Symptomate, and K-Health have become popular in recent years, they mainly serve European demographics and languages. AmarDoctor addresses this gap with a dual-interface system for both patients and healthcare providers, supporting three major Bengali dialects. At its core, the patient module uses an adaptive questioning algorithm to assess symptoms and guide users toward the appropriate specialist. To overcome digital literacy barriers, it integrates a voice-interactive AI assistant that navigates users through the app services. Complementing this, the clinician-facing interface incorporates AI-powered decision support that enhances workflow efficiency by generating structured provisional diagnoses and treatment recommendations. These outputs inform key services such as e-prescriptions, video consultations, and medical record management. To validate clinical accuracy, the system was evaluated against a gold-standard set of 185 clinical vignettes developed by experienced physicians. Effectiveness was further assessed by comparing AmarDoctor performance with five independent physicians using the same vignette set. Results showed AmarDoctor achieved a top-1 diagnostic precision of 81.08 percent (versus physicians average of 50.27 percent) and a top specialty recommendation precision of 91.35 percent (versus physicians average of 62.6 percent).",
       "authors": [
-        "Shane Dirksen",
-        "Radha Kumaran",
-        "You-Jin Kim",
-        "Yilin Wang",
-        "Tobias H\\\"ollerer"
-      ],
-      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-      "subjects": [
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-28T02:21:24+00:00",
-          "link": "https://arxiv.org/abs/2510.24004v1",
-          "size": "424kb",
-          "version": "v1"
-        }
-      ],
-      "title": "Modeling Object Attention in Mobile AR for Intrinsic Cognitive Security",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.24004",
-        "HTML": "https://arxiv.org/html/2510.24004v1",
-        "PDF": "https://arxiv.org/pdf/2510.24004"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "The study explores object recall in mobile AR settings, with a focus on cognitive security and object attention. It does not address creativity or involve creative processes or tasks."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.24011",
-      "paper_version": "v1",
-      "abstract": "As AI writing support becomes ubiquitous, how disclosing its use affects reader perception remains a critical, underexplored question. We conducted a study with 261 participants to examine how revealing varying levels of AI involvement shifts author impressions across six distinct communicative acts. Our analysis of 990 responses shows that disclosure generally erodes perceptions of trustworthiness, caring, competence, and likability, with the sharpest declines in social and interpersonal writing. A thematic analysis of participants' feedback links these negative shifts to a perceived loss of human sincerity, diminished author effort, and the contextual inappropriateness of AI. Conversely, we find that higher AI literacy mitigates these negative perceptions, leading to greater tolerance or even appreciation for AI use. Our results highlight the nuanced social dynamics of AI-mediated authorship and inform design implications for creating transparent, context-sensitive writing systems that better preserve trust and authenticity.",
-      "authors": [
-        "Hiroki Nakano",
-        "Jo Takezawa",
-        "Fabrice Matulic",
-        "Chi-Lan Yang",
-        "Koji Yatani"
-      ],
-      "license": "http://creativecommons.org/licenses/by-sa/4.0/",
-      "subjects": [
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-28T02:34:52+00:00",
-          "link": "https://arxiv.org/abs/2510.24011v1",
-          "size": "1438kb",
-          "version": "v1"
-        }
-      ],
-      "title": "Understanding Reader Perception Shifts upon Disclosure of AI Authorship",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.24011",
-        "HTML": "https://arxiv.org/html/2510.24011v1",
-        "PDF": "https://arxiv.org/pdf/2510.24011"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "partial",
-        "reason": "The paper discusses the impact of AI authorship disclosure on reader perception. Although the focus is on trust and authenticity, the discussions about AI-mediated authorship and design implications for writing systems may influence creative communication and could be indirectly related to creativity."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.24057",
-      "paper_version": "v1",
-      "abstract": "This paper presents a VR-based guide dog training system designed to assist novice trainers in understanding guide dog behavior and issuing appropriate training commands. Guide dogs play a vital role in supporting independent mobility for visually impaired individuals, yet the limited number of skilled trainers restricts their availability. Training is highly demanding, requiring accurate observation of the dog's status and precise command issuance, especially through right-hand gestures. While the trainer's left hand holds the harness to perceive haptic cues, the right hand is used to indicate directions, maintain attention, and provide comfort, with motion patterns varying by scenario and the dog's progress. Currently, novices learn mainly by observing experts or watching videos, which lacks immersion and makes it difficult to adopt the trainer's perspective for understanding behavior or synchronizing command timing.\n  To address these limitations, the proposed system introduces a VR-based assistive platform integrating panoramic visuals and haptic feedback to create an immersive training environment. The visual module provides contextual guidance, including cues for command execution and real-time comparison of the user's posture with standard actions, while the haptic module delivers tactile feedback for command gestures. Users can re-experience training sessions across diverse scenarios and dog proficiency levels, allowing independent and repeated practice. By improving the timing, accuracy, and expressiveness of right-hand commands, the system aims to accelerate skill acquisition, enhance training quality, and mitigate the shortage of qualified trainers, ultimately increasing the availability of guide dogs for visually impaired individuals.",
-      "authors": [
-        "Qirong Zhu and Ansheng Wang and Shinji Tanaka and Yasutoshi Makino and Hiroyuki Shinoda"
+        "Nazmun Nahar",
+        "Ritesh Harshad Ruparel",
+        "Shariar Kabir",
+        "Sumaiya Tasnia Khan",
+        "Shyamasree Saha",
+        "and Mamunur Rashid"
       ],
       "license": "http://creativecommons.org/licenses/by/4.0/",
       "subjects": [
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-28T04:34:30+00:00",
-          "link": "https://arxiv.org/abs/2510.24057v1",
-          "size": "7553kb",
-          "version": "v1"
-        }
-      ],
-      "title": "VR-Assisted Guide Dog Training: A 360{\\deg} PanoHaptic System for Right-Hand Commands Analysis",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.24057",
-        "HTML": "https://arxiv.org/html/2510.24057v1",
-        "PDF": "https://arxiv.org/pdf/2510.24057"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "partial",
-        "reason": "The VR-based guide dog training system enhances skill acquisition and training quality. While not creativity-centric, the immersive training and use of VR for improving training processes involve innovative techniques that can indirectly support creative problem-solving in training methodologies."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.24070",
-      "paper_version": "v1",
-      "abstract": "As generative AI becomes embedded in children's learning spaces, families face new challenges in guiding its use. Middle childhood (ages 7-13) is a critical stage where children seek autonomy even as parental influence remains strong. Using self-directed learning (SDL) as a lens, we examine how parents perceive and support children's developing AI literacy through focus groups with 13 parent-child pairs. Parents described evolving phases of engagement driven by screen time, self-motivation, and growing knowledge. While many framed AI primarily as a study tool, few considered its non-educational roles or risks, such as privacy and infrastructural embedding. Parents also noted gaps in their own AI understanding, often turning to joint exploration and engagement as a form of co-learning. Our findings reveal how families co-construct children's AI literacy, exposing tensions between practical expectations and critical literacies, and provide design implications that foster SDL while balancing autonomy and oversight.",
-      "authors": [
-        "Jingyi Xie",
-        "Chuhao Wu",
-        "Ge Wang",
-        "Rui Yu",
-        "He Zhang",
-        "Ronald Metoyer",
-        "Si Chen"
-      ],
-      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-      "subjects": [
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-28T05:06:03+00:00",
-          "link": "https://arxiv.org/abs/2510.24070v1",
-          "size": "1311kb",
-          "version": "v1"
-        }
-      ],
-      "title": "Building AI Literacy at Home: How Families Navigate Children's Self-Directed Learning with AI",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.24070",
-        "HTML": "https://arxiv.org/html/2510.24070v1",
-        "PDF": "https://arxiv.org/pdf/2510.24070"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "partial",
-        "reason": "The paper explores AI literacy in families and self-directed learning. While creativity is not the main focus, the exploration of learning and co-construction in AI literacy may foster creative thinking in educational techniques and how children engage with AI as a tool for self-directed learning."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.24227",
-      "paper_version": "v1",
-      "abstract": "The growing prevalence of negative experiences in online spaces demands urgent attention from the human-computer interaction (HCI) community. However, research on online safety remains fragmented across different HCI subfields, with limited communication and collaboration between disciplines. This siloed approach risks creating ineffective responses, including design solutions that fail to meet the diverse needs of users, and policy efforts that overlook critical usability concerns. This workshop aims to foster interdisciplinary dialogue on online safety by bringing together researchers from within and beyond HCI - including but not limited to Social Computing, Digital Design, Internet Policy, Cybersecurity, Ethics, and Social Sciences. By uniting researchers, policymakers, industry practitioners, and community advocates we aim to identify shared challenges in online safety research, highlight gaps in current knowledge, and establish common research priorities. The workshop will support the development of interdisciplinary research plans and establish collaborative environments - both within and beyond Australia - to action them.",
-      "authors": [
-        "Senuri Wijenayake",
-        "Joanne Gray",
-        "Asangi Jayatilaka",
-        "Louise La Sala",
-        "Nalin Arachchilage",
-        "Ryan M. Kelly",
-        "Sanchari Das"
-      ],
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "subjects": [
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-28T09:38:34+00:00",
-          "link": "https://arxiv.org/abs/2510.24227v1",
-          "size": "547kb",
-          "version": "v1"
-        }
-      ],
-      "title": "Advancing Interdisciplinary Approaches to Online Safety Research",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.24227",
-        "HTML": "https://arxiv.org/html/2510.24227v1",
-        "PDF": "https://arxiv.org/pdf/2510.24227"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "The paper focuses on interdisciplinary approaches to online safety research, addressing challenges and encouraging collaboration among various fields. Creativity is not mentioned as a focus or theme in the context of the paper."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.24594",
-      "paper_version": "v1",
-      "abstract": "The widespread adoption of generative AI (GenAI) has introduced new challenges in crowdsourced data collection, particularly in survey-based research. While GenAI offers powerful capabilities, its unintended use in crowdsourcing, such as generating automated survey responses, threatens the integrity of empirical research and complicates efforts to understand public opinion and behavior. In this study, we investigate and evaluate two approaches for detecting AI-generated responses in online surveys: LLM-based detection and signature-based detection. We conducted experiments across seven survey studies, comparing responses collected before 2022 with those collected after the release of ChatGPT. Our findings reveal a significant increase in AI-generated responses in the post-2022 studies, highlighting how GenAI may silently distort crowdsourced data. This work raises broader concerns about evolving landscape of data integrity, where GenAI can compromise data quality, mislead researchers, and influence downstream findings in fields such as health, politics, and social behavior. By surfacing detection strategies and empirical evidence of GenAI's impact, we aim to contribute to ongoing conversation about safeguarding research integrity and supporting scholars navigating these methodological and ethical challenges.",
-      "authors": [
-        "Dapeng Zhang",
-        "Marina Katoh",
-        "Weiping Pei"
-      ],
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "subjects": [
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-28T16:23:27+00:00",
-          "link": "https://arxiv.org/abs/2510.24594v1",
-          "size": "245kb",
-          "version": "v1"
-        }
-      ],
-      "title": "Detecting the Use of Generative AI in Crowdsourced Surveys: Implications for Data Integrity",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.24594",
-        "HTML": "https://arxiv.org/html/2510.24594v1",
-        "PDF": "https://arxiv.org/pdf/2510.24594"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "The study is concerned with the integrity of crowdsourced survey data in the face of generative AI, emphasizing detection strategies for AI-generated responses. There is no mention of creativity as part of the research themes."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.24638",
-      "paper_version": "v1",
-      "abstract": "Maintaining physical activity is essential for older adults' health and well-being, yet participation remains low. Traditional paper-based and in-person interventions have been effective but face scalability issues. Smartphone apps offer a potential solution, but their effectiveness in real-world use remains underexplored. Most prior studies take place in controlled environments, use specialized hardware, or rely on in-person training sessions or researcher-led setup. This study examines the feasibility and engagement of Senior Fit, a standalone mobile fitness app designed for older adults. We conducted continuous testing with 25 participants aged 65-85, refining the app based on their feedback to improve usability and accessibility. Our findings underscore both the potential and key challenges in designing digital health interventions. Older adults valued features such as video demonstrations and reminders that made activity feel accessible and motivating, yet some expressed frustration with manual logging and limited personalization. The Facebook group provided encouragement for some but excluded others unfamiliar with the platform. These results highlight the need for fitness apps that integrate flexible tracking, clear feedback, and low-barrier social support. We contribute design recommendations for creating inclusive mobile fitness tools that align with older adults' routines and capabilities, offering insights for future long-term, real-world deployments.",
-      "authors": [
-        "Sabrina Haque",
-        "Kyle Henry",
-        "Troyee Saha",
-        "Kimberly Vanhoose",
-        "Jobaidul Boni",
-        "Samantha Moss",
-        "Kate Hyun",
-        "Kathy Siepker",
-        "Xiangli Gu",
-        "Angela Liegey-Dougall",
-        "Stephen Mattingly",
-        "Christoph Csallner"
-      ],
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "subjects": [
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-28T17:05:50+00:00",
-          "link": "https://arxiv.org/abs/2510.24638v1",
-          "size": "1391kb",
-          "version": "v1"
-        }
-      ],
-      "title": "What Does It Take? Developing a Smartphone App that Motivates Older Adults to be Physically Active",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.24638",
-        "HTML": "https://arxiv.org/html/2510.24638v1",
-        "PDF": "https://arxiv.org/pdf/2510.24638"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "The paper focuses on developing a smartphone app for motivating older adults to engage in physical activity. While the design improvements and recommendations may involve creative problem solving, the research does not center on creativity itself or creative processes."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.24265",
-      "paper_version": "v1",
-      "abstract": "Generative AI (GenAI) tools are increasingly being adopted in software development as productivity aids. However, evidence regarding where and when these tools actually enhance productivity is unclear. In this paper, we investigate how GenAI adoption affects different dimensions of developer productivity. We surveyed 415 software practitioners to capture their perceptions of productivity changes associated with AI-assisted development using the SPACE framework - Satisfaction and well-being, Performance, Activity, Communication and collaboration, and Efficiency and flow. Our results, disaggregated by frequency of AI usage, reveal limited overall productivity change, highlighting the productivity paradox in which developers become faster but do not necessarily create better software or feel more fulfilled.",
-      "authors": [
-        "Sadia Afroz",
-        "Zixuan Feng",
-        "Katie Kimura",
-        "Bianca Trinkenreich",
-        "Igor Steinmacher",
-        "Anita Sarma"
-      ],
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "subjects": [
-        "Software Engineering (cs.SE)",
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-28T10:23:57+00:00",
-          "link": "https://arxiv.org/abs/2510.24265v1",
-          "size": "514kb",
-          "version": "v1"
-        }
-      ],
-      "title": "Developer Productivity with GenAI",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.24265",
-        "HTML": "https://arxiv.org/html/2510.24265v1",
-        "PDF": "https://arxiv.org/pdf/2510.24265"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "The paper investigates the impact of generative AI tools on developer productivity, emphasizing different dimensions such as satisfaction, performance, and efficiency. Creativity is not a central or mentioned theme within this research."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.24373",
-      "paper_version": "v1",
-      "abstract": "Artificial intelligence (AI) is already driving scientific breakthroughs in a variety of research fields, ranging from the life sciences to mathematics. This raises a critical question: can AI be applied both responsibly and effectively to address complex and interconnected sustainability challenges? This report is the result of a collaboration between the Stockholm resilience Centre (Stockholm University), the Potsdam Institute for Climate Impact Research (PIK), and Google DeepMind. Our work explores the potential and limitations of using AI as a research method to help tackle eight broad sustainability challenges. The results build on iterated expert dialogues and assessments, a systematic AI-supported literature overview including over 8,500 academic publications, and expert deep-dives into eight specific issue areas. The report also includes recommendations to sustainability scientists, research funders, the private sector, and philanthropies.",
-      "authors": [
-        "Victor Galaz",
-        "Maria Schewenius",
-        "Jonathan F. Donges",
-        "Ingo Fetzer",
-        "Erik Zhivkoplias",
-        "Wolfram Barfuss",
-        "Louis Delannoy",
-        "Lan Wang-Erlandsson",
-        "Maximilian Gelbrecht",
-        "Jobst Heitzig",
-        "Jonas Hentati-Sundberg",
-        "Christopher Kennedy",
-        "Nielja Knecht",
-        "Romi Lotcheris",
-        "Miguel Mahecha",
-        "Andrew Merrie",
-        "David Montero",
-        "Timon McPhearson",
-        "Ahmed Mustafa",
-        "Magnus Nystr\\\"om",
-        "Drew Purves",
-        "Juan C. Rocha",
-        "Masahiro Ryo",
-        "Claudia van der Salm",
-        "Samuel T. Segun",
-        "Anna B. Stephenson",
-        "Elizabeth Tellman",
-        "Felipe Tobar",
-        "Alice Vadrot"
-      ],
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "subjects": [
+        "Human-Computer Interaction (cs.HC)",
+        "Artificial Intelligence (cs.AI)",
+        "Computation and Language (cs.CL)",
         "Computers and Society (cs.CY)",
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-28T12:50:45+00:00",
-          "link": "https://arxiv.org/abs/2510.24373v1",
-          "size": "11327kb",
-          "version": "v1"
-        }
-      ],
-      "title": "AI for a Planet Under Pressure",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.24373",
-        "PDF": "https://arxiv.org/pdf/2510.24373"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "partial",
-        "reason": "While the paper primarily focuses on the use of AI to address sustainability challenges, it involves AI-driven scientific breakthroughs and innovative applications which may indirectly relate to creativity in scientific methods and problem-solving."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.24411",
-      "paper_version": "v1",
-      "abstract": "Computer-using agents powered by Vision-Language Models (VLMs) have demonstrated human-like capabilities in operating digital environments like mobile platforms. While these agents hold great promise for advancing digital automation, their potential for unsafe operations, such as system compromise and privacy leakage, is raising significant concerns. Detecting these safety concerns across the vast and complex operational space of mobile environments presents a formidable challenge that remains critically underexplored. To establish a foundation for mobile agent safety research, we introduce MobileRisk-Live, a dynamic sandbox environment accompanied by a safety detection benchmark comprising realistic trajectories with fine-grained annotations. Built upon this, we propose OS-Sentinel, a novel hybrid safety detection framework that synergistically combines a Formal Verifier for detecting explicit system-level violations with a VLM-based Contextual Judge for assessing contextual risks and agent actions. Experiments show that OS-Sentinel achieves 10%-30% improvements over existing approaches across multiple metrics. Further analysis provides critical insights that foster the development of safer and more reliable autonomous mobile agents.",
-      "authors": [
-        "Qiushi Sun",
-        "Mukai Li",
-        "Zhoumianze Liu",
-        "Zhihui Xie",
-        "Fangzhi Xu",
-        "Zhangyue Yin",
-        "Kanzhi Cheng",
-        "Zehao Li",
-        "Zichen Ding",
-        "Qi Liu",
-        "Zhiyong Wu",
-        "Zhuosheng Zhang",
-        "Ben Kao",
-        "Lingpeng Kong"
-      ],
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "subjects": [
-        "Artificial Intelligence (cs.AI)",
-        "Computation and Language (cs.CL)",
-        "Computer Vision and Pattern Recognition (cs.CV)",
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-28T13:22:39+00:00",
-          "link": "https://arxiv.org/abs/2510.24411v1",
-          "size": "3195kb",
-          "version": "v1"
-        }
-      ],
-      "title": "OS-Sentinel: Towards Safety-Enhanced Mobile GUI Agents via Hybrid Validation in Realistic Workflows",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.24411",
-        "HTML": "https://arxiv.org/html/2510.24411v1",
-        "PDF": "https://arxiv.org/pdf/2510.24411"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "This paper is centered around enhancing the safety of mobile GUI agents using Vision-Language Models, focusing on system safety and risk assessment. Creativity is not a topic covered in the research."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.24653",
-      "paper_version": "v1",
-      "abstract": "Interpretation of giga-pixel whole-slide images (WSIs) is an important but difficult task for pathologists. Their diagnostic accuracy is estimated to average around 70%. Adding a second pathologist does not substantially improve decision consistency. The field lacks adequate behavioral data to explain diagnostic errors and inconsistencies. To fill in this gap, we present PathoGaze1.0, a comprehensive behavioral dataset capturing the dynamic visual search and decision-making processes of the full diagnostic workflow during cancer diagnosis. The dataset comprises 18.69 hours of eye-tracking, mouse interaction, stimulus tracking, viewport navigation, and diagnostic decision data (EMSVD) collected from 19 pathologists interpreting 397 WSIs. The data collection process emphasizes ecological validity through an application-grounded testbed, called PTAH. In total, we recorded 171,909 fixations, 263,320 saccades, and 1,867,362 mouse interaction events. In addition, such data could also be used to improve the training of both pathologists and AI systems that might support human experts. All experiments were preregistered at https://osf.io/hj9a7, and the complete dataset along with analysis code is available at https://go.osu.edu/pathogaze.",
-      "authors": [
-        "Veronica Thai",
-        "Rui Li",
-        "Meng Ling",
-        "Shuning Jiang",
-        "Jeremy Wolfe",
-        "Raghu Machiraju",
-        "Yan Hu",
-        "Zaibo Li",
-        "Anil Parwani",
-        "Jian Chen"
-      ],
-      "license": "http://creativecommons.org/licenses/by-sa/4.0/",
-      "subjects": [
-        "Computer Vision and Pattern Recognition (cs.CV)",
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-28T17:18:43+00:00",
-          "link": "https://arxiv.org/abs/2510.24653v1",
-          "size": "32103kb",
-          "version": "v1"
-        }
-      ],
-      "title": "Eye-Tracking, Mouse Tracking, Stimulus Tracking,and Decision-Making Datasets in Digital Pathology",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.24653",
-        "HTML": "https://arxiv.org/html/2510.24653v1",
-        "PDF": "https://arxiv.org/pdf/2510.24653"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "This paper deals with eye-tracking and mouse interaction data in the context of digital pathology, with the goal of understanding diagnostic errors and decision-making. There is no mention or exploration of creativity as part of its research focus."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.24706",
-      "paper_version": "v1",
-      "abstract": "Virtual Reality (VR) games require players to translate high-level semantic actions into precise device manipulations using controllers and head-mounted displays (HMDs). While humans intuitively perform this translation based on common sense and embodied understanding, whether Large Language Models (LLMs) can effectively replicate this ability remains underexplored. This paper introduces a benchmark, ComboBench, evaluating LLMs' capability to translate semantic actions into VR device manipulation sequences across 262 scenarios from four popular VR games: Half-Life: Alyx, Into the Radius, Moss: Book II, and Vivecraft. We evaluate seven LLMs, including GPT-3.5, GPT-4, GPT-4o, Gemini-1.5-Pro, LLaMA-3-8B, Mixtral-8x7B, and GLM-4-Flash, compared against annotated ground truth and human performance. Our results reveal that while top-performing models like Gemini-1.5-Pro demonstrate strong task decomposition capabilities, they still struggle with procedural reasoning and spatial understanding compared to humans. Performance varies significantly across games, suggesting sensitivity to interaction complexity. Few-shot examples substantially improve performance, indicating potential for targeted enhancement of LLMs' VR manipulation capabilities. We release all materials at https://sites.google.com/view/combobench.",
-      "authors": [
-        "Shuqing Li",
-        "Jiayi Yan",
-        "Chenyu Niu",
-        "Jen-tse Huang",
-        "Yun Peng",
-        "Wenxuan Wang",
-        "Yepang Liu",
-        "Michael R. Lyu"
-      ],
-      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-      "subjects": [
-        "Computation and Language (cs.CL)",
-        "Artificial Intelligence (cs.AI)",
-        "Human-Computer Interaction (cs.HC)",
-        "Software Engineering (cs.SE)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-28T17:55:42+00:00",
-          "link": "https://arxiv.org/abs/2510.24706v1",
-          "size": "2367kb",
-          "version": "v1"
-        }
-      ],
-      "title": "ComboBench: Can LLMs Manipulate Physical Devices to Play Virtual Reality Games?",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.24706",
-        "HTML": "https://arxiv.org/html/2510.24706v1",
-        "PDF": "https://arxiv.org/pdf/2510.24706"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "partial",
-        "reason": "This paper explores the use of Large Language Models (LLMs) to manipulate physical devices in virtual reality gaming. While the core focus is on evaluating and improving LLM capabilities, the study does touch upon creativity in terms of task decomposition and problem-solving in a gaming context, making creativity a secondary theme."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2411.02650",
-      "paper_version": "v3",
-      "abstract": "Functional Near-Infrared Spectroscopy (fNIRS) has emerged as a valuable tool to investigate cognitive and emotional processes during learning. We focus specifically on game-integrated learning systems as the context for fNIRS-based brain data analysis. We selected game-integrated learning systems because such systems make learning more engaging, interactive, and immersive, all of which are critical features for adaptive learning design. The goal of this scoping review is to help researchers understand how fNIRS has been used so far to study brain activity in game-integrated learning systems. We also aim to show how brain data captured through fNIRS can support the development of adaptive learning systems by monitoring learners' cognitive states. Using the PRISMA-ScR framework, 1300 papers were screened, and 21 empirical studies were selected for in-depth analysis. Studies were categorized as affective/cognitive response studies or comparative studies, and further analyzed by learning platform, game device, fNIRS configuration, outcome measures, and study design. The findings reveal that game-integrated learning systems can be as effective as traditional methods in improving engagement and involvement. The findings also show that fNIRS offers valuable insights into cognitive states, but it has not yet been widely implemented in real-time adaptive systems. We identify key challenges in standardization and data interpretation and highlight the potential of fNIRS for developing brain-aware, interactive learning environments. This review offers insights to guide future research on using brain data to support adaptive learning and intelligent system design.",
-      "authors": [
-        "Shayla Sharmin",
-        "Gael Lucero-Palacios",
-        "Behdokht Kiafar",
-        "Mohammad Fahim Abrar",
-        "Mohammad Al-Ratrout",
-        "Aditya Raikwar",
-        "and Roghayeh Leila Barmaki"
-      ],
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "subjects": [
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2024-11-04T22:22:23+00:00",
-          "link": "https://arxiv.org/abs/2411.02650v1",
-          "size": "1230kb",
-          "version": "v1"
-        },
-        {
-          "date": "2025-07-24T14:16:19+00:00",
-          "link": "https://arxiv.org/abs/2411.02650v2",
-          "size": "159kb",
-          "version": "v2"
-        },
-        {
-          "date": "2025-10-28T17:10:45+00:00",
-          "link": "https://arxiv.org/abs/2411.02650v3",
-          "size": "159kb",
-          "version": "v3"
-        }
-      ],
-      "title": "A Scoping Review of Functional Near-Infrared Spectroscopy (fNIRS) Applications in Game-integrated Learning Systems",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2411.02650",
-        "HTML": "https://arxiv.org/html/2411.02650v3",
-        "PDF": "https://arxiv.org/pdf/2411.02650"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "partial",
-        "reason": "The paper focuses on the use of fNIRS in game-integrated learning, which involves aspects such as engagement and interactivity that can facilitate creativity in learning environments. However, creativity is not the primary focus of the research; the main objective is to enhance learning through cognitive state monitoring."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2504.13883",
-      "paper_version": "v3",
-      "abstract": "This study estimates cognitive effort based on functional near-infrared spectroscopy data and performance scores using a hybrid DeepNet model. The estimation of cognitive effort enables educators to modify material to enhance learning effectiveness and student engagement. In this study, we collected oxygenated hemoglobin using functional near-infrared spectroscopy during an educational quiz game. Participants (n=16) responded to 16 questions in a Unity-based educational game, each within a 30-second response time limit. We used DeepNet models to predict the performance score from the oxygenated hemoglobin, and compared traditional machine learning and DeepNet models to determine which approach provides better accuracy in predicting performance scores. The result shows that the proposed CNN-GRU gives better performance with 73% than other models. After the prediction, we used the predicted score and the oxygenated hemoglobin to observe cognitive effort by calculating relative neural efficiency and involvement in our test cases. Our result shows that even with moderate accuracy, the predicted cognitive effort closely follow the actual trends. This findings can be helpful in designing and improving learning environments and provide valuable insights into learning materials.",
-      "authors": [
-        "Shayla Sharmin and Roghayeh Leila Barmaki"
-      ],
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "subjects": [
-        "Human-Computer Interaction (cs.HC)",
         "Machine Learning (cs.LG)"
       ],
       "submission_historys": [
         {
-          "date": "2025-04-03T17:54:59+00:00",
-          "link": "https://arxiv.org/abs/2504.13883v1",
-          "size": "6755kb",
+          "date": "2025-09-28T11:31:59+00:00",
+          "link": "https://arxiv.org/abs/2510.24724v1",
+          "size": "5098kb",
           "version": "v1"
-        },
-        {
-          "date": "2025-05-29T19:30:27+00:00",
-          "link": "https://arxiv.org/abs/2504.13883v2",
-          "size": "4333kb",
-          "version": "v2"
-        },
-        {
-          "date": "2025-10-28T17:05:46+00:00",
-          "link": "https://arxiv.org/abs/2504.13883v3",
-          "size": "680kb",
-          "version": "v3"
         }
       ],
-      "title": "Hybrid Deep Learning Model to Estimate Cognitive Effort from fNIRS Signals",
+      "title": "AmarDoctor: An AI-Driven, Multilingual, Voice-Interactive Digital Health Application for Primary Care Triage and Patient Management to Bridge the Digital Health Divide for Bengali Speakers",
       "links": {
-        "Abstract": "https://arxiv.org/abs/2504.13883",
-        "HTML": "https://arxiv.org/html/2504.13883v3",
-        "PDF": "https://arxiv.org/pdf/2504.13883"
+        "Abstract": "https://arxiv.org/abs/2510.24724",
+        "HTML": "https://arxiv.org/html/2510.24724v1",
+        "PDF": "https://arxiv.org/pdf/2510.24724"
       },
       "relevance": {
         "keyword": "creativity",
-        "level": "partial",
-        "reason": "The paper outlines a method for estimating cognitive effort using fNIRS signals in educational settings. This involves adapting educational materials, which can support creative learning, but creativity is not the primary goal of the research."
-      },
-      "tasks": [
-        "Unity"
-      ],
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.20123",
-      "paper_version": "v2",
-      "abstract": "Family learning takes place in everyday routines where children and caregivers read, practice, and develop new skills together. Although AI is increasingly present in learning environments, most systems remain child-centered and overlook the collaborative, distributed nature of family education. This paper investigates how AI can mediate family collaboration by addressing tensions of coordination, uneven workloads, and parental mediation. From a formative study with families using AI in daily learning, we identified challenges in responsibility sharing and recognition of contributions. Building on these insights, we designed FamLearn, an LLM-powered prototype that distributes tasks, visualizes contributions, and provides individualized support. A one-week field study with 11 families shows how this prototype can ease caregiving burdens, foster recognition, and enrich shared learning experiences. Our findings suggest that LLMs can move beyond the role of tutor to act as family mediators - balancing responsibilities, scaffolding intergenerational participation, and strengthening the relational fabric of family learning.",
-      "authors": [
-        "Yao Li",
-        "Jingyi Xie",
-        "Ya-Fang Lin",
-        "He Zhang",
-        "Ge Wang",
-        "Gaojian Huang",
-        "Rui Yu",
-        "Si Chen"
-      ],
-      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-      "subjects": [
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-23T01:53:18+00:00",
-          "link": "https://arxiv.org/abs/2510.20123v1",
-          "size": "2985kb",
-          "version": "v1"
-        },
-        {
-          "date": "2025-10-27T20:25:49+00:00",
-          "link": "https://arxiv.org/abs/2510.20123v2",
-          "size": "2979kb",
-          "version": "v2"
-        }
-      ],
-      "title": "\"Learning Together\": AI-Mediated Support for Parental Involvement in Everyday Learning",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.20123",
-        "HTML": "https://arxiv.org/html/2510.20123v2",
-        "PDF": "https://arxiv.org/pdf/2510.20123"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "partial",
-        "reason": "The paper discusses the use of AI to facilitate family learning, focusing on distribution of learning tasks and support. Though creativity itself is not a primary theme, the system may support creative learning scenarios and collective idea generation within family settings, making creativity a secondary theme."
+        "level": "irrelevant",
+        "reason": "The study describes a digital health application for Bengali speakers, aimed at improving healthcare access and management. Creativity is not a focus or mentioned in the context of this research."
       },
       "source": "arXiv"
     },
     {
-      "id": "2510.20958",
-      "paper_version": "v2",
-      "abstract": "The prevalence of online learning poses a vital challenge in real-time monitoring of students' concentration. Traditional methods such as questionnaire assessments require manual intervention, and webcam-based monitoring fails to provide accurate insights about learners' mental focus as it is deceived by mere screen fixation without cognitive engagement. Existing BCI-based approaches lack real-time validation and evaluation procedures. To address these limitations, a Brain-Computer Interface (BCI) system is developed using a non-invasive Electroencephalogram (EEG) headband, FocusCalm, to record brainwave activity under attentive and non-attentive states. 20 minutes of data were collected from each of 20 participants watching a pre-recorded educational video. The data validation employed a novel intra-video questionnaire assessment. Subsequently, collected signals were segmented (sliding window), filtered (Butterworth bandpass), and cleaned (removal of high- amplitude and EOG artifacts such as eye blinks). Time, frequency, wavelet, and statistical features were extracted, followed by recursive feature elimination (RFE) with support vector machines (SVMs) to classify attention and non-attention states. The leave-one-subject-out (LOSO) cross-validation accuracy was found to be 88.77%. The system provides feedback alerts upon detection of a non-attention state and maintains focus profile logs. A pilot study was conducted to evaluate the effectiveness of real-time feedback. Five participants underwent a 10-minute session comprising a 5-minute baseline phase devoid of feedback, succeeded by a 5-minute feedback phase, during which alerts were activated if participants exhibited inattention for approximately 8 consecutive seconds. A paired t-test (t = 5.73, p = 0.007) indicated a statistically significant improvement in concentration during the feedback phase.",
+      "id": "2510.24729",
+      "paper_version": "v1",
+      "abstract": "While global AI development prioritizes model performance and computational scale, meaningful deployment in African markets requires fundamentally different architectural decisions. This paper introduces Contextual and Cultural Intelligence (CCI) -- a systematic framework enabling AI systems to process cultural meaning, not just data patterns, through locally relevant, emotionally intelligent, and economically inclusive design. Using design science methodology, we validate CCI through a production AI-native cross-border shopping platform serving diaspora communities. Key empirical findings: 89% of users prefer WhatsApp-based AI interaction over traditional web interfaces (n=602, chi-square=365.8, p<0.001), achieving 536 WhatsApp users and 3,938 total conversations across 602 unique users in just 6 weeks, and culturally informed prompt engineering demonstrates sophisticated understanding of culturally contextualized queries, with 89% family-focused commerce patterns and natural code-switching acceptance. The CCI framework operationalizes three technical pillars: Infrastructure Intelligence (mobile-first, resilient architectures), Cultural Intelligence (multilingual NLP with social context awareness), and Commercial Intelligence (trust-based conversational commerce). This work contributes both theoretical innovation and reproducible implementation patterns, challenging Silicon Valley design orthodoxies while providing actionable frameworks for equitable AI deployment across resource-constrained markets.",
       "authors": [
-        "Asif Islam",
-        "Farhan Ishtiaque",
-        "Md. Muhyminul Haque",
-        "Farhana Sarker",
-        "Ravi Vaidyanathan and Khondaker A. Mamun"
+        "Qness Ndlovu"
       ],
-      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
       "subjects": [
         "Human-Computer Interaction (cs.HC)",
-        "Machine Learning (cs.LG)",
-        "Signal Processing (eess.SP)",
-        "Neurons and Cognition (q-bio.NC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-23T19:36:59+00:00",
-          "link": "https://arxiv.org/abs/2510.20958v1",
-          "size": "774kb",
-          "version": "v1"
-        },
-        {
-          "date": "2025-10-28T00:13:13+00:00",
-          "link": "https://arxiv.org/abs/2510.20958v2",
-          "size": "774kb",
-          "version": "v2"
-        }
-      ],
-      "title": "NeuroPilot: A Realtime Brain-Computer Interface system to enhance concentration of students in online learning",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.20958",
-        "HTML": "https://arxiv.org/html/2510.20958v2",
-        "PDF": "https://arxiv.org/pdf/2510.20958"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "This paper is centered on enhancing student concentration using a Brain-Computer Interface system. Although it deals with cognition, it doesn't focus on creativity or creative processes."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.22414",
-      "paper_version": "v2",
-      "abstract": "Vision impairment and blindness are a major global health challenge where gaps in the ophthalmology workforce limit access to specialist care. We evaluate AMIE, a medically fine-tuned conversational system based on Gemini with integrated web search and self-critique reasoning, using real-world clinical vignettes that reflect scenarios a general ophthalmologist would be expected to manage. We conducted two complementary evaluations: (1) a human-AI interactive diagnostic reasoning study in which ophthalmologists recorded initial differentials and plans, then reviewed AMIE's structured output and revised their answers; and (2) a masked preference and quality study comparing AMIE's narrative outputs with case author reference answers using a predefined rubric. AMIE showed standalone diagnostic performance comparable to clinicians at baseline. Crucially, after reviewing AMIE's responses, ophthalmologists tended to rank the correct diagnosis higher, reached greater agreement with one another, and enriched their investigation and management plans. Improvements were observed even when AMIE's top choice differed from or underperformed the clinician baseline, consistent with a complementary effect in which structured reasoning support helps clinicians re-rank rather than simply accept the model output. Preferences varied by clinical grade, suggesting opportunities to personalise responses by experience. Without ophthalmology-specific fine-tuning, AMIE matched clinician baseline and augmented clinical reasoning at the point of need, motivating multi-axis evaluation, domain adaptation, and prospective multimodal studies in real-world settings.",
-      "authors": [
-        "Mertcan Sevgi",
-        "Fares Antaki",
-        "Abdullah Zafar Khan",
-        "Ariel Yuhan Ong",
-        "David Adrian Merle",
-        "Kuang Hu",
-        "Shafi Balal",
-        "Sophie-Christin Kornelia Ernst",
-        "Josef Huemer",
-        "Gabriel T. Kaufmann",
-        "Hagar Khalid",
-        "Faye Levina",
-        "Celeste Limoli",
-        "Ana Paula Ribeiro Reis",
-        "Samir Touma",
-        "Anil Palepu",
-        "Khaled Saab",
-        "Ryutaro Tanno",
-        "Valentin Li\\'evin",
-        "Tao Tu",
-        "Yong Cheng",
-        "Mike Schaekermann",
-        "S. Sara Mahdavi",
-        "Elahe Vedadi",
-        "David Stutz",
-        "Vivek Natarajan",
-        "Alan Karthikesalingam",
-        "Pearse A. Keane",
-        "Wei-Hung Weng"
-      ],
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "subjects": [
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-25T19:22:36+00:00",
-          "link": "https://arxiv.org/abs/2510.22414v1",
-          "size": "1377kb",
-          "version": "v1"
-        },
-        {
-          "date": "2025-10-28T17:36:04+00:00",
-          "link": "https://arxiv.org/abs/2510.22414v2",
-          "size": "1377kb",
-          "version": "v2"
-        }
-      ],
-      "title": "Complementary Human-AI Clinical Reasoning in Ophthalmology",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.22414",
-        "HTML": "https://arxiv.org/html/2510.22414v2",
-        "PDF": "https://arxiv.org/pdf/2510.22414"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "The paper evaluates AI-assisted diagnostic reasoning in ophthalmology, emphasizing diagnostic accuracy and decision-making enhancement. It does not explore creativity within its objectives or findings."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2306.08848",
-      "paper_version": "v4",
-      "abstract": "Machine learning (ML) is becoming prevalent in embedded AI sensing systems. These \"ML sensors\" enable context-sensitive, real-time data collection and decision-making across diverse applications ranging from anomaly detection in industrial settings to wildlife tracking for conservation efforts. As such, there is a need to provide transparency in the operation of such ML-enabled sensing systems through comprehensive documentation. This is needed to enable their reproducibility, to address new compliance and auditing regimes mandated in regulation and industry-specific policy, and to verify and validate the responsible nature of their operation. To address this gap, we introduce the datasheet for ML sensors framework. We provide a comprehensive template, collaboratively developed in academia-industry partnerships, that captures the distinct attributes of ML sensors, including hardware specifications, ML model and dataset characteristics, end-to-end performance metrics, and environmental impacts. Our framework addresses the continuous streaming nature of sensor data, real-time processing requirements, and embeds benchmarking methodologies that reflect real-world deployment conditions, ensuring practical viability. Aligned with the FAIR principles (Findability, Accessibility, Interoperability, and Reusability), our approach enhances the transparency and reusability of ML sensor documentation across academic, industrial, and regulatory domains. To show the application of our approach, we present two datasheets: the first for an open-source ML sensor designed in-house and the second for a commercial ML sensor developed by industry collaborators, both performing computer vision-based person detection.",
-      "authors": [
-        "Matthew Stewart",
-        "Yuke Zhang",
-        "Pete Warden",
-        "Yasmine Omri",
-        "Shvetank Prakash",
-        "Jacob Huckelberry",
-        "Joao Henrique Santos",
-        "Shawn Hymel",
-        "Benjamin Yeager Brown",
-        "Jim MacArthur",
-        "Nat Jeffries",
-        "Emanuel Moss",
-        "Mona Sloane",
-        "Brian Plancher",
-        "and Vijay Janapa Reddi"
-      ],
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "subjects": [
-        "Machine Learning (cs.LG)",
-        "Computers and Society (cs.CY)",
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2023-06-15T04:24:13+00:00",
-          "link": "https://arxiv.org/abs/2306.08848v1",
-          "size": "12666kb",
-          "version": "v1"
-        },
-        {
-          "date": "2023-09-05T19:20:03+00:00",
-          "link": "https://arxiv.org/abs/2306.08848v2",
-          "size": "17656kb",
-          "version": "v2"
-        },
-        {
-          "date": "2024-02-17T03:03:33+00:00",
-          "link": "https://arxiv.org/abs/2306.08848v3",
-          "size": "34805kb",
-          "version": "v3"
-        },
-        {
-          "date": "2025-10-28T17:53:16+00:00",
-          "link": "https://arxiv.org/abs/2306.08848v4",
-          "size": "15523kb",
-          "version": "v4"
-        }
-      ],
-      "title": "Datasheets for Machine Learning Sensors",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2306.08848",
-        "HTML": "https://arxiv.org/html/2306.08848v4",
-        "PDF": "https://arxiv.org/pdf/2306.08848"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "The paper focuses on documenting and providing transparency for ML sensors, emphasizing compliance, auditing, and reproducibility. There is no mention of creativity or creative processes."
-      },
-      "tasks": [
-        "Fairness",
-        "Human Detection"
-      ],
-      "source": "arXiv"
-    },
-    {
-      "id": "2411.14571",
-      "paper_version": "v2",
-      "abstract": "Answering end user security questions is challenging. While large language models (LLMs) like GPT, LLAMA, and Gemini are far from error-free, they have shown promise in answering a variety of questions outside of security. We studied LLM performance in the area of end user security by qualitatively evaluating 3 popular LLMs on 900 systematically collected end user security questions.\n  While LLMs demonstrate broad generalist ``knowledge'' of end user security information, there are patterns of errors and limitations across LLMs consisting of stale and inaccurate answers, and indirect or unresponsive communication styles, all of which impacts the quality of information received. Based on these patterns, we suggest directions for model improvement and recommend user strategies for interacting with LLMs when seeking assistance with security.",
-      "authors": [
-        "Vijay Prakash",
-        "Kevin Lee",
-        "Arkaprabha Bhattacharya",
-        "Danny Yuxing Huang",
-        "Jessica Staddon"
-      ],
-      "license": "http://creativecommons.org/licenses/by-sa/4.0/",
-      "subjects": [
-        "Cryptography and Security (cs.CR)",
         "Artificial Intelligence (cs.AI)",
         "Computation and Language (cs.CL)",
-        "Human-Computer Interaction (cs.HC)"
+        "Computers and Society (cs.CY)"
       ],
       "submission_historys": [
         {
-          "date": "2024-11-21T20:36:36+00:00",
-          "link": "https://arxiv.org/abs/2411.14571v1",
-          "size": "169kb",
+          "date": "2025-10-08T08:56:53+00:00",
+          "link": "https://arxiv.org/abs/2510.24729v1",
+          "size": "365kb",
           "version": "v1"
-        },
-        {
-          "date": "2025-10-27T18:54:02+00:00",
-          "link": "https://arxiv.org/abs/2411.14571v2",
-          "size": "113kb",
-          "version": "v2"
         }
       ],
-      "title": "Learned, Lagged, LLM-splained: LLM Responses to End User Security Questions",
+      "title": "Beyond Models: A Framework for Contextual and Cultural Intelligence in African AI Deployment",
       "links": {
-        "Abstract": "https://arxiv.org/abs/2411.14571",
-        "HTML": "https://arxiv.org/html/2411.14571v2",
-        "PDF": "https://arxiv.org/pdf/2411.14571"
+        "Abstract": "https://arxiv.org/abs/2510.24729",
+        "PDF": "https://arxiv.org/pdf/2510.24729"
       },
       "relevance": {
         "keyword": "creativity",
         "level": "irrelevant",
-        "reason": "This paper is centered around evaluating large language models (LLMs) concerning end user security questions. It does not address creativity as a research focus or theme."
-      },
-      "tasks": [],
-      "source": "arXiv"
-    },
-    {
-      "id": "2502.09282",
-      "paper_version": "v4",
-      "abstract": "Remote sensing images contain complex spatial patterns and semantic structures, which makes the captioning model difficult to accurately describe. Encoder-decoder architectures have become the widely used approach for RSIC by translating visual content into descriptive text. However, many existing methods rely on a single-stream architecture, which weakens the model to accurately describe the image. Such single-stream architectures typically struggle to extract diverse spatial features or capture complex semantic relationships, limiting their effectiveness in scenes with high intraclass similarity or contextual ambiguity. In this work, we propose a novel Multi-stream Encoder-decoder Framework (MsEdF) which improves the performance of RSIC by optimizing both the spatial representation and language generation of encoder-decoder architecture. The encoder fuses information from two complementary image encoders, thereby promoting feature diversity through the integration of multiscale and structurally distinct cues. To improve the capture of context-aware descriptions, we refine the input sequence's semantic modeling on the decoder side using a stacked GRU architecture with an element-wise aggregation scheme. Experiments on three benchmark RSIC datasets show that MsEdF outperforms several baseline models.",
-      "authors": [
-        "Swadhin Das",
-        "Raksha Sharma"
-      ],
-      "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
-      "subjects": [
-        "Computer Vision and Pattern Recognition (cs.CV)",
-        "Human-Computer Interaction (cs.HC)",
-        "Machine Learning (cs.LG)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-02-13T12:54:13+00:00",
-          "link": "https://arxiv.org/abs/2502.09282v1",
-          "size": "2218kb",
-          "version": "v1"
-        },
-        {
-          "date": "2025-07-02T07:55:33+00:00",
-          "link": "https://arxiv.org/abs/2502.09282v2",
-          "size": "1127kb",
-          "version": "v2"
-        },
-        {
-          "date": "2025-10-22T07:42:11+00:00",
-          "link": "https://arxiv.org/abs/2502.09282v3",
-          "size": "1731kb",
-          "version": "v3"
-        },
-        {
-          "date": "2025-10-28T04:40:41+00:00",
-          "link": "https://arxiv.org/abs/2502.09282v4",
-          "size": "1731kb",
-          "version": "v4"
-        }
-      ],
-      "title": "MsEdF: A Multi-stream Encoder-decoder Framework for Remote Sensing Image Captioning",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2502.09282",
-        "HTML": "https://arxiv.org/html/2502.09282v4",
-        "PDF": "https://arxiv.org/pdf/2502.09282"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "The paper focuses on remote sensing image captioning using a multi-stream encoder-decoder framework. There is no clear connection to creativity; it is about improving the accuracy of image descriptions."
-      },
-      "tasks": [
-        "Caption Generation",
-        "Decoder",
-        "Descriptive",
-        "Image Captioning"
-      ],
-      "source": "arXiv"
-    },
-    {
-      "id": "2503.05470",
-      "paper_version": "v2",
-      "abstract": "Context: Interest in diversity in software development has significantly increased in recent years. Reporting on diversity in software projects can enhance user trust and assist regulators in evaluating adoption. Recent AI directives include clauses that mandate diversity information during development, highlighting the growing interest of public regulators. However, current documentation often neglects diversity in favor of technical features, partly due to a lack of tools for its description and annotation.\n  Objectives: This work introduces the Software Diversity Card, a structured approach for documenting and sharing diversity-related aspects within software projects. It aims to profile the various teams involved in software development and governance, including user groups in testing and software adaptations for diverse social groups.\n  Methods: We conducted a literature review on diversity and inclusion in software development and analyzed 1,000 top-starred Open Source Software (OSS) repositories on GitHub to identify diversity-related information. Moreover, we present a diversity modeling language, a toolkit for generating cards using it, and a study of its application in two real-world software projects.\n  Results: Despite the growing awareness of diversity in the research community, our analysis found a notable lack of diversity reporting in OSS projects. Applying the card to real-world examples highlighted challenges such as balancing anonymity and transparency, managing sensitive data, and ensuring authenticity.\n  Conclusion: Our proposal can enhance diversity practices in software development, support public administrations in software assessment, and help businesses promote diversity as a key asset.",
-      "authors": [
-        "Joan Giner-Miguelez",
-        "Sergio Morales",
-        "Sergio Cobos",
-        "Javier Luis Canovas Izquierdo",
-        "Robert Clariso",
-        "Jordi Cabot"
-      ],
-      "license": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
-      "subjects": [
-        "Software Engineering (cs.SE)",
-        "Computers and Society (cs.CY)",
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-03-07T14:43:06+00:00",
-          "link": "https://arxiv.org/abs/2503.05470v1",
-          "size": "700kb",
-          "version": "v1"
-        },
-        {
-          "date": "2025-10-28T09:15:09+00:00",
-          "link": "https://arxiv.org/abs/2503.05470v2",
-          "size": "351kb",
-          "version": "v2"
-        }
-      ],
-      "title": "The Software Diversity Card: A Framework for Reporting Diversity in Software Projects",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2503.05470",
-        "HTML": "https://arxiv.org/html/2503.05470v2",
-        "PDF": "https://arxiv.org/pdf/2503.05470"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "partial",
-        "reason": "The paper introduces a framework for documenting diversity in software projects. While it does not focus directly on creativity, diversity can indirectly foster creative outcomes by including varied perspectives and ideas in project development."
+        "reason": "The paper introduces the Contextual and Cultural Intelligence framework for AI deployment in Africa, emphasizing cultural relevance and emotional intelligence, but does not explore creativity as a theme."
       },
       "source": "arXiv"
     },
     {
-      "id": "2505.21724",
-      "paper_version": "v2",
-      "abstract": "In this paper, we introduce Online Multimodal Conversational Response Generation (OMCRG), a novel task designed to produce synchronized verbal and non-verbal listener feedback online, based on the speaker's multimodal inputs. OMCRG captures natural dyadic interactions and introduces new challenges in aligning generated audio with listeners' facial responses. To tackle these challenges, we incorporate text as an intermediate modality to connect audio and facial responses. We propose OmniResponse, a Multimodal Large Language Model (MLLM) that autoregressively generates accurate multimodal listener responses. OmniResponse leverages a pretrained LLM enhanced with two core components: Chrono-Text Markup, which precisely timestamps generated text tokens, and TempoVoice, a controllable online text-to-speech (TTS) module that outputs speech synchronized with facial responses. To advance OMCRG research, we offer ResponseNet, a dataset of 696 detailed dyadic interactions featuring synchronized split-screen videos, multichannel audio, transcripts, and annotated facial behaviors. Comprehensive evaluations on ResponseNet demonstrate that OmniResponse outperforms baseline models in terms of semantic speech content, audio-visual synchronization, and generation quality. Our dataset, code, and models are publicly available.",
-      "authors": [
-        "Cheng Luo",
-        "Jianghui Wang",
-        "Bing Li",
-        "Siyang Song",
-        "Bernard Ghanem"
-      ],
-      "license": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
-      "subjects": [
-        "Computer Vision and Pattern Recognition (cs.CV)",
-        "Artificial Intelligence (cs.AI)",
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-05-27T20:12:46+00:00",
-          "link": "https://arxiv.org/abs/2505.21724v1",
-          "size": "20667kb",
-          "version": "v1"
-        },
-        {
-          "date": "2025-10-28T14:26:23+00:00",
-          "link": "https://arxiv.org/abs/2505.21724v2",
-          "size": "20669kb",
-          "version": "v2"
-        }
-      ],
-      "title": "OmniResponse: Online Multimodal Conversational Response Generation in Dyadic Interactions",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2505.21724",
-        "PDF": "https://arxiv.org/pdf/2505.21724"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "The paper focuses on online multimodal conversational response generation, emphasizing audio-visual synchronization and listener feedback in dyadic interactions. It does not address creativity or creative processes as a research theme."
-      },
-      "datasets": [
-        {
-          "dataset_name": "awakening-ai/ReactNet",
-          "downloads": "115",
-          "likes": "2",
-          "link": "https://huggingface.co/datasets/awakening-ai/ReactNet"
-        },
-        {
-          "dataset_name": "awakening-ai/ResponseNet",
-          "downloads": "81",
-          "likes": "1",
-          "link": "https://huggingface.co/datasets/awakening-ai/ResponseNet"
-        }
-      ],
-      "tasks": [
-        "Audio-Visual Synchronization",
-        "Conversational Response Generation",
-        "Large Language Model",
-        "Multimodal Large Language Model",
-        "Response Generation"
-      ],
-      "source": "arXiv"
-    },
-    {
-      "id": "2506.05699",
-      "paper_version": "v2",
-      "abstract": "As generative AI becomes increasingly integrated into higher education, understanding how students engage with these technologies is essential for responsible adoption. This study evaluates the Educational AI Hub, an AI-powered learning framework, implemented in undergraduate civil and environmental engineering courses at a large R1 public university. Using a mixed-methods design combining pre- and post-surveys, system usage logs, and qualitative analysis of students' AI interactions, the research examines perceptions of trust, ethics, usability, and learning outcomes. Findings show that students valued the AI assistant for its accessibility and comfort, with nearly half reporting greater ease using it than seeking help from instructors or teaching assistants. The tool was most helpful for completing homework and understanding concepts, though views on its instructional quality were mixed. Ethical uncertainty, particularly around institutional policy and academic integrity, emerged as a key barrier to full engagement. Overall, students regarded AI as a supplement rather than a replacement for human instruction. The study highlights the importance of usability, ethical transparency, and faculty guidance in promoting meaningful AI engagement. A total of 71 students participated across two courses, generating over 600 AI interactions and 100 survey responses that provided both quantitative and contextual insights into learning engagement.",
-      "authors": [
-        "Ramteja Sajja",
-        "Yusuf Sermet",
-        "Brian Fodale",
-        "Ibrahim Demir"
-      ],
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "subjects": [
-        "Computers and Society (cs.CY)",
-        "Artificial Intelligence (cs.AI)",
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-06-06T03:02:49+00:00",
-          "link": "https://arxiv.org/abs/2506.05699v1",
-          "size": "1042kb",
-          "version": "v1"
-        },
-        {
-          "date": "2025-10-27T23:56:32+00:00",
-          "link": "https://arxiv.org/abs/2506.05699v2",
-          "size": "1156kb",
-          "version": "v2"
-        }
-      ],
-      "title": "Evaluating AI-Powered Learning Assistants in Engineering Higher Education: Student Engagement, Ethical Challenges, and Policy Implications",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2506.05699",
-        "PDF": "https://arxiv.org/pdf/2506.05699"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "partial",
-        "reason": "While the main focus is on AI-powered learning assistants and student engagement, the paper discusses the implications of generative AI, which can relate to creative educational tools. However, creativity is not the primary focus, making it a secondary theme."
-      },
-      "tasks": [
-        "Chatbot"
-      ],
-      "source": "arXiv"
-    },
-    {
-      "id": "2506.06591",
-      "paper_version": "v2",
-      "abstract": "Previous research has explored the privacy needs and concerns of device owners, primary users, and different bystander groups with regard to smart home devices like security cameras, smart speakers, and hubs, but little is known about the privacy views and practices of smart home product teams, particularly those in non-Western contexts. This paper presents findings from 27 semi-structured interviews with Chinese smart home product team members, including product/project managers, software/hardware engineers, user experience (UX) designers, legal/privacy experts, and marketers/operation specialists. We examine their privacy perspectives, practices, and risk mitigation strategies. Our results show that participants emphasized compliance with Chinese data privacy laws, which typically prioritized national security over individual privacy rights. China-specific cultural, social, and legal factors also influenced participants' ethical considerations and attitudes toward balancing user privacy and security with convenience. Drawing on our findings, we propose a set of recommendations for smart home product teams, along with socio-technical and legal interventions to address smart home privacy issues-especially those belonging to at-risk groups-in Chinese multi-user smart homes.",
-      "authors": [
-        "Shijing He and Yaxiong Lei and Xiao Zhan and Chi Zhang and Juan Ye and Ruba Abu-Salma and Jose Such"
-      ],
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "subjects": [
-        "Computers and Society (cs.CY)",
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-06-06T23:49:48+00:00",
-          "link": "https://arxiv.org/abs/2506.06591v1",
-          "size": "112kb",
-          "version": "v1"
-        },
-        {
-          "date": "2025-10-28T12:19:28+00:00",
-          "link": "https://arxiv.org/abs/2506.06591v2",
-          "size": "114kb",
-          "version": "v2"
-        }
-      ],
-      "title": "Privacy Perspectives and Practices of Chinese Smart Home Product Teams",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2506.06591",
-        "HTML": "https://arxiv.org/html/2506.06591v2",
-        "PDF": "https://arxiv.org/pdf/2506.06591"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "This paper examines privacy perspectives and practices within the context of smart home product teams, especially in China. Creativity is not addressed within the scope of the paper."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2508.12730",
-      "paper_version": "v2",
-      "abstract": "Machine Unlearning (MU) aims to remove target training data from a trained model so that the removed data no longer influences the model's behavior, fulfilling \"right to be forgotten\" obligations under data privacy laws. Yet, we observe that researchers in this rapidly emerging field face challenges in analyzing and understanding the behavior of different MU methods, especially in terms of three fundamental principles in MU: accuracy, efficiency, and privacy. Consequently, they often rely on aggregate metrics and ad-hoc evaluations, making it difficult to accurately assess the trade-offs between methods. To fill this gap, we introduce a visual analytics system, Unlearning Comparator, designed to facilitate the systematic evaluation of MU methods. Our system supports two important tasks in the evaluation process: model comparison and attack simulation. First, it allows the user to compare the behaviors of two models, such as a model generated by a certain method and a retrained baseline, at class-, instance-, and layer-levels to better understand the changes made after unlearning. Second, our system simulates membership inference attacks (MIAs) to evaluate the privacy of a method, where an attacker attempts to determine whether specific data samples were part of the original training set. We evaluate our system through a case study visually analyzing prominent MU methods and demonstrate that it helps the user not only understand model behaviors but also gain insights that can inform the improvement of MU methods. The source code is publicly available at https://github.com/gnueaj/Machine-Unlearning-Comparator.",
-      "authors": [
-        "Jaeung Lee",
-        "Suhyeon Yu",
-        "Yurim Jang",
-        "Simon S. Woo",
-        "and Jaemin Jo"
-      ],
-      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-      "subjects": [
-        "Cryptography and Security (cs.CR)",
-        "Human-Computer Interaction (cs.HC)",
-        "Machine Learning (cs.LG)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-08-18T08:53:53+00:00",
-          "link": "https://arxiv.org/abs/2508.12730v1",
-          "size": "11238kb",
-          "version": "v1"
-        },
-        {
-          "date": "2025-10-28T08:47:58+00:00",
-          "link": "https://arxiv.org/abs/2508.12730v2",
-          "size": "11238kb",
-          "version": "v2"
-        }
-      ],
-      "title": "Unlearning Comparator: A Visual Analytics System for Comparative Evaluation of Machine Unlearning Methods",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2508.12730",
-        "PDF": "https://arxiv.org/pdf/2508.12730"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "The paper discusses a visual analytics system for evaluating machine unlearning methods, focusing on accuracy, efficiency, and privacy trade-offs. It is unrelated to creativity or creative research themes."
-      },
-      "models": [
-        {
-          "model_path": "jaeunglee/resnet18-cifar10-unlearning",
-          "downloads": "0",
-          "likes": "1",
-          "trending_score": "0.0",
-          "link": "https://huggingface.co/jaeunglee/resnet18-cifar10-unlearning"
-        }
-      ],
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.20774",
-      "paper_version": "v2",
-      "abstract": "Large-scale and diverse datasets are vital for training robust robotic manipulation policies, yet existing data collection methods struggle to balance scale, diversity, and quality. Simulation offers scalability but suffers from sim-to-real gaps, while teleoperation yields high-quality demonstrations with limited diversity and high labor cost. We introduce FieldGen, a field-guided data generation framework that enables scalable, diverse, and high-quality real-world data collection with minimal human supervision. FieldGen decomposes manipulation into two stages: a pre-manipulation phase, allowing trajectory diversity, and a fine manipulation phase requiring expert precision. Human demonstrations capture key contact and pose information, after which an attraction field automatically generates diverse trajectories converging to successful configurations. This decoupled design combines scalable trajectory diversity with precise supervision. Moreover, FieldGen-Reward augments generated data with reward annotations to further enhance policy learning. Experiments demonstrate that policies trained with FieldGen achieve higher success rates and improved stability compared to teleoperation-based baselines, while significantly reducing human effort in long-term real-world data collection. Webpage is available at https://fieldgen.github.io/.",
-      "authors": [
-        "Wenhao Wang",
-        "Kehe Ye",
-        "Xinyu Zhou",
-        "Tianxing Chen",
-        "Cao Min",
-        "Qiaoming Zhu",
-        "Xiaokang Yang",
-        "Ping Luo",
-        "Yongjian Shen",
-        "Yang Yang",
-        "Maoqing Yao",
-        "Yao Mu"
-      ],
-      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-      "subjects": [
-        "Robotics (cs.RO)",
-        "Artificial Intelligence (cs.AI)",
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-23T17:47:12+00:00",
-          "link": "https://arxiv.org/abs/2510.20774v1",
-          "size": "2997kb",
-          "version": "v1"
-        },
-        {
-          "date": "2025-10-28T17:10:50+00:00",
-          "link": "https://arxiv.org/abs/2510.20774v2",
-          "size": "2997kb",
-          "version": "v2"
-        }
-      ],
-      "title": "FieldGen: From Teleoperated Pre-Manipulation Trajectories to Field-Guided Data Generation",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.20774",
-        "HTML": "https://arxiv.org/html/2510.20774v2",
-        "PDF": "https://arxiv.org/pdf/2510.20774"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "The focus of the paper is on a data generation framework (FieldGen) for robotic manipulation. It emphasizes scalability, diversity, and quality of data collection but does not address creativity as part of its scope or objectives."
-      },
-      "paper_reviewer": "**Summary:**\nThe paper introduces FieldGen, a semi-autonomous data generation framework designed to facilitate large-scale, high-quality real-world data collection for robotic manipulation with minimal human intervention. The framework decomposes manipulation tasks into a pre-manipulation phase for trajectory diversity and a fine-manipulation phase requiring precision. FieldGen uses human demonstrations to capture key contact information, while FieldGen-Reward enhances policy learning with reward annotations. The empirical results demonstrate that FieldGen surpasses traditional teleoperation-based data collection methods in terms of success rates and requires less human effort, highlighting its effectiveness in scalable data generation and policy robustness.\n\n**Strengths:**\n- The paper offers a novel and scalable data generation approach that reduces human involvement, thereby alleviating cognitive fatigue typically associated with teleoperation.\n- The FieldGen framework effectively combines trajectory diversity with precision, achieving higher success rates in robotic manipulation tasks than teleoperation-based baselines.\n- Empirical validation shows that FieldGen-data-trained models are robust and perform better across various tasks, demonstrating the method's effectiveness and efficiency.\n\n**Weaknesses:**\n- The framework's reliance on a small set of high-quality human demonstrations for key phases may still be a limiting factor for fully autonomous deployment.\n- The complexity of the attraction field construction could be daunting for practical implementation without extensive expertise in robotic systems and control theories.\n\n**Questions:**\n- How scalable is FieldGen when applied to real-time applications or varying hardware architectures beyond those tested in the paper?\n- Can FieldGen be adapted effectively to tasks outside of the robotic manipulation realm, such as autonomous navigation or aerial robotics?\n\n**Soundness:**\nSoundness result: 4 (excellent)\n\n**Presentation:**\nPresentation result: 3 (good)\n\n**Contribution:**\nContribution result: 4 (excellent)\n\n**Data Analysis:**\n- **Strengths**: The evaluation of FieldGen in comparison to teleoperation illustrates clear benefits in scalability, success rate, and reduced human effort.\n- **Weaknesses**: The scenarios and benchmarks used in the experiments could benefit from broader diversity to further validate the generalization claims.\nData Analysis result: 3 (good)\n\n**Rating:**\nRating result: 8 (accept, good paper)\n\n**Paper Decision:**\n- Decision: Accept\n- Reasons: The paper presents a novel approach to data generation in robotic manipulation that enhances scalability and reduces reliance on human teleoperation. With strong empirical validation indicating that FieldGen-trained models provide superior performance and generalization across tasks, the work contributes significantly to the field of robotics. While the presentation can be improved in certain sections for clarity, the strengths in originality, methodological soundness, and empirical validation justify the decision to accept.",
-      "source": "arXiv"
-    },
-    {
-      "id": "2510.21293",
-      "paper_version": "v2",
-      "abstract": "Background: Trustworthy AI serves as a foundational pillar for two major AI ethics conferences: AIES and FAccT. However, current research often adopts techno-centric approaches, focusing primarily on technical attributes such as reliability, robustness, and fairness, while overlooking the sociotechnical dimensions critical to understanding AI trustworthiness in real-world contexts.\n  Objectives: This scoping review aims to examine how the AIES and FAccT communities conceptualize, measure, and validate AI trustworthiness, identifying major gaps and opportunities for advancing a holistic understanding of trustworthy AI systems.\n  Methods: We conduct a scoping review of AIES and FAccT conference proceedings to date, systematically analyzing how trustworthiness is defined, operationalized, and applied across different research domains. Our analysis focuses on conceptualization approaches, measurement methods, verification and validation techniques, application areas, and underlying values.\n  Results: While significant progress has been made in defining technical attributes such as transparency, accountability, and robustness, our findings reveal critical gaps. Current research often predominantly emphasizes technical precision at the expense of social and ethical considerations. The sociotechnical nature of AI systems remains less explored and trustworthiness emerges as a contested concept shaped by those with the power to define it.\n  Conclusions: An interdisciplinary approach combining technical rigor with social, cultural, and institutional considerations is essential for advancing trustworthy AI. We propose actionable measures for the AI ethics community to adopt holistic frameworks that genuinely address the complex interplay between AI systems and society, ultimately promoting responsible technological development that benefits all stakeholders.",
-      "authors": [
-        "Siddharth Mehrotra",
-        "Jin Huang",
-        "Xuelong Fu",
-        "Roel Dobbe",
-        "Clara I. S\\'anchez and Maarten de Rijke"
-      ],
-      "license": "http://creativecommons.org/licenses/by-sa/4.0/",
-      "subjects": [
-        "Artificial Intelligence (cs.AI)",
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-10-24T09:40:38+00:00",
-          "link": "https://arxiv.org/abs/2510.21293v1",
-          "size": "5453kb",
-          "version": "v1"
-        },
-        {
-          "date": "2025-10-28T15:20:05+00:00",
-          "link": "https://arxiv.org/abs/2510.21293v2",
-          "size": "5453kb",
-          "version": "v2"
-        }
-      ],
-      "title": "Understanding AI Trustworthiness: A Scoping Review of AIES & FAccT Articles",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2510.21293",
-        "HTML": "https://arxiv.org/html/2510.21293v2",
-        "PDF": "https://arxiv.org/pdf/2510.21293"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "The paper is a review focused on AI trustworthiness and ethics, emphasizing technical and sociotechnical dimensions. Creativity is not addressed as part of the research agenda or analysis."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2410.06068",
+      "id": "2510.24739",
       "paper_version": "v1",
-      "abstract": "As large engineering efforts go towards improving the resolution of mobile, AR and VR displays, it is important to know the maximum resolution at which further improvements bring no noticeable benefit. This limit is often referred to as the \"retinal resolution\", although the limiting factor may not necessarily be attributed to the retina. To determine the ultimate resolution at which an image appears sharp to our eyes with no perceivable blur, we created an experimental setup with a sliding display, which allows for continuous control of the resolution. The lack of such control was the main limitation of the previous studies. We measure achromatic (black-white) and chromatic (red-green and yellow-violet) resolution limits for foveal vision, and at two eccentricities (10 and 20 deg). Our results demonstrate that the resolution limit is higher than what was previously believed, reaching 94 pixels-per-degree (ppd) for foveal achromatic vision, 89 ppd for red-green patterns, and 53 ppd for yellow-violet patterns. We also observe a much larger drop in the resolution limit for chromatic patterns (red-green and yellow-violet) than for achromatic. Our results set the north star for display development, with implications for future imaging, rendering and video coding technologies.",
+      "abstract": "Artificial Intelligence (AI) and large language models (LLMs) are increasingly used in social and psychological research. Among potential applications, LLMs can be used to generate, customise, or adapt measurement instruments. This study presents a preliminary investigation of AI-generated questionnaires by comparing two ChatGPT-based adaptations of the Body Awareness Questionnaire (BAQ) with the validated human-developed version. The AI instruments were designed with different levels of explicitness in content and instructions on construct facets, and their psychometric properties were assessed using a Bayesian Graded Response Model. Results show that although surface wording between AI and original items was similar, differences emerged in dimensionality and in the distribution of item and test information across latent traits. These findings illustrate the importance of applying statistical measures of accuracy to ensure the validity and interpretability of AI-driven tools.",
       "authors": [
-        "Maliha Ashraf",
-        "Alexandre Chapiro",
-        "Rafa{\\l} K. Mantiuk"
+        "Mario Angelelli",
+        "Morena Oliva",
+        "Serena Arima",
+        "Enrico Ciavolino"
       ],
       "license": "http://creativecommons.org/licenses/by/4.0/",
       "subjects": [
-        "Human-Computer Interaction (cs.HC)",
-        "Graphics (cs.GR)",
-        "Multimedia (cs.MM)",
-        "Image and Video Processing (eess.IV)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2024-10-08T14:14:46+00:00",
-          "link": "https://arxiv.org/abs/2410.06068v1",
-          "size": "32963kb",
-          "version": "v1"
-        }
-      ],
-      "title": "Resolution limit of the eye: how many pixels can we see?",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2410.06068",
-        "HTML": "https://arxiv.org/html/2410.06068",
-        "PDF": "https://arxiv.org/pdf/2410.06068"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "irrelevant",
-        "reason": "The study is about human visual resolution limits, which relates to physical capabilities of the eye, not creativity or creative processes."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2407.13195",
-      "paper_version": "v6",
-      "abstract": "Thompson Sampling is a principled method for balancing exploration and exploitation, but its real-world adoption faces computational challenges in large-scale or non-conjugate settings. While ensemble-based approaches offer partial remedies, they typically require prohibitively large ensemble sizes. We propose Ensemble++, a scalable exploration framework using a novel shared-factor ensemble architecture with random linear combinations. For linear bandits, we provide theoretical guarantees showing that Ensemble++ achieves regret comparable to exact Thompson Sampling with only $\\Theta(d \\log T)$ ensemble sizes--significantly outperforming prior methods. Crucially, this efficiency holds across both compact and finite action sets with either time-invariant or time-varying contexts without configuration changes. We extend this theoretical foundation to nonlinear rewards by replacing fixed features with learnable neural representations while preserving the same incremental update principle, effectively bridging theory and practice for real-world tasks. Comprehensive experiments across linear, quadratic, neural, and GPT-based contextual bandits validate our theoretical findings and demonstrate Ensemble++'s superior regret-computation tradeoff versus state-of-the-art methods.",
-      "authors": [
-        "Yingru Li",
-        "Jiawei Xu",
-        "Baoxiang Wang",
-        "Zhi-Quan Luo"
-      ],
-      "license": "http://creativecommons.org/licenses/by/4.0/",
-      "subjects": [
-        "Machine Learning (cs.LG)",
-        "Artificial Intelligence (cs.AI)",
         "Human-Computer Interaction (cs.HC)",
         "Information Theory (cs.IT)",
         "Information Theory (math.IT)",
-        "Machine Learning (stat.ML)"
+        "Methodology (stat.ME)"
       ],
       "submission_historys": [
         {
-          "date": "2024-07-18T06:16:09+00:00",
-          "link": "https://arxiv.org/abs/2407.13195v1",
-          "size": "2807kb",
+          "date": "2025-10-15T09:20:35+00:00",
+          "link": "https://arxiv.org/abs/2510.24739v1",
+          "size": "10226kb",
           "version": "v1"
-        },
-        {
-          "date": "2024-07-21T16:31:14+00:00",
-          "link": "https://arxiv.org/abs/2407.13195v2",
-          "size": "2809kb",
-          "version": "v2"
-        },
-        {
-          "date": "2024-11-28T17:25:44+00:00",
-          "link": "https://arxiv.org/abs/2407.13195v3",
-          "size": "7398kb",
-          "version": "v3"
-        },
-        {
-          "date": "2025-02-01T04:04:46+00:00",
-          "link": "https://arxiv.org/abs/2407.13195v4",
-          "size": "4267kb",
-          "version": "v4"
-        },
-        {
-          "date": "2025-05-19T03:28:54+00:00",
-          "link": "https://arxiv.org/abs/2407.13195v5",
-          "size": "4266kb",
-          "version": "v5"
-        },
-        {
-          "date": "2025-10-28T08:26:28+00:00",
-          "link": "https://arxiv.org/abs/2407.13195v6",
-          "size": "4258kb",
-          "version": "v6"
         }
       ],
-      "title": "Scalable Exploration via Ensemble++",
+      "title": "Human- vs. AI-generated tests: dimensionality and information accuracy in latent trait evaluation",
       "links": {
-        "Abstract": "https://arxiv.org/abs/2407.13195",
-        "HTML": "https://arxiv.org/html/2407.13195",
-        "PDF": "https://arxiv.org/pdf/2407.13195"
+        "Abstract": "https://arxiv.org/abs/2510.24739",
+        "HTML": "https://arxiv.org/html/2510.24739v1",
+        "PDF": "https://arxiv.org/pdf/2510.24739"
       },
       "relevance": {
         "keyword": "creativity",
         "level": "irrelevant",
-        "reason": "The paper discusses efficient exploration frameworks in AI models, focusing on computational efficiencies rather than creative processes."
+        "reason": "This study investigates AI-generated questionnaires compared to human-developed versions, focusing on psychometric evaluation. It does not relate to creativity or creative processes."
       },
-      "tasks": [
-        "Computational Efficiency",
-        "Decision Making",
-        "Efficient Exploration",
-        "Multi-Armed Bandits",
-        "Sequential Decision Making",
-        "Thompson Sampling"
-      ],
-      "repo_urls": [
-        "https://github.com/szrlee/GPT-HyperAgent",
-        "https://github.com/szrlee/ensemble_plus_plus"
-      ],
       "source": "arXiv"
     },
     {
-      "id": "2402.07911",
-      "paper_version": "v2",
-      "abstract": "As AI systems increasingly shape decision making in creative design contexts, understanding how humans engage with these tools has become a critical challenge for interactive intelligent systems research. This paper contributes a challenge to rethink how to evaluate human--AI collaborative systems, advocating for a more nuanced and multidimensional approach. Findings from one of the largest field studies to date (n = 808) of a human--AI co-creative system, The Genetic Car Designer, complemented by a controlled lab study (n = 12) are presented. The system is based on an interactive evolutionary algorithm where participants were tasked with designing a simple two dimensional representation of a car. Participants were exposed to galleries of design suggestions generated by an intelligent system, MAP--Elites, and a random control. Results indicate that exposure to galleries generated by MAP--Elites significantly enhanced both cognitive and behavioural engagement, leading to higher-quality design outcomes. Crucially for the wider community, the analysis reveals that conventional evaluation methods, which often focus on solely behavioural and design quality metrics, fail to capture the full spectrum of user engagement. By considering the human--AI design process as a changing emotional, behavioural and cognitive state of the designer, we propose evaluating human--AI systems holistically and considering intelligent systems as a core part of the user experience -- not simply a back end tool.",
+      "id": "2510.24893",
+      "paper_version": "v1",
+      "abstract": "The growing integration of artificial intelligence (AI) into human cognition raises a fundamental question: does AI merely improve efficiency, or does it alter how we think? This study experimentally tested whether short-term exposure to narrow AI tools enhances core cognitive abilities or simply optimizes task performance. Thirty young adults completed standardized neuropsychological assessments embedded in a seven-week protocol with a four-week online intervention involving problem-solving and verbal comprehension tasks, either with or without AI support (ChatGPT). While AI-assisted participants completed several tasks faster and more accurately, no significant pre-post differences emerged in standardized measures of problem solving or verbal comprehension. These results demonstrate efficiency gains without cognitive change, suggesting that current narrow AI systems serve as cognitive scaffolds extending performance without transforming underlying mental capacities. The findings highlight the need for ethical and educational frameworks that promote critical and autonomous thinking in an increasingly AI-augmented cognitive ecology.",
       "authors": [
-        "Sean P. Walton",
-        "Ben J. Evans",
-        "Alma A. M. Rahat",
-        "James Stovold",
-        "Jakub Vincalek"
+        "Mar\\'ia Ang\\'elica Ben\\'itez",
+        "Roc\\'io Candela Ceballos",
+        "Karina Del Valle Molina",
+        "Sof\\'ia Mundo Araujo",
+        "Sof\\'ia Evangelina Victorio Villaroel",
+        "and Nadia Justel"
       ],
       "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
       "subjects": [
         "Human-Computer Interaction (cs.HC)",
-        "Artificial Intelligence (cs.AI)",
-        "Computational Engineering, Finance, and Science (cs.CE)",
-        "Neural and Evolutionary Computing (cs.NE)"
+        "Artificial Intelligence (cs.AI)"
       ],
       "submission_historys": [
         {
-          "date": "2024-01-30T08:54:46+00:00",
-          "link": "https://arxiv.org/abs/2402.07911v1",
-          "size": "8297kb",
+          "date": "2025-10-28T18:55:44+00:00",
+          "link": "https://arxiv.org/abs/2510.24893v1",
+          "size": "577kb",
           "version": "v1"
-        },
-        {
-          "date": "2025-09-03T12:36:03+00:00",
-          "link": "https://arxiv.org/abs/2402.07911v2",
-          "size": "9856kb",
-          "version": "v2"
         }
       ],
-      "title": "From Metrics to Meaning: Time to Rethink Evaluation in Human-AI Collaborative Design",
+      "title": "Efficiency Without Cognitive Change: Evidence from Human Interaction with Narrow AI Systems",
       "links": {
-        "Abstract": "https://arxiv.org/abs/2402.07911",
-        "HTML": "https://arxiv.org/html/2402.07911",
-        "PDF": "https://arxiv.org/pdf/2402.07911"
+        "Abstract": "https://arxiv.org/abs/2510.24893",
+        "PDF": "https://arxiv.org/pdf/2510.24893"
       },
       "relevance": {
         "keyword": "creativity",
-        "level": "core",
-        "reason": "This paper discusses human-AI collaboration in creative design contexts, using a co-creative system to enhance design outcomes. It also evaluates cognitive, emotional, and design engagement, showing a direct and explicit focus on creativity."
+        "level": "partial",
+        "reason": "Creativity is indirectly related to cognitive change and human interaction with AI. Though the focus is on efficiency and cognitive scaffolding, the discussion on cognitive ecology may touch upon creativity aspects."
       },
-      "tasks": [],
-      "paper_reviewer": "**Summary:**  \nThe paper discusses human-AI collaboration in design, specifically evaluating methods for this interaction. Findings from an expansive study of the Genetic Car Designer tool, which includes both AI algorithm-generated and random suggestions, indicate that galleries powered by AI led to enhanced engagement and design outcomes; however, current evaluation methods inadequately capture user engagement. The paper advocates for holistic evaluation approaches that consider emotional, cognitive, and behavioral states. The study provides insights into how human engagement can be enhanced in design processes through structured diversity in design suggestions and challenges conventional evaluation methodologies by highlighting the significance of user-centric approaches.\n\n**Strengths:**  \n- The study uses one of the largest field studies in mixed-initiative design tools (n = 808), increasing reliability.\n- The paper proposes a shift towards holistic evaluations of human-AI systems, considering emotional, behavioral, and cognitive states.\n- It sheds light on the importance of structured diversity through MAP-Elites, impacting engagement and design quality.\n\n**Weaknesses:**  \n- Limited generalizability to professional engineering environments; many participants were college students.\n- The user experience (UX) issues with the tool might have affected participant engagement and findings.\n- The challenge to separate effects of human engagement and AI algorithm improvements statistically, as both are correlated.\n\n**Questions:**  \n- How might this approach be adapted for use in more professional or industry-specific design environments?\n- Could the UX design issues identified in the participant feedback affect the findings significantly?\n\n**Soundness:**  \nGood - The methodology is robust but the paper's conclusions depend heavily on correlations and hypothetical causations that are difficult to untangle.\n\n**Presentation:**  \nGood - The paper is well-organized but could improve clarity regarding the implications of its findings.\n\n**Contribution:**  \nExcellent - It challenges current evaluation methods for human-AI collaboration and makes a strong case for more comprehensive, multidimensional assessment frameworks.\n\n**Data Analysis:**  \n- **Strengths**: Utilization of a large dataset adds credibility and depth to findings.\n- **Weaknesses**: The reliance on correlations makes causal interpretations challenging.\nData Analysis result - Good. The insights and methods proposed are valuable but interpreting data confidently beyond correlations is limited.\n\n**Rating:**  \nAccept, good paper - The paper is deserving of acceptance due to its timely contributions and illustrative findings, though refinements to methodology and further application-based studies would increase its impact.\n\n**Paper Decision:**  \n- Decision: Accept\n- Reasons: The paper presents significant advancements in evaluating human-AI collaborative design tools, which are timely and relevant as such systems become widespread. Although the limitations regarding generalizability and UX design are noted, the large-scale study provides robust findings that challenge conventional evaluation paradigms and have potential implications for future research and practical applications.",
       "source": "arXiv"
     },
     {
-      "id": "2405.08906",
-      "paper_version": "v6",
-      "abstract": "Educational games enhance learning experiences by integrating touchscreens, making interactions more engaging and intuitive for learners. However, the cognitive impacts of educational gameplay input modalities, such as the hand and stylus technique, are unclear. We compared the experience of using hands vs. a stylus for touchscreens while playing an educational game by analyzing oxygenated hemoglobin collected by functional Near-Infrared Spectroscopy and self-reported measures. In addition, we measured the hand vs. the stylus modalities of the task and calculated the relative neural efficiency and relative neural involvement using the mental demand and the quiz score. Our findings show that the hand condition had a significantly lower neural involvement, yet higher neural efficiency than the stylus condition. This result suggests the requirement of less cognitive effort while using the hand. Additionally, the self-reported measures show significant differences, and the results suggest that hand-based input is more intuitive, less cognitively demanding, and less frustrating. Conversely, the use of a stylus required higher cognitive effort due to the cognitive balance of controlling the pen and answering questions. These findings highlight the importance of designing educational games that allow learners to engage with the system while minimizing cognitive effort.",
+      "id": "2510.24937",
+      "paper_version": "v1",
+      "abstract": "We introduce OrchVis, a multi-agent orchestration framework that visualizes, verifies, and coordinates goal-driven collaboration among LLM-based agents. Through hierarchical goal alignment, task assignment, and conflict resolution, OrchVis enables humans to supervise complex multi-agent workflows without micromanaging each step. The system parses user intent into structured goals, monitors execution via automated verification, and exposes inter-agent dependencies through an interactive planning panel. When conflicts arise, users can explore system-proposed alternatives and selectively replan. OrchVis advances human-centered design for multi-agent systems by combining transparent visualization with adaptive autonomy.",
       "authors": [
-        "Shayla Sharmin",
-        "Elham Bakhshipour",
-        "Behdokht Kiafar",
-        "Md Fahim Abrar",
-        "Pinar Kullu",
-        "Nancy Getchell",
-        "Roghayeh Leila Barmaki"
+        "Jieyu Zhou"
       ],
       "license": "http://creativecommons.org/licenses/by/4.0/",
       "subjects": [
@@ -1658,120 +204,823 @@
       ],
       "submission_historys": [
         {
-          "date": "2024-05-14T18:47:04+00:00",
-          "link": "https://arxiv.org/abs/2405.08906v1",
-          "size": "8440kb",
-          "version": "v1"
-        },
-        {
-          "date": "2024-11-11T18:12:09+00:00",
-          "link": "https://arxiv.org/abs/2405.08906v2",
-          "size": "4544kb",
-          "version": "v2"
-        },
-        {
-          "date": "2024-11-15T23:17:21+00:00",
-          "link": "https://arxiv.org/abs/2405.08906v3",
-          "size": "4544kb",
-          "version": "v3"
-        },
-        {
-          "date": "2025-02-03T19:12:29+00:00",
-          "link": "https://arxiv.org/abs/2405.08906v4",
-          "size": "13721kb",
-          "version": "v4"
-        },
-        {
-          "date": "2025-05-29T18:41:07+00:00",
-          "link": "https://arxiv.org/abs/2405.08906v5",
-          "size": "6261kb",
-          "version": "v5"
-        },
-        {
-          "date": "2025-07-18T14:17:15+00:00",
-          "link": "https://arxiv.org/abs/2405.08906v6",
-          "size": "6212kb",
-          "version": "v6"
-        }
-      ],
-      "title": "Functional Near-Infrared Spectroscopy (fNIRS) Analysis of Interaction Techniques in Touchscreen-Based Educational Gaming",
-      "links": {
-        "Abstract": "https://arxiv.org/abs/2405.08906",
-        "HTML": "https://arxiv.org/html/2405.08906",
-        "PDF": "https://arxiv.org/pdf/2405.08906"
-      },
-      "relevance": {
-        "keyword": "creativity",
-        "level": "partial",
-        "reason": "While the focus is on cognitive impact and interaction techniques in educational gaming, the discussion involves the design of systems that can make interactions more engaging, which can be linked to supporting creative educational design processes."
-      },
-      "source": "arXiv"
-    },
-    {
-      "id": "2509.20077",
-      "paper_version": "v1",
-      "abstract": "To enable robots to comprehend high-level human instructions and perform complex tasks, a key challenge lies in achieving comprehensive scene understanding: interpreting and interacting with the 3D environment in a meaningful way. This requires a smart map that fuses accurate geometric structure with rich, human-understandable semantics. To address this, we introduce the 3D Queryable Scene Representation (3D QSR), a novel framework built on multimedia data that unifies three complementary 3D representations: (1) 3D-consistent novel view rendering and segmentation from panoptic reconstruction, (2) precise geometry from 3D point clouds, and (3) structured, scalable organization via 3D scene graphs. Built on an object-centric design, the framework integrates with large vision-language models to enable semantic queryability by linking multimodal object embeddings, and supporting object-level retrieval of geometric, visual, and semantic information. The retrieved data are then loaded into a robotic task planner for downstream execution. We evaluate our approach through simulated robotic task planning scenarios in Unity, guided by abstract language instructions and using the indoor public dataset Replica. Furthermore, we apply it in a digital duplicate of a real wet lab environment to test QSR-supported robotic task planning for emergency response. The results demonstrate the framework's ability to facilitate scene understanding and integrate spatial and semantic reasoning, effectively translating high-level human instructions into precise robotic task planning in complex 3D environments.",
-      "authors": [
-        "Xun Li",
-        "Rodrigo Santa Cruz",
-        "Mingze Xi",
-        "Hu Zhang",
-        "Madhawa Perera",
-        "Ziwei Wang",
-        "Ahalya Ravendran",
-        "Brandon J. Matthews",
-        "Feng Xu",
-        "Matt Adcock",
-        "Dadong Wang",
-        "Jiajun Liu"
-      ],
-      "license": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
-      "subjects": [
-        "Robotics (cs.RO)",
-        "Computer Vision and Pattern Recognition (cs.CV)",
-        "Human-Computer Interaction (cs.HC)"
-      ],
-      "submission_historys": [
-        {
-          "date": "2025-09-24T12:53:32+00:00",
-          "link": "https://arxiv.org/abs/2509.20077v1",
-          "size": "30307kb",
+          "date": "2025-10-28T20:07:04+00:00",
+          "link": "https://arxiv.org/abs/2510.24937v1",
+          "size": "17739kb",
           "version": "v1"
         }
       ],
-      "title": "Queryable 3D Scene Representation: A Multi-Modal Framework for Semantic Reasoning and Robotic Task Planning",
+      "title": "OrchVis: Hierarchical Multi-Agent Orchestration for Human Oversight",
       "links": {
-        "Abstract": "https://arxiv.org/abs/2509.20077",
-        "HTML": "https://arxiv.org/html/2509.20077",
-        "PDF": "https://arxiv.org/pdf/2509.20077"
+        "Abstract": "https://arxiv.org/abs/2510.24937",
+        "HTML": "https://arxiv.org/html/2510.24937v1",
+        "PDF": "https://arxiv.org/pdf/2510.24937"
       },
       "relevance": {
         "keyword": "creativity",
         "level": "irrelevant",
-        "reason": "The paper is concerned with semantic reasoning and robotic task planning in 3D environments. There's no focus on creativity or processes related to creative activities, making it unrelated to creativity research."
+        "reason": "The paper is centered around multi-agent orchestration and human oversight in goal-driven collaboration, without a focus on creativity."
       },
+      "source": "arXiv"
+    },
+    {
+      "id": "2510.25381",
+      "paper_version": "v1",
+      "abstract": "Metabolic disorders present a pressing global health challenge, with China carrying the world's largest burden. While continuous glucose monitoring (CGM) has transformed diabetes care, its potential for supporting sub-health populations -- such as individuals who are overweight, prediabetic, or anxious -- remains underexplored. At the same time, large language models (LLMs) are increasingly used in health coaching, yet CGM is rarely incorporated as a first-class signal. To address this gap, we conducted a six-week autoethnography, combining CGM with multimodal indicators captured via common digital devices and a chatbot that offered personalized reflections and explanations of glucose fluctuations. Our findings show how CGM-led, data-first multimodal tracking, coupled with conversational support, shaped everyday practices of diet, activity, stress, and wellbeing. This work contributes to HCI by extending CGM research beyond clinical diabetes and demonstrating how LLM-driven agents can support preventive health and reflection in at-risk populations.",
+      "authors": [
+        "Dongyijie Primo Pan",
+        "Lan Luo",
+        "Yike Wang",
+        "Pan Hui"
+      ],
+      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "subjects": [
+        "Human-Computer Interaction (cs.HC)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2025-10-29T10:53:32+00:00",
+          "link": "https://arxiv.org/abs/2510.25381v1",
+          "size": "3316kb",
+          "version": "v1"
+        }
+      ],
+      "title": "CGM-Led Multimodal Tracking with Chatbot Support: An Autoethnography in Sub-Health",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2510.25381",
+        "HTML": "https://arxiv.org/html/2510.25381v1",
+        "PDF": "https://arxiv.org/pdf/2510.25381"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "irrelevant",
+        "reason": "The paper discusses health monitoring and AI in healthcare contexts, with no mention of creativity. The focus is on health practices and not creative processes or outcomes."
+      },
+      "source": "arXiv"
+    },
+    {
+      "id": "2510.25421",
+      "paper_version": "v1",
+      "abstract": "Passive fatigue during conditional automated driving can compromise driver readiness and safety. This paper presents findings from a test-track study with 40 participants in a real-world rural automated driving scenario. In this scenario, a Large Language Model (LLM) based conversational agent (CA) was designed to check in with drivers and re-engage them with their surroundings. Drawing on in-car video recordings, sleepiness ratings and interviews, we analysed how drivers interacted with the agent and how these interactions shaped alertness. Users found the CA helpful for supporting vigilance during passive fatigue. Thematic analysis of acceptability further revealed three user preference profiles that implicate future intention to use CAs. Positioning empirically observed profiles within existing CA archetype frameworks highlights the need for adaptive design sensitive to diverse user groups. This work underscores the potential of CAs as proactive Human-Machine Interface (HMI) interventions, demonstrating how natural language can support context-aware interaction during automated driving.",
+      "authors": [
+        "Lewis Cockram",
+        "Yueteng Yu",
+        "Jorge Pardo",
+        "Xiaomeng Li",
+        "Andry Rakotonirainy",
+        "Jonny Kuo",
+        "Sebastien Demmel",
+        "Mike Lenn\\'e",
+        "Ronald Schroeter"
+      ],
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "subjects": [
+        "Human-Computer Interaction (cs.HC)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2025-10-29T11:40:38+00:00",
+          "link": "https://arxiv.org/abs/2510.25421v1",
+          "size": "7339kb",
+          "version": "v1"
+        }
+      ],
+      "title": "Small Talk, Big Impact? LLM-based Conversational Agents to Mitigate Passive Fatigue in Conditional Automated Driving",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2510.25421",
+        "HTML": "https://arxiv.org/html/2510.25421v1",
+        "PDF": "https://arxiv.org/pdf/2510.25421"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "irrelevant",
+        "reason": "The paper focuses on mitigating passive fatigue through conversational agents in automated driving, with an emphasis on driver alertness and safety rather than creativity."
+      },
+      "source": "arXiv"
+    },
+    {
+      "id": "2510.25593",
+      "paper_version": "v1",
+      "abstract": "The growing adoption of electric vehicles, known for their quieter operation compared to internal combustion engine vehicles, raises concerns about their detectability, particularly for vulnerable road users. To address this, regulations mandate the inclusion of exterior sound signals for electric vehicles, specifying minimum sound pressure levels at low speeds. These synthetic exterior sounds are often used in noisy urban environments, creating the challenge of enhancing detectability without introducing excessive noise annoyance. This study investigates the design of synthetic exterior sound signals that balance high noticeability with low annoyance. An audiovisual experiment with 14 participants was conducted using 15 virtual reality scenarios featuring a passing car. The scenarios included various sound signals, such as pure, intermittent, and complex tones at different frequencies. Two baseline cases, a diesel engine and only tyre noise, were also tested. Participants rated sounds for annoyance, noticeability, and informativeness using 11-point ICBEN scales. The findings highlight how psychoacoustic sound quality metrics predict annoyance ratings better than conventional sound metrics, providing insight into optimising sound design for electric vehicles. By improving pedestrian safety while minimising noise pollution, this research supports the development of effective and user-friendly exterior sound standards for electric vehicles.",
+      "authors": [
+        "Pavlo Bazilinskyy",
+        "Md Shadab Alam",
+        "Roberto Merino-Mart{\\i}nez"
+      ],
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "subjects": [
+        "Human-Computer Interaction (cs.HC)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2025-10-29T15:02:26+00:00",
+          "link": "https://arxiv.org/abs/2510.25593v1",
+          "size": "7322kb",
+          "version": "v1"
+        }
+      ],
+      "title": "Psychoacoustic assessment of synthetic sounds for electric vehicles in a virtual reality experiment",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2510.25593",
+        "HTML": "https://arxiv.org/html/2510.25593v1",
+        "PDF": "https://arxiv.org/pdf/2510.25593"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "irrelevant",
+        "reason": "The study is centered on the psychoacoustic assessment of synthetic sounds for electric vehicles, focusing on balancing detectability and noise annoyance, with no mention of creativity."
+      },
+      "source": "arXiv"
+    },
+    {
+      "id": "2510.25656",
+      "paper_version": "v1",
+      "abstract": "Visualizing changes over time is fundamental to learning from the past and anticipating the future. However, temporal semantics can be complicated, and existing visualization tools often struggle to accurately represent these complexities. It is common to use bespoke plot helper functions designed to produce specific graphics, due to the absence of flexible general tools that respect temporal semantics. We address this problem by proposing a grammar of temporal graphics, and an associated software implementation, 'ggtime', that encodes temporal semantics into a declarative grammar for visualizing temporal data. The grammar introduces new composable elements that support visualization across linear, cyclical, quasi-cyclical, and other granularities; standardization of irregular durations; and alignment of time points across different granularities and time zones. It is designed for interoperability with other semantic variables, allowing navigation across the space of visualizations while preserving temporal semantics.",
+      "authors": [
+        "Cynthia A. Huang",
+        "Mitchell O'Hara-Wild",
+        "Rob J. Hyndman",
+        "Matthew Kay"
+      ],
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "subjects": [
+        "Human-Computer Interaction (cs.HC)",
+        "Computation (stat.CO)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2025-10-29T16:21:54+00:00",
+          "link": "https://arxiv.org/abs/2510.25656v1",
+          "size": "2868kb",
+          "version": "v1"
+        }
+      ],
+      "title": "ggtime: A Grammar of Temporal Graphics",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2510.25656",
+        "HTML": "https://arxiv.org/html/2510.25656v1",
+        "PDF": "https://arxiv.org/pdf/2510.25656"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "partial",
+        "reason": "While the paper is primarily about a grammar for visualizing temporal data, the development of a new grammar could support creative data representation and visualization, making creativity a secondary theme."
+      },
+      "source": "arXiv"
+    },
+    {
+      "id": "2510.25662",
+      "paper_version": "v1",
+      "abstract": "Programming assistants powered by large language models (LLMs) have become widely available, with conversational assistants like ChatGPT proving particularly accessible to less experienced programmers. However, the varied capabilities of these tools across model versions and the mixed availability of extensions that enable web search, code execution, or retrieval-augmented generation create opportunities for user misconceptions about what systems can and cannot do. Such misconceptions may lead to over-reliance, unproductive practices, or insufficient quality control in LLM-assisted programming. Here, we aim to characterize misconceptions that users of conversational LLM-based assistants may have in programming contexts. Using a two-phase approach, we first brainstorm and catalog user misconceptions that may occur, and then conduct a qualitative analysis to examine whether these conceptual issues surface in naturalistic Python-programming conversations with an LLM-based chatbot drawn from an openly available dataset. Indeed, we see evidence that some users have misplaced expectations about the availability of LLM-based chatbot features like web access, code execution, or non-text output generation. We also see potential evidence for deeper conceptual issues around the scope of information required to debug, validate, and optimize programs. Our findings reinforce the need for designing LLM-based tools that more clearly communicate their programming capabilities to users.",
+      "authors": [
+        "Gabrielle O'Brien",
+        "Antonio Pedro Santos Alves",
+        "Sebastian Baltes",
+        "Grischa Liebel",
+        "Mircea Lungu",
+        "Marcos Kalinowski"
+      ],
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "subjects": [
+        "Human-Computer Interaction (cs.HC)",
+        "Artificial Intelligence (cs.AI)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2025-10-29T16:23:46+00:00",
+          "link": "https://arxiv.org/abs/2510.25662v1",
+          "size": "1026kb",
+          "version": "v1"
+        }
+      ],
+      "title": "User Misconceptions of LLM-Based Conversational Programming Assistants",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2510.25662",
+        "HTML": "https://arxiv.org/html/2510.25662v1",
+        "PDF": "https://arxiv.org/pdf/2510.25662"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "irrelevant",
+        "reason": "The paper examines user misconceptions in the use of LLM-based programming tools and does not pertain to creativity as a primary or secondary focus."
+      },
+      "source": "arXiv"
+    },
+    {
+      "id": "2510.24721",
+      "paper_version": "v1",
+      "abstract": "Large Language Models (LLMs) generate fluent, plausible text that can mislead users into mistaking simulated coherence for genuine understanding. This paper introduces the Epistemic Suite, a post-foundational diagnostic methodology for surfacing the epistemic conditions under which AI outputs are produced and received. Rather than determining truth or falsity, the Suite operates through twenty diagnostic lenses, applied by practitioners as context warrants, to reveal patterns such as confidence laundering, narrative compression, displaced authority, and temporal drift. It is grounded in three design principles: diagnosing production before evaluating claims, preferring diagnostic traction over foundational settlement, and embedding reflexivity as a structural requirement rather than an ethical ornament. When enacted, the Suite shifts language models into a diagnostic stance, producing inspectable artifacts-flags, annotations, contradiction maps, and suspension logs (the FACS bundle)-that create an intermediary layer between AI output and human judgment. A key innovation is epistemic suspension, a practitioner-enacted circuit breaker that halts continuation when warrant is exceeded, with resumption based on judgment rather than rule. The methodology also includes an Epistemic Triage Protocol and a Meta-Governance Layer to manage proportionality and link activation to relational accountability, consent, historical context, and pluralism safeguards. Unlike internalist approaches that embed alignment into model architectures (e.g., RLHF or epistemic-integrity proposals), the Suite operates externally as scaffolding, preserving expendability and refusal as safeguards rather than failures. It preserves the distinction between performance and understanding, enabling accountable deliberation while maintaining epistemic modesty.",
+      "authors": [
+        "Matthew Kelly"
+      ],
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "subjects": [
+        "Computers and Society (cs.CY)",
+        "Artificial Intelligence (cs.AI)",
+        "Computation and Language (cs.CL)",
+        "Human-Computer Interaction (cs.HC)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2025-09-20T00:29:38+00:00",
+          "link": "https://arxiv.org/abs/2510.24721v1",
+          "size": "981kb",
+          "version": "v1"
+        }
+      ],
+      "title": "The Epistemic Suite: A Post-Foundational Diagnostic Methodology for Assessing AI Knowledge Claims",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2510.24721",
+        "PDF": "https://arxiv.org/pdf/2510.24721"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "irrelevant",
+        "reason": "The paper introduces the Epistemic Suite for diagnosing AI outputs but does not discuss creativity. It focuses on understanding epistemic conditions and accountability rather than creative applications or processes."
+      },
+      "source": "arXiv"
+    },
+    {
+      "id": "2510.24831",
+      "paper_version": "v1",
+      "abstract": "Artificial intelligence systems based on large language models (LLMs) can now generate coherent text, music, and images, yet they operate without a persistent state: each inference reconstructs context from scratch. This paper introduces the Narrative Continuity Test (NCT) -- a conceptual framework for evaluating identity persistence and diachronic coherence in AI systems. Unlike capability benchmarks that assess task performance, the NCT examines whether an LLM remains the same interlocutor across time and interaction gaps. The framework defines five necessary axes -- Situated Memory, Goal Persistence, Autonomous Self-Correction, Stylistic & Semantic Stability, and Persona/Role Continuity -- and explains why current architectures systematically fail to support them. Case analyses (Character.AI, Grok, Replit, Air Canada) show predictable continuity failures under stateless inference. The NCT reframes AI evaluation from performance to persistence, outlining conceptual requirements for future benchmarks and architectural designs that could sustain long-term identity and goal coherence in generative models.",
+      "authors": [
+        "Stefano Natangelo"
+      ],
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "subjects": [
+        "Computers and Society (cs.CY)",
+        "Artificial Intelligence (cs.AI)",
+        "Human-Computer Interaction (cs.HC)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2025-10-28T16:44:30+00:00",
+          "link": "https://arxiv.org/abs/2510.24831v1",
+          "size": "4240kb",
+          "version": "v1"
+        }
+      ],
+      "title": "The Narrative Continuity Test: A Conceptual Framework for Evaluating Identity Persistence in AI Systems",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2510.24831",
+        "PDF": "https://arxiv.org/pdf/2510.24831"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "irrelevant",
+        "reason": "The paper primarily focuses on evaluating identity persistence in AI systems, rather than creativity. It discusses coherence and continuity, which are not directly related to creativity."
+      },
+      "source": "arXiv"
+    },
+    {
+      "id": "2510.25016",
+      "paper_version": "v1",
+      "abstract": "The future of Requirements Engineering (RE) is increasingly driven by artificial intelligence (AI), reshaping how we elicit, analyze, and validate requirements. Traditional RE is based on labor-intensive manual processes prone to errors and complexity. AI-powered approaches, specifically large language models (LLMs), natural language processing (NLP), and generative AI, offer transformative solutions and reduce inefficiencies. However, the use of AI in RE also brings challenges like algorithmic bias, lack of explainability, and ethical concerns related to automation. To address these issues, this study introduces the Human-AI RE Synergy Model (HARE-SM), a conceptual framework that integrates AI-driven analysis with human oversight to improve requirements elicitation, analysis, and validation. The model emphasizes ethical AI use through transparency, explainability, and bias mitigation. We outline a multi-phase research methodology focused on preparing RE datasets, fine-tuning AI models, and designing collaborative human-AI workflows. This preliminary study presents the conceptual framework and early-stage prototype implementation, establishing a research agenda and practical design direction for applying intelligent data science techniques to semi-structured and unstructured RE data in collaborative environments.",
+      "authors": [
+        "Mateen Ahmed Abbasi",
+        "Petri Ihantola",
+        "Tommi Mikkonen",
+        "Niko M\\\"akitalo"
+      ],
+      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "subjects": [
+        "Software Engineering (cs.SE)",
+        "Artificial Intelligence (cs.AI)",
+        "Human-Computer Interaction (cs.HC)",
+        "Machine Learning (cs.LG)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2025-10-28T22:29:11+00:00",
+          "link": "https://arxiv.org/abs/2510.25016v1",
+          "size": "1787kb",
+          "version": "v1"
+        }
+      ],
+      "title": "Towards Human-AI Synergy in Requirements Engineering: A Framework and Preliminary Study",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2510.25016",
+        "HTML": "https://arxiv.org/html/2510.25016v1",
+        "PDF": "https://arxiv.org/pdf/2510.25016"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "partial",
+        "reason": "The paper discusses human-AI synergy in requirements engineering. While creativity is not the main focus, the integration of AI and human oversight hints at processes that might enhance creativity in RE."
+      },
+      "source": "arXiv"
+    },
+    {
+      "id": "2412.15584",
+      "paper_version": "v3",
+      "abstract": "As Large Language Models become integral to decision-making, optimism about their power is tempered with concern over their errors. Users may over-rely on LLM advice that is confidently stated but wrong, or under-rely due to mistrust. Reliance interventions have been developed to help users of LLMs, but they lack rigorous evaluation for appropriate reliance. We benchmark the performance of three relevant interventions by conducting a randomized online experiment with 400 participants attempting two challenging tasks: LSAT logical reasoning and image-based numerical estimation. For each question, participants first answered independently, then received LLM advice modified by one of three reliance interventions and answered the question again. Our findings indicate that while interventions reduce over-reliance, they generally fail to improve appropriate reliance. Furthermore, people became more confident after making wrong reliance decisions in certain contexts, demonstrating poor calibration. Based on our findings, we discuss implications for designing effective reliance interventions in human-LLM collaboration.",
+      "authors": [
+        "Jessica Y. Bo",
+        "Sophia Wan",
+        "and Ashton Anderson"
+      ],
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "subjects": [
+        "Human-Computer Interaction (cs.HC)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2024-12-20T05:40:32+00:00",
+          "link": "https://arxiv.org/abs/2412.15584v1",
+          "size": "4744kb",
+          "version": "v1"
+        },
+        {
+          "date": "2025-03-09T03:39:53+00:00",
+          "link": "https://arxiv.org/abs/2412.15584v2",
+          "size": "5225kb",
+          "version": "v2"
+        },
+        {
+          "date": "2025-10-29T17:10:45+00:00",
+          "link": "https://arxiv.org/abs/2412.15584v3",
+          "size": "4199kb",
+          "version": "v3"
+        }
+      ],
+      "title": "To Rely or Not to Rely? Evaluating Interventions for Appropriate Reliance on Large Language Models",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2412.15584",
+        "HTML": "https://arxiv.org/html/2412.15584v3",
+        "PDF": "https://arxiv.org/pdf/2412.15584"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "partial",
+        "reason": "The paper deals with reliance on LLMs, involving decision-making and error management. While not directly focused on creativity, it touches on the creative aspect of designing effective reliance interventions which might involve creative problem-solving."
+      },
+      "source": "arXiv"
+    },
+    {
+      "id": "2412.20071",
+      "paper_version": "v3",
+      "abstract": "In automated UI design generation, a key challenge is the lack of support for iterative processes, as most systems focus solely on end-to-end output. This stems from limited capabilities in interpreting design intent and a lack of transparency for refining intermediate results. To better understand these challenges, we conducted a formative study that identified concrete and actionable requirements for supporting iterative design with Generative Tools. Guided by these findings, we propose PrototypeFlow, a human-centered system for automated UI generation that leverages multi-modal inputs and models. PrototypeFlow takes natural language descriptions and layout preferences as input to generate the high-fidelity UI design. At its core is a theme design module that clarifies implicit design intent through prompt enhancement and orchestrates sub-modules for component-level generation. Designers retain full control over inputs, intermediate results, and final prototypes, enabling flexible and targeted refinement by steering generation and directly editing outputs. Our experiments and user studies confirmed the effectiveness and usefulness of our proposed PrototypeFlow.",
+      "authors": [
+        "Mingyue Yuan",
+        "Jieshan Chen",
+        "Yongquan Hu",
+        "Sidong Feng",
+        "Mulong Xie",
+        "Gelareh Mohammadi",
+        "Zhenchang Xing",
+        "Aaron Quigley"
+      ],
+      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "subjects": [
+        "Human-Computer Interaction (cs.HC)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2024-12-28T07:54:00+00:00",
+          "link": "https://arxiv.org/abs/2412.20071v1",
+          "size": "5603kb",
+          "version": "v1"
+        },
+        {
+          "date": "2025-06-15T11:26:54+00:00",
+          "link": "https://arxiv.org/abs/2412.20071v2",
+          "size": "10851kb",
+          "version": "v2"
+        },
+        {
+          "date": "2025-10-29T05:00:04+00:00",
+          "link": "https://arxiv.org/abs/2412.20071v3",
+          "size": "10851kb",
+          "version": "v3"
+        }
+      ],
+      "title": "Towards Human-AI Synergy in UI Design: Supporting Iterative Generation with LLMs",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2412.20071",
+        "HTML": "https://arxiv.org/html/2412.20071v3",
+        "PDF": "https://arxiv.org/pdf/2412.20071"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "core",
+        "reason": "This paper is focused on enhancing UI design processes through iterative methods supported by LLMs, directly relating to design creativity and user involvement in creative tasks. Creativity is tightly integrated as a primary research problem."
+      },
+      "paper_reviewer": "**Summary:**\nThe paper is a comprehensive study on automated user interface (UI) design tools, identifying fundamental gaps in existing systems and highlighting the limitations in interpreting design intent and supporting iterative processes. To address these issues, PrototypeFlow, a novel human-centered, multimodal system, is proposed. The system enables designers to refine UI prototypes at varying levels\u2014from themes down to individual components\u2014via natural language input, and supports iterative, human-guided refinement rather than simply end-to-end output. PrototypeFlow employs a combination of multi-module collaboration and a robust knowledge base to generate high-fidelity, editable UI designs. In testing, the system offers significant improvements in designer satisfaction and output consistency compared to existing methods and tools. The paper emphasizes the importance of enhancing transparency in AI-generated design workflows to support iterative workflow integration and human-AI synergy.\n\n**Strengths:**\n- Provides a detailed assessment of the current limitations in automated UI design tools, backing findings with a rigorous formative study involving experienced designers.\n- Presents an innovative, modular approach to UI design that underscores human-AI collaboration, allowing iterative refinement and direct designer input.\n- Achieves high fidelity and consistency in design outputs, as evidenced by qualitative evaluations and user studies, compared to existing solutions.\n- Supports diverse design needs, evidenced by its successful integration of innovative feedback mechanisms and multiple design modules.\n- Demonstrates improvements in multiple aspects of the design process, with supporting quantitative evaluation metrics like FID and GD showing superior quality and diversity.\n\n**Weaknesses:**\n- The paper may have benefitted from a more exhaustive exploration of potential confounding variables in the user studies to better quantify human factors influence.\n- The evaluation largely hinges on metrics of quality and diversity without fully exploring long-term usability or its adaptability in more divergent real-world scenarios.\n- The dependence on a static knowledge base may limit the system's adaptability and relevance as design trends rapidly shift.\n  \n**Questions:**\n- How are potential changes in design trends and user feedback incorporated into the knowledge base to keep the system current?\n- Can the system's framework be generalized to support more diverse interfaces outside the initial scope, such as web design?\n- How does PrototypeFlow handle and mitigate potential biases inherited from the training data within its knowledge base?\n\n**Soundness:**\nExcellent\n\n**Presentation:**\nGood\n\n**Contribution:**\nExcellent\n\n**Data Analysis:**\n- **Strengths**: \n  - Comprehensive evaluation using established metrics (FID, GD).\n  - Detailed statistical methods ensure reliable results, offering a strong basis for the conclusions drawn about design quality.\n  - Strong emphasis on real-world usability through diverse user studies.\n- **Weaknesses**:\n  - Limited exploration of long-term usability and user adaptation to iterative design processes.\n\nExcellent\n\n**Rating:**\nAccept, but needs minor improvements\n\n**Paper Decision:**\n- Decision: Accept\n- Reasons: The paper showcases excellent methodological soundness, originality in approach, clear insights into enhancing Human-AI collaboration in UI design, and substantial evaluation results that support its claims. While some improvements in presentation and exploration of broader contexts could be beneficial, the contributions made by PrototypeFlow are considerable, providing a novel and impactful perspective in automated UI design development.",
+      "source": "arXiv"
+    },
+    {
+      "id": "2510.23342",
+      "paper_version": "v2",
+      "abstract": "The street has emerged as a primary site where everyday publics are confronted with AI as an infrastructural phenomenon, as machine learning-based systems are now commonly deployed in this setting in the form of automated cars, facial recognition, smart billboards and the like. While these deployments of AI in the street have attracted significant media attention and public controversy in recent years, the presence of AI in the street often remains inscrutable, and many everyday publics are unaware of it. In this paper, we explore the challenges and possibilities of everyday public engagement with AI in the situated environment of city streets under these paradoxical conditions. Combining perspectives and approaches from social and cultural studies of AI, Design Research and Science and Technology Studies (STS), we explore the affordances of the street as a site for 'material participation' in AI through design-based interventions: the creation of 'everyday AI observatories.' We narrate and reflect on our participatory observations of AI in five city streets in the UK and Australia and highlight a set of tensions that emerged from them: 1) the framing of the street as a transactional environment, 2) the designed invisibility of AI and its publics in the street 3) the stratification of street environments through statistical governance. Based on this discussion and drawing on Jane Jacobs' notion of \"eyes on the street,\" we put forward the relational notion of \"reciprocity deficits\" between AI infrastructures and everyday publics in the street. The conclusion reflects on the consequences of this form of social invisibility of AI for situated engagement with AI by everyday publics in the street and for public trust in urban governance.",
+      "authors": [
+        "Alex S. Taylor",
+        "Noortje Marres",
+        "Mercedes Bunz",
+        "Thao Phan",
+        "Maya Indira Ganesh",
+        "Dominique Barron",
+        "Yasmine Boudiaf",
+        "Rachel Coldicutt",
+        "Iain Emsley",
+        "Beatrice Gobbo",
+        "Louise Hickman",
+        "Manu Luksch",
+        "Bettina Nissen",
+        "Mukul Patel",
+        "Luis Soares"
+      ],
+      "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "subjects": [
+        "Human-Computer Interaction (cs.HC)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2025-10-27T13:56:25+00:00",
+          "link": "https://arxiv.org/abs/2510.23342v1",
+          "size": "10185kb",
+          "version": "v1"
+        },
+        {
+          "date": "2025-10-28T18:19:03+00:00",
+          "link": "https://arxiv.org/abs/2510.23342v2",
+          "size": "10185kb",
+          "version": "v2"
+        }
+      ],
+      "title": "Reciprocity Deficits: Observing AI in the street with everyday publics",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2510.23342",
+        "PDF": "https://arxiv.org/pdf/2510.23342"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "irrelevant",
+        "reason": "The paper explores public engagement with AI in urban environments and introduces 'everyday AI observatories.' It is centered on public interaction and trust rather than creativity."
+      },
+      "source": "arXiv"
+    },
+    {
+      "id": "2411.06262",
+      "paper_version": "v2",
+      "abstract": "Software updates are essential to enhance security, fix bugs, and add better features to the existing software. While some users accept software updates, non-compliance remains a widespread issue. While some users accept software updates, non-compliance remains a widespread issue. End users' systems remain vulnerable to security threats when security updates are not installed or are installed with a delay. Despite research efforts, users' noncompliance behavior with software updates is still prevalent. In this study, we explored how psychological factors influence users' perception and behavior toward software updates. In addition, we investigated how information about potential vulnerabilities and risk scores influences their behavior. Next, we proposed a model that utilizes attributes from the National Vulnerability Database (NVD) to effectively assess the overall risk score associated with delaying software updates. Next, we conducted a user study with Windows OS users, showing that providing a risk score for not updating their systems and information about vulnerabilities significantly increased users' willingness to update their systems. Additionally, we examined the influence of demographic factors, gender, on users' decision-making regarding software updates. Our results show no statistically significant difference in male and female users' responses in terms of concerns about securing their systems. The implications of this study are relevant for software developers and manufacturers as they can use this information to design more effective software update notification messages. The communication of the potential risks and their corresponding risk scores may motivate users to take action and update their systems in a timely manner, which can ultimately improve the overall security of the system.",
+      "authors": [
+        "Mahzabin Tamanna",
+        "Mohd Anwar",
+        "Joseph D.W. Stephens"
+      ],
+      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "subjects": [
+        "Software Engineering (cs.SE)",
+        "Human-Computer Interaction (cs.HC)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2024-11-09T19:30:39+00:00",
+          "link": "https://arxiv.org/abs/2411.06262v1",
+          "size": "1003kb",
+          "version": "v1"
+        },
+        {
+          "date": "2025-10-28T18:40:21+00:00",
+          "link": "https://arxiv.org/abs/2411.06262v2",
+          "size": "2422kb",
+          "version": "v2"
+        }
+      ],
+      "title": "Security Implications of User Non-compliance Behavior to Software Updates: A Risk Assessment Study",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2411.06262",
+        "PDF": "https://arxiv.org/pdf/2411.06262"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "irrelevant",
+        "reason": "The paper primarily discusses user behavior regarding software updates and security. It does not relate to creativity in terms of research focus."
+      },
+      "source": "arXiv"
+    },
+    {
+      "id": "2501.08102",
+      "paper_version": "v5",
+      "abstract": "Large Language Models (LLMs) demonstrate remarkable capabilities in text generation, yet their emotional consistency and semantic coherence in social media contexts remain insufficiently understood. This study investigates how LLMs handle emotional content and maintain semantic relationships through continuation and response tasks using three open-source models: Gemma, Llama3 and Llama3.3 and one commercial Model:Claude. By analyzing climate change discussions from Twitter and Reddit, we examine emotional transitions, intensity patterns, and semantic consistency between human-authored and LLM-generated content. Our findings reveal that while both models maintain high semantic coherence, they exhibit distinct emotional patterns: these models show a strong tendency to moderate negative emotions. When the input text carries negative emotions such as anger, disgust, fear, or sadness, LLM tends to generate content with more neutral emotions, or even convert them into positive emotions such as joy or surprise. At the same time, we compared the LLM-generated content with human-authored content. The four models systematically generated responses with reduced emotional intensity and showed a preference for neutral rational emotions in the response task. In addition, these models all maintained a high semantic similarity with the original text, although their performance in the continuation task and the response task was different. These findings provide deep insights into the emotion and semantic processing capabilities of LLM, which are of great significance for its deployment in social media environments and human-computer interaction design.",
+      "authors": [
+        "Wenlu Fan",
+        "Yuqi Zhu",
+        "Bin Wang",
+        "Wentao Xu"
+      ],
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "subjects": [
+        "Computation and Language (cs.CL)",
+        "Artificial Intelligence (cs.AI)",
+        "Human-Computer Interaction (cs.HC)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2025-01-14T13:19:47+00:00",
+          "link": "https://arxiv.org/abs/2501.08102v1",
+          "size": "4905kb",
+          "version": "v1"
+        },
+        {
+          "date": "2025-01-15T18:10:00+00:00",
+          "link": "https://arxiv.org/abs/2501.08102v2",
+          "size": "4905kb",
+          "version": "v2"
+        },
+        {
+          "date": "2025-07-18T10:53:52+00:00",
+          "link": "https://arxiv.org/abs/2501.08102v3",
+          "size": "6205kb",
+          "version": "v3"
+        },
+        {
+          "date": "2025-10-20T03:52:50+00:00",
+          "link": "https://arxiv.org/abs/2501.08102v4",
+          "size": "6213kb",
+          "version": "v4"
+        },
+        {
+          "date": "2025-10-29T03:08:26+00:00",
+          "link": "https://arxiv.org/abs/2501.08102v5",
+          "size": "6213kb",
+          "version": "v5"
+        }
+      ],
+      "title": "Consistency of Responses and Continuations Generated by Large Language Models on Social Media",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2501.08102",
+        "HTML": "https://arxiv.org/html/2501.08102v5",
+        "PDF": "https://arxiv.org/pdf/2501.08102"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "irrelevant",
+        "reason": "The paper focuses on the emotional and semantic consistency of Large Language Models in social media environments. It analyzes emotional patterns and response tasks but does not discuss creativity or creative processes."
+      },
+      "tasks": [
+        "Semantic Similarity",
+        "Semantic Textual Similarity",
+        "Text Generation"
+      ],
+      "source": "arXiv"
+    },
+    {
+      "id": "2505.09868",
+      "paper_version": "v3",
+      "abstract": "Despite its constitutional relevance, the technical ``individual fairness'' criterion has not been operationalized in U.S. state or federal statutes/regulations. We conduct a human subjects experiment to address this gap, evaluating which demographic features are relevant for individual fairness evaluation of recidivism risk assessment (RRA) tools. Our analyses conclude that the individual similarity function should consider age and sex, but it should ignore race.",
+      "authors": [
+        "Tin Trung Nguyen",
+        "Jiannan Xu",
+        "Phuong-Anh Nguyen-Le",
+        "Jonathan Lazar",
+        "Donald Braman",
+        "Hal Daum\\'e III",
+        "Zubin Jelveh"
+      ],
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "subjects": [
+        "Computers and Society (cs.CY)",
+        "Artificial Intelligence (cs.AI)",
+        "Human-Computer Interaction (cs.HC)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2025-05-15T00:07:07+00:00",
+          "link": "https://arxiv.org/abs/2505.09868v1",
+          "size": "1497kb",
+          "version": "v1"
+        },
+        {
+          "date": "2025-05-26T14:41:08+00:00",
+          "link": "https://arxiv.org/abs/2505.09868v2",
+          "size": "112kb",
+          "version": "v2"
+        },
+        {
+          "date": "2025-10-29T16:55:47+00:00",
+          "link": "https://arxiv.org/abs/2505.09868v3",
+          "size": "112kb",
+          "version": "v3"
+        }
+      ],
+      "title": "Which Demographic Features Are Relevant for Individual Fairness Evaluation of U.S. Recidivism Risk Assessment Tools?",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2505.09868",
+        "HTML": "https://arxiv.org/html/2505.09868v3",
+        "PDF": "https://arxiv.org/pdf/2505.09868"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "irrelevant",
+        "reason": "This paper evaluates demographic features for fairness in recidivism risk assessment tools. It focuses on fairness rather than creativity."
+      },
+      "tasks": [
+        "Fairness"
+      ],
+      "source": "arXiv"
+    },
+    {
+      "id": "2510.13852",
+      "paper_version": "v2",
+      "abstract": "Is an LLM telling you different facts than it's telling me? This paper introduces ConsistencyAI, an independent benchmark for measuring the factual consistency of large language models (LLMs) for different personas. ConsistencyAI tests whether, when users of different demographics ask identical questions, the model responds with factually inconsistent answers. Designed without involvement from LLM providers, this benchmark offers impartial evaluation and accountability. In our experiment, we queried 19 LLMs with prompts that requested 5 facts for each of 15 topics. We repeated this query 100 times for each LLM, each time adding prompt context from a different persona selected from a subset of personas modeling the general population. We processed the responses into sentence embeddings, computed cross-persona cosine similarity, and computed the weighted average of cross-persona cosine similarity to calculate factual consistency scores. In 100-persona experiments, scores ranged from 0.9065 to 0.7896, and the mean was 0.8656, which we adopt as a benchmark threshold. xAI's Grok-3 is most consistent, while several lightweight models rank lowest. Consistency varies by topic: the job market is least consistent, G7 world leaders most consistent, and issues like vaccines or the Israeli-Palestinian conflict diverge by provider. These results show that both the provider and the topic shape the factual consistency. We release our code and interactive demo to support reproducible evaluation and encourage persona-invariant prompting strategies.",
+      "authors": [
+        "Peter Banyas",
+        "Shristi Sharma",
+        "Alistair Simmons",
+        "Atharva Vispute"
+      ],
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "subjects": [
+        "Computation and Language (cs.CL)",
+        "Artificial Intelligence (cs.AI)",
+        "Human-Computer Interaction (cs.HC)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2025-10-11T23:32:02+00:00",
+          "link": "https://arxiv.org/abs/2510.13852v1",
+          "size": "2372kb",
+          "version": "v1"
+        },
+        {
+          "date": "2025-10-29T00:31:05+00:00",
+          "link": "https://arxiv.org/abs/2510.13852v2",
+          "size": "1238kb",
+          "version": "v2"
+        }
+      ],
+      "title": "ConsistencyAI: A Benchmark to Assess LLMs' Factual Consistency When Responding to Different Demographic Groups",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2510.13852",
+        "HTML": "https://arxiv.org/html/2510.13852v2",
+        "PDF": "https://arxiv.org/pdf/2510.13852"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "irrelevant",
+        "reason": "The paper introduces a benchmark for evaluating the factual consistency of language models across different demographics. It is focused on consistency, not creativity."
+      },
+      "source": "arXiv"
+    },
+    {
+      "id": "2510.19017",
+      "paper_version": "v1",
+      "abstract": "Elderly people with speech impairments often face challenges in engaging in meaningful social communication, particularly when using Augmentative and Alternative Communication (AAC) tools that primarily address basic needs. Moreover, effective chats often rely on personal memories, which is hard to extract and reuse. We introduce SocializeChat, an AAC tool that generates sentence suggestions by drawing on users' personal memory records. By incorporating topic preference and interpersonal closeness, the system reuses past experience and tailors suggestions to different social contexts and conversation partners. SocializeChat not only leverages past experiences to support interaction, but also treats conversations as opportunities to create new memories, fostering a dynamic cycle between memory and communication. A user study shows its potential to enhance the inclusivity and relevance of AAC-supported social interaction.",
+      "authors": [
+        "Wei Xiang",
+        "Yunkai Xu",
+        "Yuyang Fang",
+        "Zhuyu Teng",
+        "Zhaoqu Jiang",
+        "Beijia Hu",
+        "Jinguo Yang"
+      ],
+      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "subjects": [
+        "Human-Computer Interaction (cs.HC)",
+        "Computers and Society (cs.CY)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2025-10-21T18:59:38+00:00",
+          "link": "https://arxiv.org/abs/2510.19017v1",
+          "size": "863kb",
+          "version": "v1"
+        }
+      ],
+      "title": "SocializeChat: A GPT-Based AAC Tool Grounded in Personal Memories to Support Social Communication",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2510.19017",
+        "HTML": "https://arxiv.org/html/2510.19017",
+        "PDF": "https://arxiv.org/pdf/2510.19017"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "partial",
+        "reason": "SocializeChat leverages past personal memories to enhance social communication in AAC tools. While the main focus is not creativity, it supports users in engaging imaginative social interactions, which touches upon creative communication as a secondary theme."
+      },
+      "source": "arXiv"
+    },
+    {
+      "id": "2403.13002",
+      "paper_version": "v4",
+      "abstract": "Various ideation methods, such as morphological analysis and design-by-analogy, have been developed to aid creative problem-solving and innovation. Among them, the Theory of Inventive Problem Solving (TRIZ) stands out as one of the best-known methods. However, the complexity of TRIZ and its reliance on users' knowledge, experience, and reasoning capabilities limit its practicality. To address this, we introduce AutoTRIZ, an artificial ideation system that integrates Large Language Models (LLMs) to automate and enhance the TRIZ methodology. By leveraging LLMs' vast pre-trained knowledge and advanced reasoning capabilities, AutoTRIZ offers a novel, generative, and interpretable approach to engineering innovation. AutoTRIZ takes a problem statement from the user as its initial input, automatically conduct the TRIZ reasoning process and generates a structured solution report. We demonstrate and evaluate the effectiveness of AutoTRIZ through comparative experiments with textbook cases and a real-world application in the design of a Battery Thermal Management System (BTMS). Moreover, the proposed LLM-based framework holds the potential for extension to automate other knowledge-based ideation methods, such as SCAMPER, Design Heuristics, and Design-by-Analogy, paving the way for a new era of AI-driven innovation tools.",
+      "authors": [
+        "Shuo Jiang",
+        "Weifeng Li",
+        "Yuping Qian",
+        "Yangjun Zhang",
+        "Jianxi Luo"
+      ],
+      "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "subjects": [
+        "Human-Computer Interaction (cs.HC)",
+        "Artificial Intelligence (cs.AI)",
+        "Computation and Language (cs.CL)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2024-03-13T02:53:36+00:00",
+          "link": "https://arxiv.org/abs/2403.13002v1",
+          "size": "5251kb",
+          "version": "v1"
+        },
+        {
+          "date": "2024-04-02T09:38:05+00:00",
+          "link": "https://arxiv.org/abs/2403.13002v2",
+          "size": "5251kb",
+          "version": "v2"
+        },
+        {
+          "date": "2024-05-23T02:19:12+00:00",
+          "link": "https://arxiv.org/abs/2403.13002v3",
+          "size": "4698kb",
+          "version": "v3"
+        },
+        {
+          "date": "2025-03-24T12:10:38+00:00",
+          "link": "https://arxiv.org/abs/2403.13002v4",
+          "size": "9202kb",
+          "version": "v4"
+        }
+      ],
+      "title": "AutoTRIZ: Automating Engineering Innovation with TRIZ and Large Language Models",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2403.13002",
+        "PDF": "https://arxiv.org/pdf/2403.13002"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "core",
+        "reason": "The paper focuses on AutoTRIZ, a system designed to automate and enhance the creativity-focused TRIZ methodology using Large Language Models. It directly addresses creative problem-solving and innovation, positioning creativity as a central theme."
+      },
+      "tasks": [
+        "Morphological Analysis"
+      ],
+      "repo_urls": [
+        "https://github.com/shuojiangcn/autotriz-detc24"
+      ],
+      "paper_reviewer": "**Summary:**\nThe paper introduces AutoTRIZ, an innovative tool designed to automate and enhance the Theory of Inventive Problem Solving (TRIZ) using Large Language Models (LLMs). The tool aims to address the limitations of traditional TRIZ by automating the problem-solving process using LLMs' vast pre-trained knowledge and reasoning capabilities, thus improving accessibility and practicality. AutoTRIZ takes a problem statement, conducts TRIZ reasoning, and generates a structured solution report. The paper presents comparative experiments with textbook cases and a detailed case study on the design of a Battery Thermal Management System (BTMS) to demonstrate its effectiveness. The proposed framework can also be extended to other ideation methods, signaling a new era of AI-driven innovation tools.\n\n**Strengths:**\n- The paper presents a novel application of LLMs to enhance and automate the TRIZ methodology, a well-regarded approach for systematic problem-solving.\n- AutoTRIZ is demonstrated via practical case studies, including an engineering-specific BTMS design, showcasing its real-world applicability.\n- The framework offers extensibility to other knowledge-based ideation methods, highlighting its potential versatility.\n\n**Weaknesses:**\n- The tool relies heavily on the predefined TRIZ framework, which might limit the scope of its solutions to the existing inventive principles.\n- There is a reliance on user input quality, as poorly formulated problem statements could affect solution effectiveness.\n- Evaluation of AutoTRIZ-generated solutions is limited, with no comprehensive comparison against state-of-the-art non-LLM TRIZ solutions.\n\n**Questions:**\n- How does AutoTRIZ handle ambiguities or inconsistencies in user-provided problem statements?\n- What measures are in place to ensure the correctness and creativity of the generated solutions beyond the TRIZ framework?\n- Can AutoTRIZ incorporate feedback loops to iteratively improve solutions based on user input?\n\n**Soundness:**\nGood - The paper is technically sound, with thorough methodology and case studies supporting the effectiveness of AutoTRIZ. However, there is room for expansion in evaluating solution quality and applicability.\n\n**Presentation:**\nExcellent - The paper is well-structured with a logical flow, clear illustrations, and comprehensive explanations of the TRIZ process and AutoTRIZ's architecture.\n\n**Contribution:**\nExcellent - AutoTRIZ represents a significant advancement in automating engineering problem-solving, offering a new tool that bridges traditional TRIZ with modern AI capabilities.\n\n**Data Analysis:**\n- **Strengths**: The paper provides a detailed description of experiments and a case study, demonstrating the functionality and practical application of AutoTRIZ.\n- **Weaknesses**: The comparative analysis with human experts could be expanded to include more statistical analysis or benchmarks to strengthen validation.\n\n**Rating:**\nAccept, but needs minor improvements - The paper presents good work with innovative methods that can benefit from further validation and broader comparative studies.\n\n**Paper Decision:**\n- Decision: Accept\n- Reasons: AutoTRIZ provides a novel integration of LLMs and TRIZ, facilitating automated and interpretable solution generation, which is well-demonstrated across experimental and real-world scenarios. The clear presentation and logical structure aid in understanding its impact and potential. Nevertheless, the paper could benefit from additional validation of the generated solutions and consideration of feedback mechanisms for iterative improvement.",
+      "source": "arXiv"
+    },
+    {
+      "id": "2409.09135",
+      "paper_version": "v1",
+      "abstract": "Over the past decade, wearable computing devices (``smart glasses'') have undergone remarkable advancements in sensor technology, design, and processing power, ushering in a new era of opportunity for high-density human behavior data. Equipped with wearable cameras, these glasses offer a unique opportunity to analyze non-verbal behavior in natural settings as individuals interact. Our focus lies in predicting engagement in dyadic interactions by scrutinizing verbal and non-verbal cues, aiming to detect signs of disinterest or confusion. Leveraging such analyses may revolutionize our understanding of human communication, foster more effective collaboration in professional environments, provide better mental health support through empathetic virtual interactions, and enhance accessibility for those with communication barriers.\n  In this work, we collect a dataset featuring 34 participants engaged in casual dyadic conversations, each providing self-reported engagement ratings at the end of each conversation. We introduce a novel fusion strategy using Large Language Models (LLMs) to integrate multiple behavior modalities into a ``multimodal transcript'' that can be processed by an LLM for behavioral reasoning tasks. Remarkably, this method achieves performance comparable to established fusion techniques even in its preliminary implementation, indicating strong potential for further research and optimization. This fusion method is one of the first to approach ``reasoning'' about real-world human behavior through a language model. Smart glasses provide us the ability to unobtrusively gather high-density multimodal data on human behavior, paving the way for new approaches to understanding and improving human communication with the potential for important societal benefits. The features and data collected during the studies will be made publicly available to promote further research.",
+      "authors": [
+        "Cheng Charles Ma",
+        "Kevin Hyekang Joo",
+        "Alexandria K. Vail",
+        "Sunreeta Bhattacharya",
+        "\\'Alvaro Fern\\'andez Garc\\'ia",
+        "Kailana Baker-Matsuoka",
+        "Sheryl Mathew",
+        "Lori L. Holt",
+        "Fernando De la Torre"
+      ],
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "subjects": [
+        "Artificial Intelligence (cs.AI)",
+        "Computation and Language (cs.CL)",
+        "Human-Computer Interaction (cs.HC)",
+        "Machine Learning (cs.LG)"
+      ],
+      "submission_historys": [
+        {
+          "date": "2024-09-13T18:28:12+00:00",
+          "link": "https://arxiv.org/abs/2409.09135v1",
+          "size": "889kb",
+          "version": "v1"
+        }
+      ],
+      "title": "Multimodal Fusion with LLMs for Engagement Prediction in Natural Conversation",
+      "links": {
+        "Abstract": "https://arxiv.org/abs/2409.09135",
+        "HTML": "https://arxiv.org/html/2409.09135",
+        "PDF": "https://arxiv.org/pdf/2409.09135"
+      },
+      "relevance": {
+        "keyword": "creativity",
+        "level": "partial",
+        "reason": "The paper involves predicting engagement in conversations, which indirectly links to creativity in terms of enhancing communication and collaboration. However, creativity is not the primary focus but more of a secondary possible outcome or benefit."
+      },
+      "tasks": [],
       "source": "arXiv"
     }
   ],
   "subjects": [
     "Computer Vision and Pattern Recognition (cs.CV)",
-    "Multimedia (cs.MM)",
-    "Computational Engineering, Finance, and Science (cs.CE)",
     "Computation and Language (cs.CL)",
-    "Image and Video Processing (eess.IV)",
-    "Cryptography and Security (cs.CR)",
-    "Robotics (cs.RO)",
+    "Methodology (stat.ME)",
     "Artificial Intelligence (cs.AI)",
-    "Neurons and Cognition (q-bio.NC)",
     "Information Theory (math.IT)",
-    "Signal Processing (eess.SP)",
-    "Machine Learning (stat.ML)",
+    "Computation (stat.CO)",
     "Information Theory (cs.IT)",
     "Computers and Society (cs.CY)",
-    "Neural and Evolutionary Computing (cs.NE)",
     "Software Engineering (cs.SE)",
     "Human-Computer Interaction (cs.HC)",
-    "Graphics (cs.GR)",
     "Machine Learning (cs.LG)"
   ],
   "prompt": {
@@ -1779,10 +1028,10 @@
   },
   "description": "Data source: https://arxiv.org/list/cs.HC/new",
   "level_tatistics": {
-    "core": 3,
-    "partial": 12,
-    "irrelevant": 23
+    "core": 2,
+    "partial": 6,
+    "irrelevant": 16
   },
-  "arxiv_update_date": "2025-10-29",
-  "updated_at": "2025-10-29 10:40:38"
+  "arxiv_update_date": "2025-10-30",
+  "updated_at": "2025-10-30 10:37:40"
 }
